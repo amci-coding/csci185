@@ -72,12 +72,16 @@ if __name__ == '__main__':
 
     for file_path in file_paths:
         do_replacement('/spring2023', '', file_path)
+        do_replacement('<li><a href="https://drive.google.com/drive/folders/1O7exzeo0Wg-RmAN7W20R10SSHdEt75Mx?usp=sharing" target="_blank">Videos</a></li>', '', file_path)
 
     '''
-    In VS Code, here's the find and replace code:
+    In VS Code
+    1. Prettier
+    2. Here's the find and replace code:
         * Find: 
             (lectures\/\w*\d\d)
             (tutorials\/\w*\d\d)
-            (homework\/\w*\d\d)
+            (assignments\/\w*\d\d)
+            (assignments\/\w*\d-\d)
         * Replace: $1.html
     '''
