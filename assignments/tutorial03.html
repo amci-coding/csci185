@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Create a Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+    <script defer src="/assets/js/fish-pond.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="https://communication.unca.edu/wp-content/themes/tin/assets/logo.svg" />
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li class="active"><a href="/assignments/">Assignments</a></li>
+        <!-- <li ><a href="/final-project/">Final Project</a></li> -->
+        <li ><a href="/design-reference/">Web Reference</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1O7exzeo0Wg-RmAN7W20R10SSHdEt75Mx?usp=sharing" target="_blank">Videos</a></li>
+        <!-- <li ><a href="/resources/">Resources</a></li> -->
+        <!-- <li ><a href="/times-locations/">Calendar</a></li> -->
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#step-1-get-set-up">Step 1: Get Set Up</a>
+    <ol>
+      <li><a href="#commit-your-changes-and-push-to-github">Commit your changes and push to GitHub</a>
+        <ol>
+          <li><a href="#1-staging">1. Staging</a></li>
+          <li><a href="#2-committing">2. Committing</a></li>
+          <li><a href="#3-syncing">3. Syncing</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#step-2-link-to-your-work">Step 2: Link to your work</a>
+    <ol>
+      <li><a href="#links-to-tutorials">Links to Tutorials</a></li>
+      <li><a href="#in-class-work-optional">In-Class Work (Optional)</a></li>
+    </ol>
+  </li>
+  <li><a href="#step-3-plan-your-homepage-design">Step 3: Plan your homepage design</a></li>
+  <li><a href="#checklist">Checklist</a></li>
+  <li><a href="#what-to-turn-in">What to turn in</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            Tutorial 3: Create a Homepage
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Fri, 01/27 @ 11:59PM.
+    
+    
+        6 Points.
+    
+    
+</p>
+
+<style>
+    img {
+        max-width: 750px;
+        width: 60%;
+        border: solid 1px #000;
+    }
+    img.large {
+        max-width: 100%;
+        width: 100%;
+        border: solid 1px #000;
+    }
+</style>
+
+<p>In this tutorial, you are going to make a homepage to showcase the work you have done in this class. You will create your homepage at the root of your <code class="highlighter-rouge">csci185</code> directory (the folder where you made your git repository). Please complete the following steps:</p>
+
+<h2 id="step-1-get-set-up">Step 1: Get Set Up</h2>
+
+<p>Create a brand new file called <code class="highlighter-rouge">index.html</code> <strong>directly inside</strong> of your <code class="highlighter-rouge">csci185</code> directory, and paste this (suggested) starter code into the HTML file you just created:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- You're welcome to change any of this! --&gt;</span>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;head&gt;</span>
+        <span class="c">&lt;!-- stylesheets and metadata go here --&gt;</span>
+       <span class="nt">&lt;title&gt;</span>My CSCI 185 Homepage<span class="nt">&lt;/title&gt;</span>       
+       <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"styles.css"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;/head&gt;</span>
+   <span class="nt">&lt;body&gt;</span>
+       <span class="c">&lt;!-- HTML content tags go here. Change anything you want! --&gt;</span>
+       <span class="nt">&lt;header&gt;</span>
+           <span class="nt">&lt;h1&gt;</span>My CSCI 185 Homepage<span class="nt">&lt;/h1&gt;</span>
+       <span class="nt">&lt;/header&gt;</span> 
+       <span class="nt">&lt;main&gt;</span>
+            <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"tutorials"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h2&gt;</span>Tutorials<span class="nt">&lt;/h2&gt;</span>
+                <span class="c">&lt;!-- 
+                    Links to your tutorial assignments go here.
+                    When you submit a new tutorial, add a link to it
+                    here (if applicable)
+                --&gt;</span>
+            <span class="nt">&lt;/section&gt;</span>
+            <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"homework"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h2&gt;</span>Homework<span class="nt">&lt;/h2&gt;</span>
+                <span class="c">&lt;!-- 
+                    Links to your Homework assignments go here.
+                    When you submit a new HW assignment, add a link to it here (if applicable)
+                --&gt;</span>
+            <span class="nt">&lt;/section&gt;</span>
+            <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"inspiration"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h2&gt;</span>Design Inspiration<span class="nt">&lt;/h2&gt;</span>
+                <span class="c">&lt;!-- 
+                    Links to 5-10 websites that inspire you
+                --&gt;</span>
+            <span class="nt">&lt;/section&gt;</span>
+            <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"class-exercises"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;h2&gt;</span>Class Exercises<span class="nt">&lt;/h2&gt;</span>
+                <span class="c">&lt;!-- 
+                    Links to your in-class activities
+                --&gt;</span>
+            <span class="nt">&lt;/section&gt;</span>
+        <span class="nt">&lt;/main&gt;</span>
+   <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Also create a stylesheet called <code class="highlighter-rouge">styles.css</code> directly inside of your <code class="highlighter-rouge">csci185</code> directory. Paste the following (suggested) starter code into the stylesheet:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* You're welcome to change any of this! */</span>
+<span class="o">*</span> <span class="p">{</span>
+    <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0px</span><span class="p">;</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span><span class="o">,</span> <span class="nt">a</span><span class="o">,</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.5em</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.1em</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>When you’re done, your <code class="highlighter-rouge">csci185</code> directory should look something like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>csci185
+├── homework
+│   └── hw02
+├── lectures
+│   ├── lecture03
+│   └── lecture04
+├── tutorials
+│   └── tutorial02
+├── index.html   <span class="c"># index.html file you just made</span>
+└── styles.css   <span class="c"># styles.css you just made</span>
+</code></pre></div></div>
+
+<p>Note that you can have additional files and folders in your repo directory, so long as the ones listed above are in there.</p>
+
+<h3 id="commit-your-changes-and-push-to-github">Commit your changes and push to GitHub</h3>
+<p>Once you’ve set up your two new files, go ahead and commit everything and push your new files to GitHub. This will involve (1) “staging” all of your changes, (2) committing them, and (3) syncing them.</p>
+
+<h4 id="1-staging">1. Staging</h4>
+
+<p><img class="large" src="/assets/images/tutorials/tutorial03/ss1.png" /></p>
+
+<h4 id="2-committing">2. Committing</h4>
+
+<p><img class="large" src="/assets/images/tutorials/tutorial03/ss2.png" /></p>
+
+<h4 id="3-syncing">3. Syncing</h4>
+<p><img class="large" src="/assets/images/tutorials/tutorial03/ss3.png" /></p>
+
+<h2 id="step-2-link-to-your-work">Step 2: Link to your work</h2>
+
+<h3 id="links-to-tutorials">Links to Tutorials</h3>
+<p>Next, create an unordered list inside of the “tutorials” section of your HTML page. If you don’t know how, consult W3 schools or the <a href="../html-reference/compound-tags/">course HTML reference</a>. Then, within one of the list item tags (<code class="highlighter-rouge">&lt;li&gt;&lt;/li&gt;</code>) add a hyperlink (<code class="highlighter-rouge">&lt;a&gt;&lt;/a&gt;</code> tag) that links to the <code class="highlighter-rouge">index.html</code> file you made in Tutorial 2. You will use a <strong>relative path</strong>. For instance, mine looks like this:</p>
+
+<ul>
+  <li><a href="https://vanwars.github.io/csci185-coursework/" target="_blank">Sarah’s Demo Homepage</a></li>
+</ul>
+
+<p>When you’re done, commit your changes and push to GitHub using the same steps that you used above. Then, wait about a minute and go check out your changes on GitHub pages.</p>
+
+<ul>
+  <li>Each week, when you submit your tutorial, you will link to it from your homepage like we did today.</li>
+</ul>
+
+<h3 id="in-class-work-optional">In-Class Work (Optional)</h3>
+<p>To get some additional linking practice, please create an unordered list inside of the “class-exercises” section of your HTML page. Within each list item, include a link to each in-class activity we have been doing (including the <code class="highlighter-rouge">lecture04</code> exercises from Monday).</p>
+
+<h2 id="step-3-plan-your-homepage-design">Step 3: Plan your homepage design</h2>
+<p>Eventually, you’ll want to style your homepage to give it your own unique aesthetic. We’ll start digging into some of the CSS principles needed to effectively style web pages next week. That said, it’s never to early to start thinking about the look-and-feel of your website, and coming up with good ideas often starts by examining websites that inspire you.</p>
+
+<p>To gather inspiration, you are going to go out to the Internet and find 5-10 web pages, images, advertisements, banners, etc. that you think look great! You can look at the <a href="/design-reference/">Design Resources page</a> to find some inspiring websites, or revisit websites that you already like.</p>
+
+<p>When you have your list of websites, create an unordered list to the “inspiration” section of your homepage (like Sarah’s <a href="https://vanwars.github.io/csci185-coursework" target="_blank">example</a>). Each list item should contain a link to one of the websites you found.</p>
+
+<h2 id="checklist">Checklist</h2>
+<p>Please make sure that you have completed the following (see the <a href="https://vanwars.github.io/csci185-coursework" target="_blank">example</a>, except you will add images, etc.):</p>
+
+<ul class="checkbox-list">
+  <li>Added a link to Tutorial 2</li>
+  <li>Added links to your in-class assignments (which should be stored in within the <code class="highlighter-rouge">lectures</code> folder) – optional but recommended.</li>
+  <li>Added your “inspiration” links</li>
+  <li>Posted your homepage to GitHub Pages</li>
+</ul>
+
+<h2 id="what-to-turn-in">What to turn in</h2>
+<p>After completing Tutorial 3, please publish everything to GitHub (stage, commit, and sync). Then, in the Moodle, paste a link to:</p>
+<ol>
+  <li>Your GitHub pages homepage (the link that visually displays your homepage)</li>
+  <li>Your repository (the link that displays your code)</li>
+</ol>
+
+<p>For example, Sarah would submit:</p>
+<ul>
+  <li>GitHub pages homepage: <a href="https://vanwars.github.io/csci185-coursework/">https://vanwars.github.io/csci185-coursework/</a></li>
+  <li>Repository: <a href="https://github.com/vanwars/csci185-coursework">https://github.com/vanwars/csci185-coursework</a></li>
+</ul>
+
+<p>If you named your GitHub repository something different, that’s OK!</p>
+
+
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>

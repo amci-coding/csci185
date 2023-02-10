@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Quiz 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+    <script defer src="/assets/js/fish-pond.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="https://communication.unca.edu/wp-content/themes/tin/assets/logo.svg" />
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li ><a href="/assignments/">Assignments</a></li>
+        <!-- <li ><a href="/final-project/">Final Project</a></li> -->
+        <li ><a href="/design-reference/">Web Reference</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1O7exzeo0Wg-RmAN7W20R10SSHdEt75Mx?usp=sharing" target="_blank">Videos</a></li>
+        <!-- <li ><a href="/resources/">Resources</a></li> -->
+        <!-- <li ><a href="/times-locations/">Calendar</a></li> -->
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#set-up">Set Up</a>
+    <ol>
+      <li><a href="#guidelines">Guidelines</a></li>
+    </ol>
+  </li>
+  <li><a href="#part1">Part 1. HTML Tasks (index.html) [30pts]</a>
+    <ol>
+      <li><a href="#1-stylesheet-link">1. Stylesheet Link</a></li>
+      <li><a href="#2-semantic-structure">2. Semantic Structure</a></li>
+      <li><a href="#3-header--navigation-sections">3. Header &amp; Navigation Sections</a></li>
+      <li><a href="#4-main-section">4. Main Section</a></li>
+      <li><a href="#5-footer">5. Footer</a></li>
+    </ol>
+  </li>
+  <li><a href="#part2">Part 2: Styling tasks [30pts]</a>
+    <ol>
+      <li><a href="#1-style-the-header">1. Style the header</a></li>
+      <li><a href="#2-style-the-image-inside-the-header-element">2. Style the image inside the header element</a></li>
+      <li><a href="#3-style-the-hyperlinks-inside-the-nav-element">3. Style the hyperlinks inside the nav element</a></li>
+      <li><a href="#4-style-the-main-element">4. Style the main element</a></li>
+      <li><a href="#5-style-the-landing-class">5. Style the “landing” class</a></li>
+      <li><a href="#6-style-the-image-inside-of-the-landing-class">6. Style the image inside of the “landing” class</a></li>
+      <li><a href="#7-style-the-h1-and-h2-elements">7. Style the “h1” and “h2” elements</a></li>
+      <li><a href="#8-style-the-h1-element-inside-of-the-landing-class">8. Style the “h1” element inside of the “landing” class</a></li>
+      <li><a href="#9-style-the-link-inside-of-the-landing-class-to-look-like-a-button">9. Style the link inside of the “landing” class to look like a button</a></li>
+      <li><a href="#10-style-the-footer-element">10. Style the footer element</a></li>
+      <li><a href="#11-add-rulesets-to-style-the-other-pages">11. Add rulesets to style the other pages</a></li>
+      <li><a href="#verify-that-youre-done-with-the-styling">Verify that you’re done with the styling</a></li>
+    </ol>
+  </li>
+  <li><a href="#part3">Part 3. HTML Tasks (other files)  [30pts]</a>
+    <ol>
+      <li><a href="#1-stylesheet-link-1">1. Stylesheet Link</a></li>
+      <li><a href="#2-header-section">2. Header Section</a></li>
+      <li><a href="#3-footer-section">3. Footer Section</a></li>
+    </ol>
+  </li>
+  <li><a href="#part4">Part 4: Link from your homepage  [10pts]</a></li>
+  <li><a href="#submit">Submit</a>
+    <ol>
+      <li><a href="#1-verify-that-youre-done-with-the-quiz">1. Verify that you’re done with the quiz</a>
+        <ol>
+          <li><a href="#a-html-structure">A. HTML structure</a></li>
+          <li><a href="#b-links-all-work">B. Links all work</a></li>
+          <li><a href="#c-the-website-should-look-like-this-animation">C. The website should look like this animation</a></li>
+          <li><a href="#d-your-homepage-should-link-to-the-quiz">D. Your homepage should link to the quiz.</a></li>
+        </ol>
+      </li>
+      <li><a href="#2-submit-to-the-moodle">2. Submit to the Moodle</a></li>
+    </ol>
+  </li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>Quiz 1</h1>
+    
+ 
+                <style>
+    img.preview {
+        max-width: 60%;
+        min-width: 500px;
+    }
+</style>
+
+<p><a href="/course-files/quizzes/quiz01.zip" class="nu-button">Quiz 1 Starter Files <i class="fas fa-download"></i></a></p>
+
+<h2 id="set-up">Set Up</h2>
+<ul>
+  <li>Inside your <code class="highlighter-rouge">csci185</code> folder, create a folder called <code class="highlighter-rouge">quizzes</code>.</li>
+  <li>Download the starter files and unzip them. They should be unzipped in a folder called <code class="highlighter-rouge">quiz01</code>.</li>
+  <li>Move your <code class="highlighter-rouge">quiz01</code> folder into  the <code class="highlighter-rouge">quizzes</code> folder.</li>
+  <li>Open your entire <code class="highlighter-rouge">csci185</code> folder in VS Code.</li>
+</ul>
+
+<p>Your directory structure should look something like this (it’s OK if your file structure looks different, so long as the quizzes folder looks like the one below):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>csci185
+├── homework
+├── index.html
+├── lectures
+├── quizzes
+│   └── quiz01
+├── styles.css
+└── tutorials
+</code></pre></div></div>
+
+<p>When you’re done with that, complete the Parts 1-4 as described below:</p>
+
+<ol class="compact">
+  <li>(30pts) <a href="#part1">HTML Tasks (index.html)</a></li>
+  <li>(30pts) <a href="#part2">Styling tasks</a></li>
+  <li>(30pts) <a href="#part3">HTML Tasks (other files)</a></li>
+  <li>(10pts) <a href="#part4">Link from your homepage</a></li>
+</ol>
+
+<blockquote>
+  <h3 id="guidelines">Guidelines</h3>
+  <ul class="compact">
+    <li>You may not move or rename any of the files.</li>
+    <li>Read the instructions that are outlined under each section very carefully.</li>
+    <li>Complete as many tasks as you can by the end of the quiz.</li>
+    <li>If it doesn’t look exactly like the screenshot, don’t stress – partial credit is given!</li>
+    <li>Just do your best.</li>
+  </ul>
+</blockquote>
+
+<h2 id="part1">Part 1. HTML Tasks (index.html) [30pts]</h2>
+<p>For this section, you will be editing the <code class="highlighter-rouge">index.html</code> file in order to create the following structure inside of your <code class="highlighter-rouge">body</code> tag:</p>
+
+<p><img class="preview" src="/assets/images/quizzes/quiz01/schematic.png" /></p>
+
+<h3 id="1-stylesheet-link">1. Stylesheet Link</h3>
+<ol>
+  <li>Inside of the <code class="highlighter-rouge">head</code> tag in your <code class="highlighter-rouge">index.html</code> file, add a link to the <code class="highlighter-rouge">styles.css</code> stylesheet (located in the <code class="highlighter-rouge">assets</code> &gt; <code class="highlighter-rouge">css</code> folder).
+    <ul>
+      <li>If you did it correctly, the background of your web page should turn dark blue.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="2-semantic-structure">2. Semantic Structure</h3>
+<ol>
+  <li>Add three empty semantic tags inside the body tag:
+    <ul>
+      <li>a <code class="highlighter-rouge">header</code> tag</li>
+      <li>a <code class="highlighter-rouge">main</code> tag</li>
+      <li>a <code class="highlighter-rouge">footer</code> tag</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="3-header--navigation-sections">3. Header &amp; Navigation Sections</h3>
+<ol>
+  <li>Inside the <code class="highlighter-rouge">header</code> tag, add an <code class="highlighter-rouge">img</code> tag that links to the <code class="highlighter-rouge">taco-temple-logo.webp</code> file (in the <code class="highlighter-rouge">images</code> folder).</li>
+  <li>Next to the <code class="highlighter-rouge">img</code> tag (but still inside the <code class="highlighter-rouge">header</code> tag), add a <code class="highlighter-rouge">nav</code> tag.</li>
+  <li>Inside the <code class="highlighter-rouge">nav</code> tag, add 3 hyperlinks:
+    <ul>
+      <li>One called <strong>Menu</strong> that links to <code class="highlighter-rouge">menu.html</code></li>
+      <li>One called <strong>Contact</strong> that links to <code class="highlighter-rouge">contact.html</code></li>
+      <li>One called <strong>Hours &amp; Location</strong> that links to <code class="highlighter-rouge">location-hours.html</code></li>
+    </ul>
+  </li>
+</ol>
+
+<p>Note that <code class="highlighter-rouge">menu.html</code>, <code class="highlighter-rouge">contact.html</code> , and <code class="highlighter-rouge">location-hours.html</code> are all located inside of the <code class="highlighter-rouge">site-pages</code> folder.</p>
+
+<p><img class="preview" src="/assets/images/quizzes/quiz01/ss01.png" /></p>
+
+<h3 id="4-main-section">4. Main Section</h3>
+<ol>
+  <li>Give the <code class="highlighter-rouge">main</code> tag a class called <code class="highlighter-rouge">"landing"</code>.</li>
+  <li>Inside the <code class="highlighter-rouge">main</code> tag, add two tags:</li>
+  <li>An <code class="highlighter-rouge">img</code> tag that links to the <code class="highlighter-rouge">landing-image.webp</code> file (in the images folder).</li>
+  <li>A <code class="highlighter-rouge">section</code> tag. Inside the section tag, add two tags:
+    <ul>
+      <li>An <code class="highlighter-rouge">h1</code> that says: “Call 828-255-8098<br /> for take-out or click below to order online!”</li>
+      <li>A hyperlink that links to the Taco Temple order online page here: <a href="https://www.mamacitastacotemple.com/s/order" target="_blank">https://www.mamacitastacotemple.com/s/order</a>. The link text should say “Order now”.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><img class="preview" src="/assets/images/quizzes/quiz01/ss02.png" /></p>
+
+<h3 id="5-footer">5. Footer</h3>
+<p>Within the <code class="highlighter-rouge">footer</code> tag, create a paragraph tag that says “Copyright 2023, Taco Temple.”</p>
+
+<p><img class="preview" src="/assets/images/quizzes/quiz01/ss03.png" /></p>
+
+<h2 id="part2">Part 2: Styling tasks [30pts]</h2>
+
+<h3 id="1-style-the-header">1. Style the header</h3>
+<p>Create a ruleset for <strong><code class="highlighter-rouge">header</code> elements</strong> that applies the following styles:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">padding</span><span class="o">:</span> <span class="err">25</span><span class="nt">px</span> <span class="err">13</span><span class="nt">vw</span><span class="o">;</span>
+<span class="nt">display</span><span class="o">:</span> <span class="nt">flex</span><span class="o">;</span>
+<span class="nt">align-items</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span>
+<span class="nt">justify-content</span><span class="o">:</span> <span class="nt">space-between</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h3 id="2-style-the-image-inside-the-header-element">2. Style the image inside the header element</h3>
+<p>Create a ruleset for <strong><code class="highlighter-rouge">img</code> elements <u>inside of</u> a <code class="highlighter-rouge">header</code> element</strong> that sets the <code class="highlighter-rouge">width</code> property to <code class="highlighter-rouge">180px</code></p>
+
+<h3 id="3-style-the-hyperlinks-inside-the-nav-element">3. Style the hyperlinks inside the nav element</h3>
+<p>Create a ruleset for <strong><code class="highlighter-rouge">a</code> elements <u>inside of</u> a <code class="highlighter-rouge">nav</code> element</strong> that applies the following styles:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">color</span><span class="o">:</span> <span class="nt">white</span><span class="o">;</span>
+<span class="nt">text-decoration</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
+<span class="nt">margin</span><span class="o">:</span> <span class="err">10</span><span class="nt">px</span><span class="o">;</span>
+<span class="nt">text-transform</span><span class="o">:</span> <span class="nt">uppercase</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h3 id="4-style-the-main-element">4. Style the main element</h3>
+<p>Create a ruleset for <strong><code class="highlighter-rouge">main</code> elements</strong> that applies the following styles:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">padding</span><span class="o">:</span> <span class="err">100</span><span class="nt">px</span> <span class="err">25</span><span class="nt">vw</span> <span class="err">50</span><span class="nt">px</span> <span class="err">25</span><span class="nt">vw</span><span class="o">;</span>
+<span class="nt">min-height</span><span class="o">:</span> <span class="err">55</span><span class="nt">vh</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h3 id="5-style-the-landing-class">5. Style the “landing” class</h3>
+<p>Create a ruleset for the <strong><code class="highlighter-rouge">landing</code> class</strong> that applies the following styles:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">background</span><span class="o">:</span> <span class="nt">white</span><span class="o">;</span>
+<span class="nt">padding</span><span class="o">:</span> <span class="err">50</span><span class="nt">px</span> <span class="err">15</span><span class="nt">vw</span> <span class="err">100</span><span class="nt">px</span> <span class="err">15</span><span class="nt">vw</span><span class="o">;</span>
+<span class="nt">display</span><span class="o">:</span> <span class="nt">grid</span><span class="o">;</span>
+<span class="nt">grid-template-columns</span><span class="o">:</span> <span class="err">60</span><span class="o">%</span> <span class="err">40</span><span class="o">%;</span>
+<span class="nt">align-items</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span>
+<span class="nt">justify-content</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h3 id="6-style-the-image-inside-of-the-landing-class">6. Style the image inside of the “landing” class</h3>
+<p>Create a ruleset for <strong><code class="highlighter-rouge">img</code> elements <u>inside of</u> a <code class="highlighter-rouge">landing</code> class element</strong> that sets the <code class="highlighter-rouge">width</code> property to <code class="highlighter-rouge">100%</code>.</p>
+
+<h3 id="7-style-the-h1-and-h2-elements">7. Style the “h1” and “h2” elements</h3>
+<p>Apply the following style rules to <strong>all <code class="highlighter-rouge">h1</code> and <code class="highlighter-rouge">h2</code></strong> elements:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">font-family</span><span class="o">:</span> <span class="nt">Malamondo</span><span class="o">;</span>
+<span class="nt">font-weight</span><span class="o">:</span> <span class="err">400</span><span class="o">;</span>
+<span class="nt">text-transform</span><span class="o">:</span> <span class="nt">uppercase</span><span class="o">;</span>
+<span class="nt">text-align</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>This should give your <code class="highlighter-rouge">h1</code> and <code class="highlighter-rouge">h2</code> tags tag a funky custom font (which you’ll notice as you complete Part 3).</p>
+
+<h3 id="8-style-the-h1-element-inside-of-the-landing-class">8. Style the “h1” element inside of the “landing” class</h3>
+<p>Apply the following style rules to <strong><code class="highlighter-rouge">h1</code> elements <u>inside of</u> a <code class="highlighter-rouge">landing</code> class element</strong>:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">color</span><span class="o">:</span> <span class="nt">black</span><span class="o">;</span>
+<span class="nt">line-height</span><span class="o">:</span> <span class="err">1</span><span class="o">.</span><span class="err">2</span><span class="nt">em</span><span class="o">;</span>
+<span class="nt">font-size</span><span class="o">:</span> <span class="err">1</span><span class="o">.</span><span class="err">7</span><span class="nt">em</span><span class="o">;</span>
+<span class="nt">font-family</span><span class="o">:</span> <span class="nt">Malamondo-Alt</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>This should give your <code class="highlighter-rouge">h1</code> tag on the landing page a slightly different custom font.</p>
+
+<h3 id="9-style-the-link-inside-of-the-landing-class-to-look-like-a-button">9. Style the link inside of the “landing” class to look like a button</h3>
+<p>Apply the following style rules to <strong><code class="highlighter-rouge">a</code> elements <u>inside of</u> a <code class="highlighter-rouge">landing</code> class element</strong>:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">text-align</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span>
+<span class="nt">background-color</span><span class="o">:</span> <span class="err">#013672</span><span class="o">;</span>
+<span class="nt">color</span><span class="o">:</span> <span class="nt">white</span><span class="o">;</span>
+<span class="nt">border</span><span class="o">:</span> <span class="nt">solid</span> <span class="err">2</span><span class="nt">px</span> <span class="nt">white</span><span class="o">;</span>
+<span class="nt">padding</span><span class="o">:</span> <span class="err">10</span><span class="nt">px</span> <span class="err">20</span><span class="nt">px</span><span class="o">;</span>
+<span class="nt">font-weight</span><span class="o">:</span> <span class="err">300</span><span class="o">;</span>
+<span class="nt">margin</span><span class="o">:</span> <span class="nt">auto</span><span class="o">;</span>
+<span class="nt">display</span><span class="o">:</span> <span class="nt">block</span><span class="o">;</span>
+<span class="nt">width</span><span class="o">:</span> <span class="err">100</span><span class="nt">px</span><span class="o">;</span>
+<span class="nt">border-radius</span><span class="o">:</span> <span class="err">4</span><span class="nt">px</span><span class="o">;</span>
+<span class="nt">text-decoration</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h3 id="10-style-the-footer-element">10. Style the footer element</h3>
+<p>Create a ruleset for <strong><code class="highlighter-rouge">footer</code> elements</strong> to:</p>
+
+<ol class="compact">
+  <li>Give the footer <code class="highlighter-rouge">50px</code> of padding</li>
+  <li>center the text inside of the footer</li>
+</ol>
+
+<h3 id="11-add-rulesets-to-style-the-other-pages">11. Add rulesets to style the other pages</h3>
+<p>Below the styles you just created, add the following rulesets
+to style the other pages:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">ul</span> <span class="p">{</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h2</span> <span class="p">{</span>
+    <span class="nl">text-align</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.location-hours</span> <span class="p">{</span>
+    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.location-hours</span> <span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">form</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">600px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="nt">form</span> <span class="nt">label</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">75px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span> <span class="m">0px</span> <span class="m">5px</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">form</span> <span class="nt">input</span><span class="o">,</span> <span class="nt">form</span> <span class="nt">textarea</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">550px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="m">#FFF</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="nb">solid</span> <span class="m">1px</span> <span class="m">#CCC</span><span class="p">;</span>
+    <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.2em</span><span class="p">;</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">form</span> <span class="nt">button</span> <span class="p">{</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="nb">solid</span> <span class="m">2px</span> <span class="m">#fff</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span> <span class="m">20px</span><span class="p">;</span>
+    <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="m">#013672</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Work Sans'</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="m">300</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.1em</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="verify-that-youre-done-with-the-styling">Verify that you’re done with the styling</h3>
+<p>When you’re done, the homepage should look like this:</p>
+
+<p><img class="large frame" src="/assets/images/quizzes/quiz01/ss04.png" /></p>
+
+<h2 id="part3">Part 3. HTML Tasks (other files)  [30pts]</h2>
+<p>Please complete the following tasks for each of the three HTML files:</p>
+<ol>
+  <li><code class="highlighter-rouge">menu.html</code></li>
+  <li><code class="highlighter-rouge">contact.html</code></li>
+  <li><code class="highlighter-rouge">location-hours.html</code></li>
+</ol>
+
+<h3 id="1-stylesheet-link-1">1. Stylesheet Link</h3>
+<ol>
+  <li>Add a <code class="highlighter-rouge">link</code> tag inside the <code class="highlighter-rouge">head</code> tag of each of the three HTML pages that links to <code class="highlighter-rouge">styles.css</code> (located in the <code class="highlighter-rouge">assets</code> folder).
+    <ul>
+      <li>Note that the relative path will be different from what it was in <code class="highlighter-rouge">index.html</code></li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="2-header-section">2. Header Section</h3>
+<ol>
+  <li>Copy the entire <code class="highlighter-rouge">header</code> tag (and everything inside of it) from <code class="highlighter-rouge">index.html</code> and paste it into each of the HTML pages <strong>above</strong> the <code class="highlighter-rouge">main</code> tag, but still within the <code class="highlighter-rouge">body</code> tag.</li>
+  <li>Adjust the file paths for the relative links so that the relative paths don’t break (now that you’re editing a file in the <code class="highlighter-rouge">site-pages</code> folder).</li>
+  <li><strong>[Optional – 2pts Extra Credit]</strong> Make the Taco Temple logo into a link by wrapping a hyperlink (<code class="highlighter-rouge">a</code> tag) around the <code class="highlighter-rouge">img</code> tag. This link should point to <code class="highlighter-rouge">index.html</code> in the parent directory.</li>
+</ol>
+
+<p>When you’re done, <code class="highlighter-rouge">menu.html</code>, <code class="highlighter-rouge">contact.html</code>, and <code class="highlighter-rouge">location-hours.html</code> should all link to one another.</p>
+
+<h3 id="3-footer-section">3. Footer Section</h3>
+<ol>
+  <li>Copy the entire <code class="highlighter-rouge">footer</code> tag  (and everything inside of it) from <code class="highlighter-rouge">index.html</code> and paste it <strong>below</strong> the <code class="highlighter-rouge">main</code> tag.</li>
+</ol>
+
+<h2 id="part4">Part 4: Link from your homepage  [10pts]</h2>
+<p>When you’re done with the exercise:</p>
+<ol>
+  <li>Update your homepage (that you made during Tutorial 3) by adding a link to the <code class="highlighter-rouge">index.html</code> file that you made in this quiz (and make sure you are using a relative link). Sarah’s quiz looks like this:
+    <ul>
+      <li><a href="https://vanwars.github.io/csci185-coursework/" target="_blank">https://vanwars.github.io/csci185-coursework/</a></li>
+    </ul>
+  </li>
+  <li>Commit and sync your changes to GitHub.</li>
+</ol>
+
+<h2 id="submit">Submit</h2>
+
+<h3 id="1-verify-that-youre-done-with-the-quiz">1. Verify that you’re done with the quiz</h3>
+<p>When you’re done with Parts 1-4, double-check that you’re done:</p>
+
+<h4 id="a-html-structure">A. HTML structure</h4>
+<p>All 4 of the HTML pages you just edited should have the  semantic structure (pictured below)
+<img class="preview" src="/assets/images/quizzes/quiz01/ss05.png" /></p>
+
+<h4 id="b-links-all-work">B. Links all work</h4>
+<p>Every page should link to every other page (no broken links).</p>
+<ul>
+  <li>Note that linking from the detail pages to the index.html page is optional.</li>
+</ul>
+
+<h4 id="c-the-website-should-look-like-this-animation">C. The website should look like this animation</h4>
+<p><img class="preview" src="/assets/images/quizzes/quiz01/tt-final.gif" /></p>
+
+<h4 id="d-your-homepage-should-link-to-the-quiz">D. Your homepage should link to the quiz.</h4>
+
+<h3 id="2-submit-to-the-moodle">2. Submit to the Moodle</h3>
+<p><strong>Please Read Carefully:</strong> To submit Quiz 1, paste the following links into the Moodle under the Quiz 1 submission section:</p>
+
+<ol>
+  <li>A link to your <strong>homepage</strong> on GitHub pages.</li>
+  <li>A link to your GitHub <strong>code repository</strong> (where your code files are stored).</li>
+</ol>
+
+<p>If your GitHub is not working for whatever reason, just zip your <strong>COMPLETED</strong> <code class="highlighter-rouge">quiz01</code> folder and upload it to the Moodle.</p>
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>

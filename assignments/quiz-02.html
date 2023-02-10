@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Quiz: CSS Techniques</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+    <script defer src="/assets/js/fish-pond.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="https://communication.unca.edu/wp-content/themes/tin/assets/logo.svg" />
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li class="active"><a href="/assignments/">Assignments</a></li>
+        <!-- <li ><a href="/final-project/">Final Project</a></li> -->
+        <li ><a href="/design-reference/">Web Reference</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1O7exzeo0Wg-RmAN7W20R10SSHdEt75Mx?usp=sharing" target="_blank">Videos</a></li>
+        <!-- <li ><a href="/resources/">Resources</a></li> -->
+        <!-- <li ><a href="/times-locations/">Calendar</a></li> -->
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#1-ground-rules-please-read-carefully">1. Ground Rules (Please Read Carefully)</a>
+    <ol>
+      <li><a href="#in-class-exercises">In-Class Exercises</a></li>
+      <li><a href="#take-home-exercises">Take Home Exercises</a></li>
+    </ol>
+  </li>
+  <li><a href="#2-study-resources">2. Study Resources</a></li>
+  <li><a href="#3-actual-quiz">3. Actual Quiz</a>
+    <ol>
+      <li><a href="#a-40pts-written-portion-in-class">A. [40pts] Written Portion (In Class)</a></li>
+      <li><a href="#b-60pts-computer-based-portion-take-home">B. [60pts] Computer-Based Portion (Take Home)</a>
+        <ol>
+          <li><a href="#1-20pts-dom-manipulation">1. [20pts] DOM Manipulation</a></li>
+          <li><a href="#2-20pts-functions">2. [20pts] Functions</a></li>
+          <li><a href="#3-20pts-loops--conditionals">3. [20pts] Loops + Conditionals</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#what-to-submit">What to Submit</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>Quiz: CSS Techniques</h1>
+    
+ 
+                <style>
+    .warning {
+        border-left: solid 5px #990000;
+        background-color: #99000033;
+    }
+    .warning p {
+        color: #990000 !important;
+    }
+
+    .rules {
+        border-left: solid 5px #4298B5;
+        padding-left: 15px;
+    }
+
+    img.medium {
+        max-width: 550px;
+    }
+
+</style>
+
+<blockquote class="rules blockquote-no-margin">
+  <h2 id="1-ground-rules-please-read-carefully">1. Ground Rules (Please Read Carefully)</h2>
+  <p>Quiz 2 is a mixture of in-class and take-home activities. You will have ~36 hours to complete it.</p>
+
+  <h3 id="in-class-exercises">In-Class Exercises</h3>
+  <p>The first part of the quiz will be completed <strong>DURING CLASS.</strong> You may use your notes, pen and paper, and any “cheat sheats” that you want to make. You may not use a computer. <strong>Attendance is MANDATORY.</strong></p>
+
+  <h3 id="take-home-exercises">Take Home Exercises</h3>
+  <p>For the take-home portion of the quiz, you may begin working on it as soon as it is posted (Wednesday, 11/09 at 8AM). It is due on <strong>Thursday (11/10) at 11:59PM.</strong> No quizzes will be accepted after this time.  For the take home portion of the quiz:</p>
+  <ul>
+    <li>You <strong>MAY</strong> use the course website, as well as any notes, lecture files, or internet reference materials to complete the quiz.</li>
+    <li>You <strong>MAY NOT</strong> discuss the quiz with anyone or collaborate in any way with anyone. This is an individual assessment.</li>
+  </ul>
+
+  <h2 id="2-study-resources">2. Study Resources</h2>
+  <p>To study for the quiz, please review the following:</p>
+  <ul>
+    <li>Course slides, videos, readings, and sample code.</li>
+    <li><a href="https://docs.google.com/document/d/1mXB25SyI29fQJAZzvKZthITJbmSjcBAqJTPrSUo-ZOo/edit?usp=sharing" target="_blank">Study Guide</a></li>
+    <li><a href="https://docs.google.com/document/d/1m2GEY24tFEKS-dF_-RdwV9KygkTGIr1gV7zVlabpjG4/edit?usp=sharing" target="_blank">Sample Problems</a> (for the in-class, written portion of the quiz).</li>
+  </ul>
+
+  <p>Please also become very comfortable with the exercises from <a href="../assignments/tutorial12">Tutorial 12</a> (for the take-home portion of the quiz).</p>
+</blockquote>
+
+<h2 id="3-actual-quiz">3. Actual Quiz</h2>
+
+<h3 id="a-40pts-written-portion-in-class">A. [40pts] Written Portion (In Class)</h3>
+<p>To be administered during your regularly scheduled class time. Open notes, closed computer.</p>
+<ul>
+  <li><a href="https://docs.google.com/document/d/1Jr08fZM4NRABvS_SE9qA6Y-UALyQQaO0vngnQjD8akk/edit?usp=sharing" target="_blank">Quiz 2 Solutions</a></li>
+</ul>
+
+<h3 id="b-60pts-computer-based-portion-take-home">B. [60pts] Computer-Based Portion (Take Home)</h3>
+<p>Please download the starter files (below) and complete the 3 sets of tasks described below. Read the instructions that are outlined under each task <strong>very carefully.</strong> You must complete each exercise exactly as the instructions indicate to receive full credit. Otherwise, you will receive partial credit for the parts you correctly completed.</p>
+
+<p><a href="/course-files/quizzes/quiz02.zip" class="nu-button">Quiz 2 Starter Files <i class="fas fa-download"></i></a> <a href="/course-files/quizzes/quiz02_answers.zip" class="button">Quiz 2 Solutions <i class="fas fa-download"></i></a></p>
+
+<h4 id="1-20pts-dom-manipulation">1. [20pts] DOM Manipulation</h4>
+<p>Open the <code class="highlighter-rouge">exercise01</code> folder and add event handlers to all of the buttons. When a button is clicked, the image tag should display the corresponding animal (see the <code class="highlighter-rouge">images</code> folder), and there should be a label below the image describing the picture. When you’re done, your page should look like the animation shown below:</p>
+
+<p><img class="medium frame" src="/assets/images/quizzes/quiz02/animals.gif" /></p>
+
+<h4 id="2-20pts-functions">2. [20pts] Functions</h4>
+<p>Open the <code class="highlighter-rouge">exercise02</code> folder and create a function called <code class="highlighter-rouge">drawElmo</code> that draws a picture of Elmo. The function should have the following parameters defined (in order):</p>
+<ol>
+  <li><code class="highlighter-rouge">x</code> (number) – the x-coordinate of the center of the circle(s).</li>
+  <li><code class="highlighter-rouge">y</code> (number) – the y-coordinate of the center of the circle(s).</li>
+  <li><code class="highlighter-rouge">size</code> (number) – the diameter of the larger circle.</li>
+  <li><code class="highlighter-rouge">color</code> (number) – the color of Elmo’s face.</li>
+  <li><code class="highlighter-rouge">hasNose</code> (boolean) – whether or not Elmo should have a nose (just default the color to a reddish color).</li>
+</ol>
+
+<p>If the argument for <code class="highlighter-rouge">hasNose</code> is set to true, a nose is drawn. Otherwise, no nose is drawn. A decent looking nose can be made with the ellipse function…</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">fill</span><span class="p">(</span><span class="dl">'</span><span class="s1">#db5461</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">ellipse</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>  <span class="c1">// x, y, width, height (but yours needs to scale)</span>
+</code></pre></div></div>
+
+<p>…but of course yours will need to be dynamically positioned / scaled according to the function arguments (just like you’ve been doing for the past several weeks).</p>
+
+<p>When I invoke your function as follows (within the <code class="highlighter-rouge">setup()</code> function)…</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">drawElmo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#0bc9cd</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>   <span class="c1">// nose drawn</span>
+<span class="nx">drawElmo</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#0bc9cd</span><span class="dl">'</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>   <span class="c1">// no nose drawn</span>
+<span class="nx">drawElmo</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">325</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#8093f1</span><span class="dl">'</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>  <span class="c1">// no nose drawn</span>
+<span class="nx">drawElmo</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">375</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#7fb285</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>   <span class="c1">// nose drawn</span>
+<span class="nx">drawElmo</span><span class="p">(</span><span class="mi">550</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#102e4a</span><span class="dl">'</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>   <span class="c1">// nose drawn</span>
+</code></pre></div></div>
+
+<p>…the image pictured below should be drawn to the screen:</p>
+
+<p><img class="medium frame" src="/assets/images/quizzes/quiz02/elmos.png" /></p>
+
+<h4 id="3-20pts-loops--conditionals">3. [20pts] Loops + Conditionals</h4>
+
+<p>Open the <code class="highlighter-rouge">exercise03</code> folder. Inside of <code class="highlighter-rouge">main.js</code>, write a program, using any kind of loop you want, that draws all of the pictures to the screen where the <code class="highlighter-rouge">is_favorite</code> property is set to true. You don’t have to worry about formatting (the CSS), so long as following 8 images are displayed:</p>
+
+<p><img class="medium frame" src="/assets/images/quizzes/quiz02/photos.png" /></p>
+
+<p><strong>Hints</strong></p>
+<ul>
+  <li>Loop through the <code class="highlighter-rouge">photos</code> array.</li>
+  <li>If the current photo’s <code class="highlighter-rouge">is_favorite</code> property is set to true, append an image element (<code class="highlighter-rouge">img</code> tag) to the <code class="highlighter-rouge">&lt;div class="images"&gt;&lt;/div&gt;</code> container.</li>
+  <li>Consider using a template literal.</li>
+  <li>Partial credit will be given.</li>
+</ul>
+
+<h2 id="what-to-submit">What to Submit</h2>
+<p>Please doublecheck to make sure you’ve completed the 3 tasks described above. When you’re done:</p>
+
+<ol>
+  <li>Zip your entire <code class="highlighter-rouge">quiz02</code> folder that contains a <strong>COMPLETED</strong> version of the tasks. In other words, don’t accidentally submit the starter files or you will not receive any credit for the quiz.</li>
+  <li>Upload the <code class="highlighter-rouge">quiz02.zip</code> you just made to the course Moodle under <strong>Quiz 2.</strong></li>
+</ol>
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>

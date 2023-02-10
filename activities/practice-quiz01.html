@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Practice for Quiz 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+    <script defer src="/assets/js/fish-pond.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="https://communication.unca.edu/wp-content/themes/tin/assets/logo.svg" />
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li ><a href="/assignments/">Assignments</a></li>
+        <!-- <li ><a href="/final-project/">Final Project</a></li> -->
+        <li ><a href="/design-reference/">Web Reference</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1O7exzeo0Wg-RmAN7W20R10SSHdEt75Mx?usp=sharing" target="_blank">Videos</a></li>
+        <!-- <li ><a href="/resources/">Resources</a></li> -->
+        <!-- <li ><a href="/times-locations/">Calendar</a></li> -->
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#part-1-setup">Part 1: Setup</a></li>
+  <li><a href="#part-2-html-tasks">Part 2: HTML Tasks</a>
+    <ol>
+      <li><a href="#21-metadata">2.1. Metadata</a></li>
+      <li><a href="#22-header-section">2.2. Header Section</a></li>
+      <li><a href="#23-navigation">2.3. Navigation</a></li>
+      <li><a href="#24-main-section">2.4. Main Section</a></li>
+      <li><a href="#25-footer">2.5. Footer</a></li>
+    </ol>
+  </li>
+  <li><a href="#part-3-styling-tasks">Part 3: Styling tasks</a></li>
+  <li><a href="#what-to-submit-if-this-were-a-real-quiz">What to Submit (if this were a real quiz)</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>Practice for Quiz 1</h1>
+    
+ 
+                <style>
+    img {
+        max-width: 70%;
+    }
+</style>
+
+<p>To study for Quiz 1, please complete the practice quiz by downloading the starter files and following the instructions (below). If you have questions, please ask during class time or in office hours.</p>
+
+<p><a href="/course-files/activities/practice-quiz01.zip" class="nu-button">Download Starter Files <i class="fas fa-download"></i></a></p>
+
+<h2 id="part-1-setup">Part 1: Setup</h2>
+<p>You are going to build the webpage pictured below:</p>
+
+<p><img src="/assets/images/quizzes/practice_quiz01/exercise01.png" /></p>
+
+<p>Inside of the <code class="highlighter-rouge">practice-quiz01</code> folder, create a brand new HTML file called <code class="highlighter-rouge">index.html</code> that is a <strong><em>direct child</em></strong> of the <code class="highlighter-rouge">practice-quiz01</code> folder. If you did it correctly, your file structure should look like this:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>practice-quix01
+├── images
+│   ├── landscape1_300x200.jpg
+│   ├── landscape2_300x200.jpg
+│   └── landscape3_300x200.jpg
+├── index.html
+└── pages
+    ├── about.html
+    └── gallery.html
+</code></pre></div></div>
+
+<p>Edit <code class="highlighter-rouge">index.html</code> file by adding an HTML “skeleton” with the following tags:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;head&gt;</span>
+   <span class="nt">&lt;/head&gt;</span>
+   <span class="nt">&lt;body&gt;</span>
+   <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h2 id="part-2-html-tasks">Part 2: HTML Tasks</h2>
+<p>Edit the <code class="highlighter-rouge">index.html</code> pages as follows:</p>
+
+<h3 id="21-metadata">2.1. Metadata</h3>
+<ol>
+  <li>Add a <code class="highlighter-rouge">title</code> tag inside of the <code class="highlighter-rouge">head</code> tag, with the display text of “Practice Quiz 1: Your Name.”</li>
+</ol>
+
+<h3 id="22-header-section">2.2. Header Section</h3>
+<ol>
+  <li>Add a <code class="highlighter-rouge">header</code> tag inside the <code class="highlighter-rouge">body</code> tag (don’t get the head and the header tag confused).</li>
+  <li>Inside the <code class="highlighter-rouge">header</code> tag, create an <code class="highlighter-rouge">h1</code> tag that displays the text “Practice Quiz 1: Your Name.”</li>
+</ol>
+
+<h3 id="23-navigation">2.3. Navigation</h3>
+<ol>
+  <li>Below the <code class="highlighter-rouge">header</code> tag, create a navigation section using the <code class="highlighter-rouge">nav</code> tag.</li>
+  <li>Inside of the <code class="highlighter-rouge">nav</code> tag, create three hyperlinks:
+    <ul>
+      <li>One that links to <code class="highlighter-rouge">gallery.html</code> (in the pages folder) with the display text of “Photo Gallery”. Use a <strong>relative path</strong>.</li>
+      <li>One that links to <code class="highlighter-rouge">about.html</code> with the display text of “About Us”. Also use a <strong>relative path</strong>.</li>
+      <li>One that links to Instagram’s home page, the display text of “Instagram”. Use an <strong>absolute path</strong>.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Note:</strong> you may not move the gallery.html or about.html files outside of the <code class="highlighter-rouge">pages</code> folder.</p>
+
+<h3 id="24-main-section">2.4. Main Section</h3>
+<ol>
+  <li>Below the <code class="highlighter-rouge">nav</code> tag, create a <code class="highlighter-rouge">main</code> tag.</li>
+  <li>Inside the <code class="highlighter-rouge">main</code> tag, create a section that has an id of “images”.</li>
+  <li>Inside of the section you just made, create 3 <code class="highlighter-rouge">img</code> tags that display the three images in the <code class="highlighter-rouge">images</code> folder, using <strong>relative paths</strong>.
+    <ul>
+      <li>Don’t forget to use the <code class="highlighter-rouge">alt</code> attribute to give each image a description (for people who use a screen reader).</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="25-footer">2.5. Footer</h3>
+<p>Create a footer section below your <code class="highlighter-rouge">main</code> section using the <code class="highlighter-rouge">footer</code> tag. Within the footer, create a paragraph tag that says “Copyright Your Name, 2023.”</p>
+
+<h2 id="part-3-styling-tasks">Part 3: Styling tasks</h2>
+<p>Create a CSS file called <code class="highlighter-rouge">styles.css</code> that is a <strong><em>direct child</em></strong> of the <code class="highlighter-rouge">practice-quiz01</code> folder. If you did it correctly, your file structure should look like this:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>practice-quix01
+├── images
+│   ├── landscape1_300x200.jpg
+│   ├── landscape2_300x200.jpg
+│   └── landscape3_300x200.jpg
+├── index.html
+├── pages
+│   ├── about.html
+│   └── gallery.html
+└── styles.css
+</code></pre></div></div>
+
+<p>Edit your <code class="highlighter-rouge">index.html</code> file by adding a link to your stylesheet. Then, complete the following tasks within <code class="highlighter-rouge">styles.css</code>:</p>
+
+<ol>
+  <li>Create a rule for the <code class="highlighter-rouge">body</code> element that sets the background color to a light gray (<code class="highlighter-rouge">#F0F4EF</code>).</li>
+  <li>Create some style rules for the <code class="highlighter-rouge">header</code> element (and any relevant child elements) to:
+    <ul>
+      <li>Set the background color to <code class="highlighter-rouge">#b4cded</code></li>
+      <li>Center the text horizontally and vertically.</li>
+      <li>Set the font family to <code class="highlighter-rouge">Impact</code>.</li>
+    </ul>
+  </li>
+  <li>Create some style rules for the <code class="highlighter-rouge">nav</code> element (and any relevant child elements) to:
+    <ul>
+      <li>Center-align the hyperlinks</li>
+      <li>Turn the background color to black</li>
+      <li>Set the link color to white, no underline, and bold (<a href="https://www.w3schools.com/css/css_link.asp">hint</a>).</li>
+    </ul>
+  </li>
+  <li>Create some style rules to ensure that the three images are all in a row, evenly spaced, and with the same width. You may use any technique you want to do this, so long as you’re using CSS. See the screenshot above.</li>
+  <li>Create some style rules to set the footer’s background color to <code class="highlighter-rouge">#344966</code>, and the footer’s text color to white.</li>
+</ol>
+
+<h2 id="what-to-submit-if-this-were-a-real-quiz">What to Submit (if this were a real quiz)</h2>
+<p>If this were the real quiz, you would commit and push your changes (like we’ve been doing in class). Then, you would paste two links into the Quiz 1 section;</p>
+<ol>
+  <li>A link to your code repository (e.g., <a href="https://github.com/vanwars/csci185-coursework">https://github.com/vanwars/csci185-coursework</a>)</li>
+  <li>A link to your homepage (e.g., <a href="https://vanwars.github.io/csci185-coursework">https://vanwars.github.io/csci185-coursework</a>)</li>
+</ol>
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>

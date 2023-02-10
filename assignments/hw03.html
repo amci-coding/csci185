@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Assigning CSS Properties Using Selectors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+    <script defer src="/assets/js/fish-pond.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="https://communication.unca.edu/wp-content/themes/tin/assets/logo.svg" />
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li class="active"><a href="/assignments/">Assignments</a></li>
+        <!-- <li ><a href="/final-project/">Final Project</a></li> -->
+        <li ><a href="/design-reference/">Web Reference</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1O7exzeo0Wg-RmAN7W20R10SSHdEt75Mx?usp=sharing" target="_blank">Videos</a></li>
+        <!-- <li ><a href="/resources/">Resources</a></li> -->
+        <!-- <li ><a href="/times-locations/">Calendar</a></li> -->
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#your-tasks">Your Tasks</a>
+    <ol>
+      <li><a href="#1-selector-practice-css-diners-4pts">1. Selector Practice: CSS Diners (4pts)</a></li>
+      <li><a href="#2-practice-assigning-css-rules-using-selectors-6pts">2. Practice Assigning CSS Rules Using Selectors (6pts)</a></li>
+      <li><a href="#3-practice-importing-a-google-font-5pts">3. Practice Importing a Google Font (5pts)</a></li>
+    </ol>
+  </li>
+  <li><a href="#what-to-submit">What to Submit</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            HW3: Assigning CSS Properties Using Selectors
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Mon, 02/06 @ 11:59PM.
+    
+    
+        15 Points.
+    
+    
+</p>
+
+<style>
+    .continuous {
+        display: flex;
+        flex-direction: column;
+        border: solid 1px #CCC;
+        border-radius: 4px;
+        padding: 5px;
+        max-width: 600px;
+    }
+
+    .continuous img {
+        width: 100%;
+    }
+    .continuous img:nth-child(2) {
+        margin-left: 1px;
+        width: 99.9%;
+    }
+</style>
+
+<h2 id="your-tasks">Your Tasks</h2>
+<p>Before you begin, please download the Homework 3 starter files.</p>
+
+<p><a href="/course-files/homework/hw03.zip" class="nu-button">Homework 3 Starter Files <i class="fas fa-download"></i></a></p>
+
+<h3 id="1-selector-practice-css-diners-4pts">1. Selector Practice: CSS Diners (4pts)</h3>
+<p>Complete the first 14 steps of <a href="https://flukeout.github.io/" target="_blank">CSS Diner</a>. When you’re done, take a screenshot showing you completed all of the levels. Your screenshot should have a green checkmark next to each level (like the one below but with checkmarks).</p>
+
+<p><img class="small frame" src="/assets/images/homework/hw03/exercise01.png" /></p>
+
+<p>Note that Quiz 1 will expect you to know all of the selectors, so make sure that you understand and review each of the 14 steps to study for Quiz 1.</p>
+
+<h3 id="2-practice-assigning-css-rules-using-selectors-6pts">2. Practice Assigning CSS Rules Using Selectors (6pts)</h3>
+
+<p>For Task #2, you will style the <code class="highlighter-rouge">index.html</code> file – by editing <code class="highlighter-rouge">styles.css</code> – so that it looks like <a href="https://drive.google.com/file/d/1dqZdvTELzxYBOoTtsxxa30IEvw_MAKT5/view?usp=sharing" target="_blank">this video</a> (also pictured below).</p>
+
+<div class="continuous">
+    <img src="/assets/images/homework/hw03/exercise02a.png" /> 
+    <img src="/assets/images/homework/hw03/exercise02b.png" />
+</div>
+
+<p>To do this, open the <code class="highlighter-rouge">exercise02</code> folder and complete the tasks below. You may only edit the stylesheet (<code class="highlighter-rouge">styles.css</code>). <strong>Do not edit anything inside <code class="highlighter-rouge">index.html</code>.</strong> Note that there are many ways to come up with a correct answer.</p>
+
+<ul class="checkbox-list">
+  <li><strong>[1pt]</strong> Give the main section some margin on the left and right sides so that it looks like the image shown above (try <code class="highlighter-rouge">15vw</code>).</li>
+  <li><strong>[1pt]</strong> Set the background color of the first, third, and fifth cards to <code class="highlighter-rouge">#EEEEEE</code>.</li>
+  <li><strong>[1pt]</strong> Set the background color of the second, fourth, and sixth cards to <code class="highlighter-rouge">#BCE5D6</code>.</li>
+  <li><strong>[1pt]</strong> Make the images inside the first, third, and fifth card circular.</li>
+  <li><strong>[1pt]</strong> Set the font family of all of the text to <code class="highlighter-rouge">'Courier New'</code>. Remember that fonts cascade, so you could just set it in one place (but there are many other ways to do it as well).</li>
+  <li><strong>[1pt]</strong> Set the font weight of the <strong>first paragraph</strong> and the <strong>paragraph inside the footer</strong> to bold. The paragraphs inside the cards should <strong>NOT</strong> be bold.</li>
+</ul>
+
+<h3 id="3-practice-importing-a-google-font-5pts">3. Practice Importing a Google Font (5pts)</h3>
+<p>Open <code class="highlighter-rouge">exercise03</code> and use CSS to assign a custom Google Font font to the <code class="highlighter-rouge">h1</code> and <code class="highlighter-rouge">h2</code> tags.</p>
+
+<ul>
+  <li>Note: the example shown below is using the “Sacramento” font (imported from <a href="https://fonts.google.com/specimen/Sacramento" target="_blank">Google Fonts</a>), but you may use any font that you want.</li>
+</ul>
+
+<p>Feel free to Google “How to use a Google Font in CSS” if you need help, or consult one or more of the links provided below:</p>
+<ul>
+  <li><a href="https://www.w3docs.com/snippets/css/how-to-import-google-fonts-in-css-file.html" target="_blank">https://www.w3docs.com/snippets/css/how-to-import-google-fonts-in-css-file.html</a></li>
+  <li><a href="https://developers.google.com/fonts/docs/getting_started" target="_blank">https://developers.google.com/fonts/docs/getting_started</a></li>
+  <li><a href="https://www.w3schools.com/css/css_font_google.asp" target="_blank">https://www.w3schools.com/css/css_font_google.asp</a></li>
+</ul>
+
+<p><img class="frame xsmall" src="/assets/images/homework/hw03/exercise03.png" /></p>
+
+<p>Before you submit:</p>
+<ul>
+  <li>Ensure that only the <code class="highlighter-rouge">h1</code> and <code class="highlighter-rouge">h2</code> tags have been assigned the font (and not all of the text).</li>
+</ul>
+
+<h2 id="what-to-submit">What to Submit</h2>
+<p><strong>Please Read Carefully:</strong> To submit Homework 3, please paste the following links into the Moodle under the Homework 3 submission section:</p>
+
+<ol>
+  <li>A link to your <strong>homepage</strong> (from Tutorial 3) on GitHub pages, which should link to your <code class="highlighter-rouge">hw03</code> assignment (and previous tutorials and classwork you have done).</li>
+  <li>A link to your GitHub <strong>code repository</strong> (where your code files are stored).</li>
+</ol>
+
+<p><strong>IMPORTANT</strong>: Make sure that your CSS Diner screenshot is saved in your <code class="highlighter-rouge">hw03/exercise01</code> folder before you commit / send your files to GitHub.</p>
+
+
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>

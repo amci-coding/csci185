@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Linking to Internet Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+    <script defer src="/assets/js/fish-pond.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="https://communication.unca.edu/wp-content/themes/tin/assets/logo.svg" />
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li class="active"><a href="/assignments/">Assignments</a></li>
+        <!-- <li ><a href="/final-project/">Final Project</a></li> -->
+        <li ><a href="/design-reference/">Web Reference</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1O7exzeo0Wg-RmAN7W20R10SSHdEt75Mx?usp=sharing" target="_blank">Videos</a></li>
+        <!-- <li ><a href="/resources/">Resources</a></li> -->
+        <!-- <li ><a href="/times-locations/">Calendar</a></li> -->
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#overview">Overview</a>
+    <ol>
+      <li><a href="#task01">[10pts] Task 1: Linking to Pages &amp; Media Using Relative &amp; Absolute Paths</a></li>
+      <li><a href="#task02">[6pts] Task 2: Using Semantic Containers</a>
+        <ol>
+          <li><a href="#please-read-carefully">Please Read Carefully</a></li>
+        </ol>
+      </li>
+      <li><a href="#task03">[4pts] Task 3: Publishing to GitHub using git</a></li>
+    </ol>
+  </li>
+  <li><a href="#what-to-submit">What to Submit</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            HW2: Linking to Internet Resources
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Mon, 01/30 @ 11:59PM.
+    
+    
+        20 Points.
+    
+    
+</p>
+
+<h2 id="overview">Overview</h2>
+<p>For your second homework, you will practice some basic HTML tasks that are fundamental to the development of high-quality websites:</p>
+
+<ol>
+  <li><a href="#task01">Linking</a></li>
+  <li><a href="#task02">Using Semantic Containers</a></li>
+  <li><a href="#task03">Publishing to GitHub</a></li>
+</ol>
+
+<p>Please download the starter files (below) and complete the tasks described below. Read the instructions that are outlined under each task <strong>very carefully.</strong> You must complete each exercise exactly as the instructions indicate to receive full credit. Otherwise, you will receive partial credit for the parts you correctly completed.</p>
+
+<p><a href="/course-files/homework/hw02.zip" class="nu-button">Homework 2 Starter Files <i class="fas fa-download"></i></a></p>
+
+<h3 id="task01">[10pts] Task 1: Linking to Pages &amp; Media Using Relative &amp; Absolute Paths</h3>
+
+<p>For Task #1, You will be creating the website shown in <a href="https://drive.google.com/file/d/1tUF1rB-0q2iHU6vUaITRbd1Uy6ZAoO16/view?usp=sharing" target="_blank">this video</a> and pictured in the screenshots below.</p>
+
+<p><img class="small frame" src="/assets/images/homework/hw02/home.png" /> <img class="small frame" src="/assets/images/homework/hw02/mammals.png" /> <img class="small frame" src="/assets/images/homework/hw02/reptiles.png" /> <img class="small frame" src="/assets/images/homework/hw02/sea-creatures.png" /></p>
+
+<p>To do this, open the <code class="highlighter-rouge">task01</code> folder. You should see a file structure that looks like this:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>task01
+├── images
+│   ├── mammals
+│   │   ├── fox.jpeg
+│   │   ├── lion.jpg
+│   │   ├── monkey.jpg
+│   │   ├── squirrel.jpg
+│   │   ├── tiger.png
+│   │   └── zebra.jpeg
+│   ├── reptiles
+│   │   ├── chameleon.jpeg
+│   │   └── turtle.jpeg
+│   └── sea-creatures
+│       ├── fish
+│       │   └── fish.png
+│       └── other
+│           └── jellyfish.jpeg
+├── index.html
+├── pages
+│   ├── mammals.html
+│   ├── reptiles.html
+│   └── sea-creatures.html
+└── styles.css
+</code></pre></div></div>
+
+<p>Then, complete the 4 subtasks:</p>
+
+<ul class="checkbox-list">
+  <li><strong>[2pts]</strong> Modify <code class="highlighter-rouge">index.html</code>, <code class="highlighter-rouge">mammals.html</code>, <code class="highlighter-rouge">reptiles.html</code>, and <code class="highlighter-rouge">sea-creatures.html</code> so that each page links to the <code class="highlighter-rouge">styles.css</code> stylesheet. You will know that you did it correctly if the web page looks styled when you preview it.</li>
+  <li><strong>[3pts]</strong> Modify the hyperlinks inside of the <code class="highlighter-rouge">&lt;nav&gt;</code> sections of <code class="highlighter-rouge">index.html</code>, <code class="highlighter-rouge">mammals.html</code>, <code class="highlighter-rouge">reptiles.html</code>, and <code class="highlighter-rouge">sea-creatures.html</code> so that every HTML page links to every other HTML page <strong>using relative paths</strong>.
+    <ul>
+      <li>In case it isn’t clear, the hyperlink associated with the “Home” link text should link to <code class="highlighter-rouge">index.html</code> (see the video above for a demo).</li>
+    </ul>
+  </li>
+  <li><strong>[3pts]</strong> Add images to <code class="highlighter-rouge">mammals.html</code>, <code class="highlighter-rouge">reptiles.html</code>, and <code class="highlighter-rouge">sea-creatures.html</code> inside of the <code class="highlighter-rouge">&lt;section class="photo-container"&gt;&lt;/section&gt;</code> tag. Ensure that you are using <strong>relative paths</strong> to the corresponding image in the <code class="highlighter-rouge">images</code> folder.
+    <ul>
+      <li>Mammals should display 6 images (fox, lion, monkey, squirrel, tiger, and zebra).</li>
+      <li>Reptiles should display 2 images (chameleon and turtle).</li>
+      <li>Sea Creatures should display 2 images (fish and jellyfish).</li>
+    </ul>
+  </li>
+  <li><strong>[2pts]</strong> Inside of <code class="highlighter-rouge">mammals.html</code>, <code class="highlighter-rouge">reptiles.html</code>, and <code class="highlighter-rouge">sea-creatures.html</code>, add a hyperlink to a Wikipedia page where you can learn more about each animal category. You will do this above the <code class="highlighter-rouge">&lt;section class="photo-container"&gt;&lt;/section&gt;</code> tag but still inside of the <code class="highlighter-rouge">&lt;main&gt;&lt;/main&gt;</code> tag.
+    <ul>
+      <li><code class="highlighter-rouge">mammals.html</code> should have a link to: https://en.wikipedia.org/wiki/Mammal.</li>
+      <li><code class="highlighter-rouge">reptiles.html</code> should have a link to: https://en.wikipedia.org/wiki/Reptile.</li>
+      <li><code class="highlighter-rouge">sea-creatures.html</code> should have a link to: https://en.wikipedia.org/wiki/Marine_life.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="task02">[6pts] Task 2: Using Semantic Containers</h3>
+<p>For your second task, you are going to practice working with <strong><em>semantic</em></strong> tags. Recall that semantic tags help screen readers and search engines (i.e., robots) understand the structure of your webpage. Using these tags effectively has huge implications for the usability of your website and how effectively search engines and web scrapers are able to index and understand what your page is about.</p>
+
+<p>To practice using semantic tags, you are going to do two things:</p>
+<ol>
+  <li>Read <a href="https://htmlandcssguidebook.com/html/html5-semantic/" target="_blank">this article on semantic tags</a></li>
+  <li>Complete <a href="https://htmlandcssguidebook.com/quizzes/html-semantic.html" target="_blank">this quiz</a> on semantic HTML and copy the completed HTML to <code class="highlighter-rouge">task02/history.html</code> (inside the body tag).</li>
+</ol>
+
+<blockquote>
+  <h4 id="please-read-carefully">Please Read Carefully</h4>
+  <p>You will submit your <code class="highlighter-rouge">task02</code> answers as follows:</p>
+  <ol>
+    <li>Before you click the “Check Your Work” button on Step 10 (the last step of the quiz), you will copy all of the HTML code (with all the edits that you made) and paste your code inside of the body tag in the <code class="highlighter-rouge">task02/history.html</code> file.</li>
+    <li><strong>Important:</strong> Make sure that you copy all of your code <strong>BEFORE</strong> you click the “Check Your Work” button. Once you successfully complete Step 10, the quiz <strong>WILL NOT LET YOU GO BACK</strong> and preview your work, so you’ll have to do it again (which is good practice, but also annoying).</li>
+    <li>If you correctly completed the assignment, your <code class="highlighter-rouge">task02/history.html</code> web page will look like the web page pictured below:</li>
+  </ol>
+</blockquote>
+
+<p><img class="large frame" src="/assets/images/homework/hw02/hw02-task02.gif" /></p>
+
+<h3 id="task03">[4pts] Task 3: Publishing to GitHub using git</h3>
+<p>When you’re done with <code class="highlighter-rouge">task01</code> and <code class="highlighter-rouge">task02</code>:</p>
+
+<ul class="checkbox-list">
+  <li>Ensure that all of your folders and files are lowercase with no spaces.</li>
+  <li>Ensure that your repository on GitHub is called csci185-coursework (and if it’s not, rename it).</li>
+  <li>Create a link to from your homepage (which you created during Tutorial 3) to the index.html you just made (which should be stored in the <code class="highlighter-rouge">homework/hw02</code> folder). Recall that your homepage is at the root of your csci185 folder.</li>
+  <li>Commit and push all of your changes to GitHub (like we did in Tutorials 3).</li>
+</ul>
+
+<p>Here is what my homepage looks like after I’ve published it, except for your HW2 will be a completed HW2 (versus the starter files):</p>
+
+<ul>
+  <li>Webpage: <a href="https://vanwars.github.io/csci185-coursework/" target="_blank">https://vanwars.github.io/csci185-coursework/</a></li>
+  <li>Code: <a href="https://github.com/vanwars/csci185-coursework" target="_blank">https://github.com/vanwars/csci185-coursework</a></li>
+</ul>
+
+<h2 id="what-to-submit">What to Submit</h2>
+<p>Please Read Carefully: To submit Homework 2, please paste the following links into the Moodle under the Homework 2 submission section (just like you did for Tutorial 3):</p>
+
+<ol>
+  <li>A link to your homepage (the one you made in Tutorial 3) on GitHub pages, which should link to your <code class="highlighter-rouge">hw02</code> assignment (and previous tutorials and classwork you have done).</li>
+  <li>A link to your GitHub code repository (where your code files are stored).</li>
+</ol>
+
+
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>
