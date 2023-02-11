@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>Intro to HTML Forms + CSS Practice</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="../assets/main.css">
+        <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="../assets/images/unca-logo.svg" />
+
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="../syllabus/index.html">Syllabus</a></li>
+        <li ><a href="../index.html" >Schedule</a></li>
+        <li class="active"><a href="../assignments/index.html">Assignments</a></li>
+        <li ><a href="../design-reference/index.html">Web Reference</a></li>
+        
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#your-tasks">Your Tasks</a>
+    <ol>
+      <li><a href="#1-make-a-form">1. Make a Form</a></li>
+      <li><a href="#2-sending-data-using-a-form">2. Sending data using a form</a>
+        <ol>
+          <li><a href="#how-did-it-work">How did it work?</a></li>
+        </ol>
+      </li>
+      <li><a href="#3-styling-your-page">3. Styling your page</a>
+        <ol>
+          <li><a href="#31-text-formatting">3.1. Text formatting</a></li>
+          <li><a href="#32-add-padding-to-the-various-containers">3.2. Add padding to the various containers</a></li>
+          <li><a href="#33-format-the-header">3.3. Format the header</a></li>
+          <li><a href="#34-change-the-height-of-the-about-and-contact-sections">3.4. Change the height of the “about” and “contact” sections</a></li>
+          <li><a href="#35-change-the-background-color-of-the-about-and-footer-sections">3.5. Change the background color of the “about” and footer sections</a></li>
+          <li><a href="#36-format-the-dessert-cards">3.6 Format the dessert cards</a></li>
+          <li><a href="#36-format-the-images-inside-of-the-dessert-cards">3.6. Format the images inside of the dessert cards</a></li>
+          <li><a href="#37-format-the-form">3.7. Format the Form</a></li>
+        </ol>
+      </li>
+      <li><a href="#4-link-the-pages-together">4. Link the pages together</a></li>
+    </ol>
+  </li>
+  <li><a href="#what-to-turn-in">What to turn in</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            Tutorial 4: Intro to HTML Forms + CSS Practice
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Fri, 02/03 @ 11:59PM.
+    
+    
+        6 Points.
+    
+    
+</p>
+
+<p>In today’s tutorial, you are going to make a website for a bakery, which will involve:</p>
+
+<ol class="compact">
+  <li>Creating HTML form so that people can contact you,</li>
+  <li>Connecting your form submission to a server address – so that the submitted data can be processed,</li>
+  <li>Styling your bakery homepage, and</li>
+  <li>Linking between your various bakery pages.</li>
+</ol>
+
+<p>When you’re done, your bakery homepage should look like the image shown below:</p>
+
+<p><img class="large frame" src="../assets/images/tutorials/tutorial04/bakery.png" /></p>
+<ul>
+  <li><a href="https://drive.google.com/file/d/1aqucLyog0FDIEjgPPel33V049xu3aOuq/view?usp=sharing">video demo here</a></li>
+</ul>
+
+<p>Please download the starter files, unzip them, and save them inside of your <code class="highlighter-rouge">csci185/tutorials</code> folder.</p>
+
+<p><a href="../course-files/tutorials/tutorial04.zip" class="nu-button">Download Tutorial Files <i class="fas fa-download"></i></a></p>
+
+<p>Then complete the following tasks:</p>
+
+<h2 id="your-tasks">Your Tasks</h2>
+<h3 id="1-make-a-form">1. Make a Form</h3>
+<p>Add the following form tags to the <code class="highlighter-rouge">&lt;section id="contact"&gt;&lt;/section&gt;</code> of the form:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"#"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Contact Us<span class="nt">&lt;/h2&gt;</span>
+                
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"name"</span><span class="nt">&gt;</span>Name:<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">required</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email:<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">required</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"message"</span><span class="nt">&gt;</span>Message:<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"message"</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">spellcheck=</span><span class="s">"true"</span> <span class="na">rows=</span><span class="s">"10"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+        
+    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"submit"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send<span class="nt">&lt;/button&gt;</span>
+
+    <span class="c">&lt;!-- This is a hidden form field 
+    (invisible to the user, but necessary for the form) --&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">id=</span><span class="s">"redirect"</span> <span class="na">name=</span><span class="s">"_next"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+            
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+<p>When you’re done, please take a look at the <code class="highlighter-rouge">input</code>, <code class="highlighter-rouge">label</code> and <code class="highlighter-rouge">button</code> tags. Note how each tag creates a different form control (or label).</p>
+
+<h3 id="2-sending-data-using-a-form">2. Sending data using a form</h3>
+<p>In order to get your form to work, you need to teach your web browser where to send the data that users type into the form. There are many ways to do this. We will be using a free service called <a href="https://formsubmit.co/" target="_blank">Form Submit</a>. To get your form to work with formsubmit, please do the following:</p>
+
+<ol>
+  <li>Modify your form’s <code class="highlighter-rouge">action</code> attribute by replacing the <code class="highlighter-rouge">#</code> with this web address:<br /> <code class="highlighter-rouge">https://formsubmit.co/your_email@provider.com</code>.</li>
+  <li>Replace <code class="highlighter-rouge">your_email@provider.com</code> with <strong>your email address</strong>.</li>
+  <li>Test your form by:
+    <ul>
+      <li>Previewing <code class="highlighter-rouge">index.html</code> in the web browser</li>
+      <li>Filling it out and pressing the “Send” button (and completing the captcha if prompted)</li>
+      <li>Checking your email</li>
+    </ul>
+  </li>
+</ol>
+
+<p>If you did it right, you should have received an email with the information you filled out in the form you just submitted (it might be in your spam folder).</p>
+
+<h4 id="how-did-it-work">How did it work?</h4>
+<p>Your browser sent all of the data that you typed into the form to a server located at this address: <code class="highlighter-rouge">https://formsubmit.co</code>. The “Form Submit” server then relayed that information to your email address (which you specified in the action attribute). There are many ways to send data to a server. Using the form’s built-in <code class="highlighter-rouge">action</code> attribute is one of those ways.</p>
+
+<h3 id="3-styling-your-page">3. Styling your page</h3>
+<p>Once you’ve got your form working, it’s time to style it! In this section, the style declarations will be provided for you, but it’s up to you to figure out what selector to use.</p>
+
+<h4 id="31-text-formatting">3.1. Text formatting</h4>
+<p>Create a rule that assigns the following style declaration(s) to all of the <code class="highlighter-rouge">p</code> elements on the page:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">font-size</span><span class="o">:</span> <span class="err">1</span><span class="o">.</span><span class="err">1</span><span class="nt">em</span><span class="o">;</span>
+<span class="nt">line-height</span><span class="o">:</span> <span class="err">1</span><span class="o">.</span><span class="err">6</span><span class="nt">em</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h4 id="32-add-padding-to-the-various-containers">3.2. Add padding to the various containers</h4>
+<p>Create a rule that assigns the following style declaration(s) to all of the <code class="highlighter-rouge">header</code>, <code class="highlighter-rouge">section</code>, and <code class="highlighter-rouge">footer</code> elements on the page.</p>
+<ul>
+  <li>Hint: use a <a href="https://www.w3schools.com/css/css_selectors.asp" target="_blank">grouping selector</a>.</li>
+</ul>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">padding</span><span class="o">:</span> <span class="err">60</span><span class="nt">px</span> <span class="err">15</span><span class="nt">vw</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h4 id="33-format-the-header">3.3. Format the header</h4>
+<p>Format the <code class="highlighter-rouge">header</code> tag by giving it the following style declaration(s):</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">background</span><span class="o">:</span> <span class="nf">#F4F4F4</span><span class="o">;</span>
+<span class="nt">height</span><span class="o">:</span> <span class="err">150</span><span class="nt">px</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h4 id="34-change-the-height-of-the-about-and-contact-sections">3.4. Change the height of the “about” and “contact” sections</h4>
+<p>Create a rule that assigns the following style declaration(s) to the <code class="highlighter-rouge">id="about"</code> and <code class="highlighter-rouge">id="contact"</code> elements of the page</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">min-height</span><span class="o">:</span> <span class="err">100</span><span class="nt">vh</span><span class="o">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>This rule ensures that the height of each section is at least the size of the window.</li>
+</ul>
+
+<h4 id="35-change-the-background-color-of-the-about-and-footer-sections">3.5. Change the background color of the “about” and footer sections</h4>
+<p>Create a rule that assigns the following style declaration(s) to the <code class="highlighter-rouge">id="about"</code> and <code class="highlighter-rouge">footer</code> elements.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">background</span><span class="o">:</span> <span class="nf">#F4F4F4</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h4 id="36-format-the-dessert-cards">3.6 Format the dessert cards</h4>
+<p>Create a rule that assigns the following style declaration(s) to all of the elements that have a class of “item”:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">display</span><span class="o">:</span> <span class="nt">inline-block</span><span class="o">;</span>
+<span class="nt">width</span><span class="o">:</span> <span class="err">28</span><span class="o">%;</span>
+<span class="nt">margin-bottom</span><span class="o">:</span> <span class="err">50</span><span class="nt">px</span><span class="o">;</span>
+<span class="nt">margin-right</span><span class="o">:</span> <span class="err">30</span><span class="nt">px</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>A few notes:</p>
+<ul>
+  <li><code class="highlighter-rouge">display: inline-block;</code> makes the cards so that they are arranged side-by-side.</li>
+  <li><code class="highlighter-rouge">width: 28%;</code> ensure that there are roughly three cards per row (accounting for the right margin).</li>
+  <li>the <code class="highlighter-rouge">margin-right</code> and <code class="highlighter-rouge">margin-bottom</code> properties create space between each card.</li>
+</ul>
+
+<h4 id="36-format-the-images-inside-of-the-dessert-cards">3.6. Format the images inside of the dessert cards</h4>
+<p>Create a rule that assigns the following style declaration(s) to all of the images that are inside of an element with a class of “item”:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">width</span><span class="o">:</span> <span class="err">100</span><span class="o">%;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>This will ensure that the image fits to the size of its parent container.</li>
+</ul>
+
+<h4 id="37-format-the-form">3.7. Format the Form</h4>
+<p>Finally, add the following rulesets to the end of the stylesheet to format the links and the form:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.item</span> <span class="nt">a</span><span class="o">,</span> 
+<span class="nc">.item</span> <span class="nt">a</span><span class="nd">:link</span><span class="o">,</span> 
+<span class="nc">.item</span> <span class="nt">a</span><span class="nd">:visited</span><span class="o">,</span> 
+<span class="nc">.item</span> <span class="nt">a</span><span class="nd">:hover</span><span class="o">,</span> 
+<span class="nc">.item</span> <span class="nt">a</span><span class="nd">:link</span><span class="o">,</span>
+<span class="nt">button</span> <span class="p">{</span>
+    <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">8px</span> <span class="m">15px</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="nb">solid</span> <span class="m">2px</span> <span class="no">black</span><span class="p">;</span>
+    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#contact</span> <span class="nt">form</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">600px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="m">#F4F4F4</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#contact</span> <span class="nt">label</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">75px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span> <span class="m">0px</span> <span class="m">5px</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nf">#contact</span> <span class="nt">input</span><span class="o">,</span> <span class="nf">#contact</span> <span class="nt">textarea</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">550px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="m">#FFF</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="nb">solid</span> <span class="m">1px</span> <span class="m">#CCC</span><span class="p">;</span>
+    <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.2em</span><span class="p">;</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* Formatting for Detail Page */</span>
+
+<span class="nc">.detail</span> <span class="nt">img</span><span class="o">,</span> <span class="nc">.detail</span> <span class="nc">.description</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.detail</span> <span class="nt">img</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">40%</span><span class="p">;</span>
+    <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">top</span><span class="p">;</span>
+    <span class="nl">margin-right</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.detail</span> <span class="nc">.description</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">55%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="nt">a</span><span class="o">,</span>
+<span class="nt">h1</span> <span class="nt">a</span><span class="nd">:visited</span><span class="o">,</span>
+<span class="nt">h1</span> <span class="nt">a</span><span class="nd">:active</span><span class="o">,</span>
+<span class="nt">h1</span> <span class="nt">a</span><span class="nd">:link</span><span class="o">,</span>
+<span class="nt">h1</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+    <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">h1</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">underline</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>For the sake of time, the form and detail page formatting has been done for you. That said, take a look at each ruleset and see if you can understand what it does!</p>
+
+<h3 id="4-link-the-pages-together">4. Link the pages together</h3>
+<p>Finally, to give you more practice re: linking (to prepare you for Quiz 1), please complete the following HTML tasks:</p>
+<ol>
+  <li>Modify all of the “MORE” links so that they link to their respective “detail page.”</li>
+  <li>Preview all of the detail pages. If some of them don’t link to the stylesheet, add the stylesheet links. See <code class="highlighter-rouge">pages/batons.html</code> for a sample.</li>
+  <li>For each “detail” page, add a hyperlink <strong><em>inside of</em></strong> the <code class="highlighter-rouge">&lt;h1&gt;</code> tag that links back to the main page.</li>
+</ol>
+
+<h2 id="what-to-turn-in">What to turn in</h2>
+<p>After completing Tutorial 4, please publish everything to GitHub (stage, commit, and sync). Then, in the Moodle, paste a link to:</p>
+<ol>
+  <li>Your GitHub pages homepage (the link that visually displays your homepage)</li>
+  <li>Your repository (the link that displays your code)</li>
+</ol>
+
+<p>For example, Sarah would submit:</p>
+<ul>
+  <li>GitHub pages homepage: <a href="https://vanwars.github.io/csci185-coursework/">https://vanwars.github.io/csci185-coursework/</a></li>
+  <li>Repository: <a href="https://github.com/vanwars/csci185-coursework">https://github.com/vanwars/csci185-coursework</a></li>
+</ul>
+
+
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="../assets/js/main.js"></script>
+    
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="../assets/js/scrollspy.js"></script>
+    </body>
+</html>

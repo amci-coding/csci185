@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>CSS Grid & Flex Practice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/main.css">
+    <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
+    
+    
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="../assets/images/unca-logo.svg" />
+
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="../syllabus/index.html">Syllabus</a></li>
+        <li ><a href="../index.html" >Schedule</a></li>
+        <li class="active"><a href="../assignments/index.html">Assignments</a></li>
+        <li ><a href="../design-reference/index.html">Web Reference</a></li>
+        
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#overview">Overview</a>
+    <ol>
+      <li><a href="#references">References</a>
+        <ol>
+          <li><a href="#common-css-properties-and-techniques">Common CSS Properties and Techniques</a></li>
+          <li><a href="#css-grid">CSS Grid</a></li>
+          <li><a href="#flex">Flex</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#your-tasks">Your Tasks</a>
+    <ol>
+      <li><a href="#1-flexbox-froggy">1. Flexbox Froggy</a></li>
+      <li><a href="#2-center-align-elements-within-a-container">2. Center-align elements within a container</a></li>
+      <li><a href="#3-create-a-navigation-bar">3. Create a Navigation Bar</a></li>
+      <li><a href="#4-css-grid-garden">4. CSS Grid Garden</a></li>
+      <li><a href="#5-create-this-layout">5. Create this layout</a></li>
+      <li><a href="#6-create-the-taco-temple-layout">6. Create the Taco Temple layout</a></li>
+      <li><a href="#7-create-the-following-mobile--responsive-layout">7. Create the following mobile / responsive layout</a></li>
+    </ol>
+  </li>
+  <li><a href="#what-to-turn-in">What to turn in</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            HW4: CSS Grid & Flex Practice
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Mon, 02/20 @ 11:59PM.
+    
+    
+        20 Points.
+    
+    
+</p>
+
+<style>
+    img.xsmall {
+        max-width: 250px;
+        width: 60%;
+    }
+    img.large {
+        max-width: 100%;
+        width: 100%;
+    }
+</style>
+
+<h2 id="overview">Overview</h2>
+<p>This homework can be completed individually or in pairs. Working in pairs does not mean “splitting up the work” so that each person does half of the tasks. Rather, both parties should complete the tasks and help one another as questions arise.</p>
+
+<h3 id="references">References</h3>
+<p>CSS is best understood through practice, and by consulting online resources as needed. Here are a curated list of resources that should help you complete your tasks:</p>
+
+<h4 id="common-css-properties-and-techniques">Common CSS Properties and Techniques</h4>
+
+<ul class="compact">
+  <li><a href="../css-reference/rules-of-thumb/">CSS Rules of Thumb</a></li>
+  <li><a href="../css-reference/selectors/">Selectors</a>
+    <ul>
+      <li><a href="https://flukeout.github.io/">CSS Diner</a></li>
+    </ul>
+  </li>
+  <li><a href="../css-reference/color/">Color</a></li>
+  <li><a href="/css-reference/units/">CSS Units</a></li>
+  <li><a href="../css-reference/fonts/">Text &amp; Fonts</a></li>
+  <li><a href="../css-reference/box-model/">The Box Model</a></li>
+  <li><a href="../css-reference/css-grid/">CSS Grid</a></li>
+  <li><a href="../css-reference/media-queries/">Media Queries</a></li>
+</ul>
+
+<h4 id="css-grid">CSS Grid</h4>
+
+<ul class="compact">
+  <li><a href="https://cssgridgarden.com/" target="_blank">CSS Grid Garden</a> <br />Please try to complete at least the first 10 levels</li>
+  <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Tricks: A Complete Guide to Grid</a></li>
+  <li><a href="https://www.freecodecamp.org/news/learn-css-grid-by-building-5-layouts/" target="_blank">Learn CSS Grid by Building 5 Layouts in 17 minutes</a></li>
+</ul>
+
+<h4 id="flex">Flex</h4>
+
+<ul class="compact">
+  <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a>.<br />Please try to complete at least the first 10 levels</li>
+  <li><a href="https://university.webflow.com/lesson/flexbox-vs-grid" target="_blank">When to use Flex versus CSS Grid?</a></li>
+  <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS Tricks: A Complete Guide to Flexbox</a></li>
+  <li><a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank">W3 Schools Flexbox Guide</a></li>
+</ul>
+
+<h2 id="your-tasks">Your Tasks</h2>
+<p><a href="../course-files/homework/hw04.zip" class="nu-button">HW04 Starter Files <i class="fas fa-download"></i></a></p>
+
+<p>Download the <code class="highlighter-rouge">hw04.zip</code> file, unzip it and move the unzipped tutorial03 folder into the <code class="highlighter-rouge">csci185/homework</code> folder.</p>
+
+<h3 id="1-flexbox-froggy">1. Flexbox Froggy</h3>
+<p>TODO: Instructions</p>
+
+<h3 id="2-center-align-elements-within-a-container">2. Center-align elements within a container</h3>
+
+<p>Open <code class="highlighter-rouge">02-flex</code> and create the layout shown below by editing the CSS file. You should not need to edit the HTML.</p>
+
+<p><img src="../assets/images/homework/hw04/exercise04.gif" /></p>
+
+<p>Please ensure that the following criteria are met:</p>
+
+<ul class="compact">
+  <li>The height of each <code class="highlighter-rouge">section</code> should be the same as the height of the browser window.</li>
+  <li>The content inside of each <code class="highlighter-rouge">section</code> tag should be centered horizontally and vertically.</li>
+  <li>Each <code class="highlighter-rouge">section</code> should have a different background color.</li>
+  <li>The content in each <code class="highlighter-rouge">section</code> should be stacked vertically</li>
+</ul>
+
+<h3 id="3-create-a-navigation-bar">3. Create a Navigation Bar</h3>
+<p>Open <code class="highlighter-rouge">03-navbar</code>, and try to make the following layout using flex. The navigation bar should also be anchored to the top so when you scroll, the nav bar stays fixed.</p>
+
+<p><img class="frame large" src="../assets/images/homework/hw04/exercise05.png" /></p>
+
+<p>Hints:</p>
+
+<ul class="compact">
+  <li>Both the <code class="highlighter-rouge">nav</code> and <code class="highlighter-rouge">ul</code> elements will need to be put into flex mode.</li>
+  <li>Use the Chrome inspector to adjust the alignment properties.</li>
+  <li>To turn the bullets off, set the <code class="highlighter-rouge">list-style-type</code> property to <code class="highlighter-rouge">none</code>.</li>
+  <li>To create a fixed menu, see <a href="https://codepen.io/vanwars/pen/LYBdyzJ?editors=0100" target="_blank">this code sample</a>:</li>
+</ul>
+
+<h3 id="4-css-grid-garden">4. CSS Grid Garden</h3>
+<p>TODO: Instructions</p>
+
+<h3 id="5-create-this-layout">5. Create this layout</h3>
+
+<p>Open <code class="highlighter-rouge">05-grid</code>, and try to make the following layout using CSS Grid. You should not need to modify the HTML file. Note that the gridlines are just for demonstration, but they won’t actually be visible.</p>
+
+<p><img class="small" src="../assets/images/homework/hw04/exercise06b.png" /></p>
+
+<p><strong>Note:</strong> You do NOT have to center the text inside of each section unless you want to.</p>
+
+<h3 id="6-create-the-taco-temple-layout">6. Create the Taco Temple layout</h3>
+
+<p>Open <code class="highlighter-rouge">06-tacotemple</code>, and try to make the following layout using CSS Grid. You should only have to edit the CSS file.</p>
+
+<p><img class="large" src="../assets/images/homework/hw04/tacotemple01.png" /></p>
+
+<p><strong>A few hints:</strong>
+The <code class="highlighter-rouge">main</code> container is a grid with two columns – no rows specified). See grid lines:</p>
+
+<p><img class="large" src="../assets/images/homework/hw04/tacotemple02.png" /></p>
+
+<p>The <code class="highlighter-rouge">section</code> container is also a grid with two columns. See grid lines:</p>
+
+<p><img class="small" src="../assets/images/homework/hw04/tacotemple03.png" /></p>
+
+<h3 id="7-create-the-following-mobile--responsive-layout">7. Create the following mobile / responsive layout</h3>
+<p>TODO: Instructions. Something that works w/media queries!</p>
+
+<h2 id="what-to-turn-in">What to turn in</h2>
+<p>Something about linking (make a demo)…</p>
+
+
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="../assets/js/main.js"></script>
+    
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="../assets/js/scrollspy.js"></script>
+    </body>
+</html>
