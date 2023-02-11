@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Media Tags</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/main.css">
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="two-column">
+    <div class="container">
+        <!-- banner -->
+        <header>
+            <section>
+                <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
+                <h2 class="desktop">Introduction to Programming for the Web</h2>
+                <a class="mobile" href="#">
+                    <i class="menu-toggle fas fa-bars"></i>
+                </a>
+                <h1 class="mobile">CSCI 185: Spring 2023</h1>
+            </section>
+            <img src="../../../assets/images/unca-logo.svg" />
+            <p class="kudos">
+                Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+            </p>
+            <canvas></canvas>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../../../syllabus/index.html">Syllabus</a></li>
+                <li><a href="../../../index.html">Schedule</a></li>
+                <li><a href="../../../assignments/index.html">Assignments</a></li>
+                <li class="active"><a href="../design-reference/index.html">Web Reference</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+                    <li>
+                        <a href="../../design-reference/index.html" class="">Design Resources</a>
+                    </li>
+                    <li>
+                        <a href="../../javascript-reference/index.html" class="">JavaScript Cheatsheet</a>
+                    </li>
+                    <li>
+                        <a href="../../accessibility-reference/index.html" class="">Accessibility Resources</a>
+                    </li>
+                    <li>
+                        <a href="../index.html">HTML Resources</a>
+                        <ol>
+                            <li>
+                                <a href="../rules-of-thumb/index.html" class="">Rules of Thumb</a>
+                            </li>
+                            <li>
+                                <a href="../text-tags/index.html" class="">Text Markup Tags</a>
+                            </li>
+                            <li>
+                                <a href="../links/index.html" class="">Hyperlinks</a>
+                            </li>
+                            <li>
+                                <a href="../images/index.html" class="">Image Tags</a>
+                            </li>
+                            <li>
+                                <a href="../media-tags/index.html" class="active">Media Tags</a>
+                            </li>
+                            <li>
+                                <a href="../compound-tags/index.html" class="">Compound Tags</a>
+                            </li>
+                            <li>
+                                <a href="../semantic-tags/index.html" class="">Semantic Tags</a>
+                            </li>
+                            <li>
+                                <a href="../forms/index.html" class="">Form Tags</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="../../css-reference/index.html" class="">CSS Resources</a>
+                        <ol>
+                            <li>
+                                <a href="../../css-reference/rules-of-thumb/index.html" class="">Rules of Thumb</a>
+                            </li>
+                            <li>
+                                <a href="../../css-reference/selectors/index.html" class="">Selectors</a>
+                            </li>
+                            <li>
+                                <a href="../../css-reference/color/index.html" class="">Color</a>
+                            </li>
+                            <li>
+                                <a href="../../css-reference/fonts/index.html" class="">Text & Fonts</a>
+                            </li>
+                            <li>
+                                <a href="../../css-reference/box-model/index.html" class="">The Box Model</a>
+                            </li>
+                            <li>
+                                <a href="../../css-reference/units/index.html" class="">CSS Units</a>
+                            </li>
+                            <li>
+                                <a href="../../css-reference/flexbox/index.html" class="">Flexbox</a>
+                            </li>
+                            <li>
+                                <a href="../../css-reference/css-grid/index.html" class="">CSS Grid</a>
+                            </li>
+                            <li>
+                                <a href="../../css-reference/media-queries/index.html" class="">Media Queries</a>
+                            </li>
+                            <li>
+                                <a href="../../css-reference/style-guides/index.html" class="">Style Guides</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </aside>
+            <article>
+                <h1>
+
+                    <a href="../">HTML Resources</a> > 5.
+
+                    Media Tags
+                </h1>
+                <!-- 
+
+    
+        <h1>Media Tags</h1>
+    
+  -->
+
+                <p>In the previous sections, we reviewed the simplest and most <em>frequently used</em> tags: <code
+                        class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;...&lt;h6&gt;&lt;/h6&gt;, &lt;p&gt;&lt;/p&gt;, &lt;a&gt;&lt;/a&gt;, &lt;img /&gt;</code>
+                </p>
+
+                <p>In this section, we add to this list by including <strong>iframes, audio files, and videos</strong>.
+                    Below we provide a description of each element, as well as the tags, attributes, and values that
+                    generate them. Each element also has a corresponding code sample that you can continue exploring on
+                    your own.</p>
+
+                <h2 id="iframes">IFrames</h2>
+                <p>Sample code to make an IFrame (to embed another web page).</p>
+
+                <p><strong>Other Websites</strong></p>
+
+                <p><em>Note</em>: <em>This page blocks IFrames, so you’ll have to view this code in CodePen.io</em></p>
+                <iframe src="https://codepen.io/vanwars/embed/dXyaRE/?theme-id=18654&amp;default-tab=html,result"
+                    allowfullscreen="true" class="codepen-frame"></iframe>
+
+                <p><strong>Spotify</strong></p>
+                <iframe src="https://codepen.io/vanwars/embed/YWGMLo/?theme-id=18654&amp;default-tab=html,result"
+                    allowfullscreen="true" class="codepen-frame"></iframe>
+
+                <p><strong>Vimeo &amp; YouTube</strong></p>
+                <iframe src="https://codepen.io/vanwars/embed/mErgKd/?theme-id=18654&amp;default-tab=html,result"
+                    allowfullscreen="true" class="codepen-frame"></iframe>
+
+                <h2 id="audio">Audio</h2>
+                <p>Sample code to embed an audio file (new in HTML5):</p>
+                <iframe src="https://codepen.io/vanwars/embed/ezYxGr/?theme-id=18654&amp;default-tab=html,result"
+                    allowfullscreen="true" class="codepen-frame"></iframe>
+
+                <h2 id="video">Video</h2>
+                <p>Sample code to embed a video file (new in HTML5):</p>
+                <iframe src="https://codepen.io/vanwars/embed/PzoVON/?theme-id=18654&amp;default-tab=html,result"
+                    allowfullscreen="true" class="codepen-frame"></iframe>
+
+
+            </article>
+        </main>
+    </div>
+    <script type="text/javascript" src="../../../assets/js/main.js"></script>
+
+</body>
+
+</html>
