@@ -1,693 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-            <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>The Box Model</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="/assets/main.css">
-    
-    
-        <style>
-            html {
-                scroll-behavior: smooth;
-            }
-        </style>
-    </head>
-    <body class="two-column">
-        <div class="container">
-        <!-- banner -->
-<header>
-    <section>
-        <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
-        <h2 class="desktop">Introduction to Programming for the Web</h2>
-        <a class="mobile" href="#">
-            <i class="menu-toggle fas fa-bars"></i>
-        </a>
-        <h1 class="mobile">CSCI 185: Spring 2023</h1>
-    </section>
-    <img src="https://communication.unca.edu/wp-content/themes/tin/assets/logo.svg" />
-    <p class="kudos">
-        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
-    </p>
-    <canvas></canvas>
-</header>
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>The Box Model</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="../../assets/main.css" />
+    <script type="text/javascript" src="../../assets/js/fish-pond.js" defer></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="two-column">
+    <div class="container">
+        <!-- banner -->
+        <header>
+            <section>
+                <h1 class="desktop">
+                    <a href="../../index.html">CSCI 185: Spring 2023</a>
+                </h1>
+                <h2 class="desktop">Introduction to Programming for the Web</h2>
+                <a class="mobile" href="#">
+                    <i class="menu-toggle fas fa-bars"></i>
+                </a>
+                <h1 class="mobile">CSCI 185: Spring 2023</h1>
+            </section>
+            <img src="../../assets/images/unca-logo.svg" />
+            <p class="kudos">
+                Fish by
+                <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+            </p>
+            <canvas></canvas>
+        </header>
         <nav>
-    <ul>
-        <li ><a href="/syllabus/">Syllabus</a></li>
-        <li ><a href="/" >Schedule</a></li>
-        <li ><a href="/assignments/">Assignments</a></li>
-        <!-- <li ><a href="/final-project/">Final Project</a></li> -->
-        <li class="active"><a href="/design-reference/">Web Reference</a></li>
-        
-        <!-- <li ><a href="/resources/">Resources</a></li> -->
-        <!-- <li ><a href="/times-locations/">Calendar</a></li> -->
-    </ul>
-</nav>
+            <ul>
+                <li><a href="../../syllabus/index.html">Syllabus</a></li>
+                <li><a href="../../index.html">Schedule</a></li>
+                <li><a href="../../assignments/index.html">Assignments</a></li>
+                <li class="active">
+                    <a href="../../design-reference/index.html">Web Reference</a>
+                </li>
+            </ul>
+        </nav>
 
         <main>
             <aside>
-                
-
-
-<ol class="side-menu">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <li>
-            
-            
-            <a href="/design-reference/" class="">Design Resources</a>
-            <ol>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            </ol>
-        </li>
-    
-
-    
-
-    
-
-    
-        <li>
-            
-            
-            <a href="/javascript-reference/" class="">JavaScript Cheatsheet</a>
-            <ol>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            </ol>
-        </li>
-    
-
-    
-
-    
-
-    
-        <li>
-            
-            
-            <a href="/accessibility-reference/" class="">Accessibility Resources</a>
-            <ol>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            </ol>
-        </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <li>
-            
-            
-            <a href="/html-reference/" class="">HTML Resources</a>
-            <ol>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                <ol class="side-menu">
                     <li>
-                        
-                        
-                        <a href="/html-reference/rules-of-thumb/" class="">Rules of Thumb</a>
-                        
+                        <a href="../../design-reference/index.html" class="">Design Resources</a>
                     </li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
                     <li>
-                        
-                        
-                        <a href="/html-reference/text-tags/" class="">Text Markup Tags</a>
-                        
+                        <a href="../../javascript-reference/index.html" class="">JavaScript Cheatsheet</a>
                     </li>
-                
-                
-                
-                
-                
-                
-                
                     <li>
-                        
-                        
-                        <a href="/html-reference/links/" class="">Hyperlinks</a>
-                        
+                        <a href="../../accessibility-reference/index.html" class="">Accessibility Resources</a>
                     </li>
-                
-                
-                
                     <li>
-                        
-                        
-                        <a href="/html-reference/images/" class="">Image Tags</a>
-                        
+                        <a href="../../html-reference/index.html">HTML Resources</a>
+                        <ol>
+                            <li>
+                                <a href="../../html-reference/rules-of-thumb/index.html" class="">Rules of Thumb</a>
+                            </li>
+                            <li>
+                                <a href="../../html-reference/text-tags/index.html">Text Markup Tags</a>
+                            </li>
+                            <li>
+                                <a href="../../html-reference/links/index.html" class="">Hyperlinks</a>
+                            </li>
+                            <li>
+                                <a href="../../html-reference/images/index.html" class="">Image Tags</a>
+                            </li>
+                            <li>
+                                <a href="../../html-reference/media-tags/index.html" class="">Media Tags</a>
+                            </li>
+                            <li>
+                                <a href="../../html-reference/compound-tags/index.html" >Compound Tags</a>
+                            </li>
+                            <li>
+                                <a href="../../html-reference/semantic-tags/index.html" class="">Semantic Tags</a>
+                            </li>
+                            <li>
+                                <a href="../../html-reference/forms/index.html" class="">Form Tags</a>
+                            </li>
+                        </ol>
                     </li>
-                
-                
-                
-                
-                
-                
-                
                     <li>
-                        
-                        
-                        <a href="/html-reference/media-tags/" class="">Media Tags</a>
-                        
+                        <a href="../index.html" class="">CSS Resources</a>
+                        <ol>
+                            <li>
+                                <a href="../rules-of-thumb/index.html" class="">Rules of Thumb</a>
+                            </li>
+                            <li>
+                                <a href="../selectors/index.html" class="">Selectors</a>
+                            </li>
+                            <li>
+                                <a href="../color/index.html" class="">Color</a>
+                            </li>
+                            <li>
+                                <a href="../fonts/index.html" class="">Text & Fonts</a>
+                            </li>
+                            <li>
+                                <a href="../box-model/index.html" class="active">The Box Model</a>
+                            </li>
+                            <li>
+                                <a href="../units/index.html" class="">CSS Units</a>
+                            </li>
+                            <li>
+                                <a href="../flexbox/index.html" class="">Flexbox</a>
+                            </li>
+                            <li>
+                                <a href="../css-grid/index.html" class="">CSS Grid</a>
+                            </li>
+                            <li>
+                                <a href="../media-queries/index.html" class="">Media Queries</a>
+                            </li>
+                            <li>
+                                <a href="../style-guides/index.html" class="">Style Guides</a>
+                            </li>
+                        </ol>
                     </li>
-                
-                
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/html-reference/compound-tags/" class="">Compound Tags</a>
-                        
-                    </li>
-                
-                
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/html-reference/semantic-tags/" class="">Semantic Tags</a>
-                        
-                    </li>
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/html-reference/forms/" class="">Form Tags</a>
-                        
-                    </li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            </ol>
-        </li>
-    
-
-    
-
-    
-        <li>
-            
-            
-            <a href="/css-reference/" class="">CSS Resources</a>
-            <ol>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/css-reference/rules-of-thumb/" class="">Rules of Thumb</a>
-                        
-                    </li>
-                
-                
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/css-reference/selectors/" class="">Selectors</a>
-                        
-                    </li>
-                
-                
-                
-                
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/css-reference/color/" class="">Color</a>
-                        
-                    </li>
-                
-                
-                
-                
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/css-reference/fonts/" class="">Text & Fonts</a>
-                        
-                    </li>
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/css-reference/box-model/" class="active">The Box Model</a>
-                        
-                            <ol>
-  <li><a href="#common-box-model-properties">Common Box Model properties</a></li>
-</ol>
-
-                        
-                    </li>
-                
-                
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/css-reference/units/" class="">CSS Units</a>
-                        
-                    </li>
-                
-                
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/css-reference/flexbox/" class="">Flexbox</a>
-                        
-                    </li>
-                
-                
-                
-                
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/css-reference/css-grid/" class="">CSS Grid</a>
-                        
-                    </li>
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/css-reference/media-queries/" class="">Media Queries</a>
-                        
-                    </li>
-                
-                
-                
-                
-                
-                    <li>
-                        
-                        
-                        <a href="/css-reference/style-guides/" class="">Style Guides</a>
-                        
-                    </li>
-                
-                
-                
-                
-            </ol>
-        </li>
-    
-
-</ol>
+                </ol>
             </aside>
             <article>
-                <h1>
-                    
-                        <a href="../">CSS Resources</a> > 5.
-                    
-                    The Box Model
-                </h1>
+                <h1><a href="index.html">CSS Resources</a> > 5. The Box Model</h1>
                 <!-- 
 
     
         <h1>The Box Model</h1>
     
   -->
-                
-                <p>Every element in web design is a rectangular box. The box model refers to some of the properties that control the layout of these boxes (width, height, margin, padding, border, and box-sizing). The <a href="https://css-tricks.com/the-css-box-model/" target="_blank">CSS Tricks</a> website has a nice description of it.</p>
 
-<p><img class="medium" src="/assets/images/reference/box_model.png" /></p>
+                <p>
+                    Every element in web design is a rectangular box. The box model
+                    refers to some of the properties that control the layout of these
+                    boxes (width, height, margin, padding, border, and box-sizing). The
+                    <a href="https://css-tricks.com/the-css-box-model/" target="_blank">CSS Tricks</a>
+                    website has a nice description of it.
+                </p>
 
-<h2 id="common-box-model-properties">Common Box Model properties</h2>
+                <p>
+                    <img class="medium" src="../../assets/images/reference/box_model.png" />
+                </p>
 
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.page-section</span> <span class="p">{</span>
+                <h2 id="common-box-model-properties">Common Box Model properties</h2>
+
+                <div class="language-css highlighter-rouge">
+                    <div class="highlight">
+                        <pre class="highlight"><code><span class="nc">.page-section</span> <span class="p">{</span>
     <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>     <span class="err">//</span> <span class="err">"border-box"</span> <span class="err">does</span> <span class="err">not</span> <span class="err">count</span> <span class="err">padding</span> <span class="err">/</span> <span class="err">border</span> <span class="err">in</span> <span class="err">size</span> <span class="err">calculations</span>
     <span class="nl">border</span><span class="p">:</span> <span class="nb">dotted</span> <span class="m">1px</span> <span class="m">#CCC</span><span class="p">;</span>    
     <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>              <span class="err">//</span> <span class="py">note</span><span class="p">:</span> <span class="n">also</span> <span class="n">padding-right</span><span class="p">,</span> <span class="n">padding-left</span><span class="p">,</span> <span class="n">padding-top</span><span class="p">,</span> <span class="n">padding-bottom</span>
     <span class="n">margin</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>               <span class="err">//</span> <span class="py">note</span><span class="p">:</span> <span class="n">also</span> <span class="n">margin-right</span><span class="p">,</span> <span class="n">margin-left</span><span class="p">,</span> <span class="n">margin-top</span><span class="p">,</span> <span class="n">margin-bottom</span>
     <span class="n">width</span><span class="p">:</span> <span class="m">50vh</span><span class="p">;</span>                <span class="err">//</span> <span class="err">vh</span> <span class="err">stands</span> <span class="err">for</span> <span class="err">viewport</span> <span class="err">height,</span> <span class="err">vw</span> <span class="err">stands</span> <span class="err">for</span> <span class="err">viewport</span> <span class="err">width</span>
 <span class="p">}</span>
-</code></pre></div></div>
-
-
-                
-            </article>  
+</code></pre>
+                    </div>
+                </div>
+            </article>
         </main>
-            <script type="text/javascript" src="/assets/js/main.js"></script>
-    
-    
-    </body>
+    </div>
+    <script type="text/javascript" src="../../assets/js/main.js"></script>
+</body>
+
 </html>
