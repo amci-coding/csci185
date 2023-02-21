@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../../fonts/Montserrat-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../../fonts/Montserrat-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../../fonts/Montserrat-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "Malamondo"; 
+    src: url("../../fonts/Malamondo.otf") format("opentype"); 
+}
+
+@font-face {
+    font-family: "Malamondo-Alt"; 
+    src: url('../../fonts/MalamondoW01-Alt.woff2') format('woff2'),
+         url('../../fonts/MalamondoW01-Alt.woff') format('woff'),
+         url("../../fonts/MalamondoW01-Alt.ttf") format("truetype"); 
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    line-height: 1.6em;
+}
+
+h1, h2 {
+    font-family: 'Malamondo-Alt';
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Malamondo';
+}
