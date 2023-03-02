@@ -1,16 +1,14 @@
 <!doctype html>
 <html lang="en">
     <head>
-            <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Practice with Flexbox and CSS Grid</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
-    
-    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title>Get Started on HW4</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
     </head>
     <body class="two-column">
         <!-- banner -->
@@ -43,7 +41,9 @@
 
         <main>
             <aside>
-                
+                <ol class="side-menu">
+  <li><a href="#what-to-submit">What to Submit</a></li>
+</ol>
 
             </aside>
             <article>
@@ -51,8 +51,8 @@
 
     
         <h1>
-            <a href="../assignments/">Assignments</a> > 
-            Tutorial 5: Practice with Flexbox and CSS Grid
+            <a href="../assignments/hw04.html">Assignments</a> > 
+            Tutorial 5: Get Started on HW4
         </h1>
     
  
@@ -66,7 +66,17 @@
     
 </p>
 
-<p>Flexbox and CSS Grid exercises</p>
+<p>For today’s tutorial, you will get started on <a href="../assignments/hw04.html">HW4</a>. Your job is to complete <strong>at least 3</strong> of the 7 tasks (and more if possible).</p>
+
+<h2 id="what-to-submit">What to Submit</h2>
+<p>To submit Tutorial 5, just link to at least three completed HW4 tasks from your homepage. 
+
+<p>When you’re done, paste the following links into the Moodle under the Tutorial 5 submission section:</p>
+
+<ol>
+  <li>A link to your <strong>homepage</strong> on GitHub pages, which should link to at least 3 of the <code class="highlighter-rouge">hw04</code> tasks.</li>
+  <li>A link to your GitHub <strong>code repository</strong> (where your code files are stored).</li>
+</ol>
 
 
 
@@ -78,9 +88,16 @@
             </p>
         </footer>
         
-            <script type="text/javascript" src="../assets/js/main.js"></script>
+            <script type="text/javascript" src="/spring2023/assets/js/main.js"></script>
     
-    
-        <script type="text/javascript" src="../assets/js/scrollspy.js"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/spring2023/assets/js/scrollspy.js"></script>
     </body>
 </html>
