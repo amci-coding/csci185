@@ -1,293 +1,432 @@
 <!doctype html>
 <html lang="en">
-    <head>
-            <meta charset="utf-8">
+
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Make a fake portfolio website</title>
+    <title>Make a Fake Portfolio Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
-    
-    
-    </head>
-    <body class="two-column">
-        <!-- banner -->
-<header>
-    <section>
-        <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
-        <h2 class="desktop">Introduction to Programming for the Web</h2>
-        <a class="mobile" href="#">
-            <i class="menu-toggle fas fa-bars"></i>
-        </a>
-        <h1 class="mobile">CSCI 185: Spring 2023</h1>
-    </section>
-    <img src="../assets/images/unca-logo.svg" />
 
-    <p class="kudos">
-        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
-    </p>
-    <canvas></canvas>
-</header>
 
-        <nav>
-    <ul>
-        <li ><a href="../syllabus/index.html">Syllabus</a></li>
-        <li ><a href="../index.html" >Schedule</a></li>
-        <li class="active"><a href="../assignments/index.html">Assignments</a></li>
-        <li ><a href="../reference/design-reference/index.html">Web Reference</a></li>
-        
-    </ul>
-</nav>
+</head>
 
-        <main>
-            <aside>
-                <ol class="side-menu">
-  <li><a href="#hints-updated-911-12pm">Hints (Updated 9/11 @12PM)</a></li>
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#your-tasks">Your Tasks</a>
-    <ol>
-      <li><a href="#nav">1. Navigation</a></li>
-      <li><a href="#header">2. Header</a></li>
-      <li><a href="#about">3. About Me</a></li>
-      <li><a href="#projects">4. Projects</a></li>
-      <li><a href="#contact">5. Contact</a></li>
-      <li><a href="#footer">6. Footer</a></li>
-      <li><a href="#publish">7. Publish to GitHub</a></li>
-    </ol>
-  </li>
-  <li><a href="#rubric">Rubric</a></li>
-  <li><a href="#what-to-submit">What to Submit</a></li>
-</ol>
+<body class="two-column">
+    <!-- banner -->
+    <header>
+        <section>
+            <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
+            <h2 class="desktop">Introduction to Programming for the Web</h2>
+            <a class="mobile" href="#">
+                <i class="menu-toggle fas fa-bars"></i>
+            </a>
+            <h1 class="mobile">CSCI 185: Spring 2023</h1>
+        </section>
+        <img src="../assets/images/unca-logo.svg" />
 
-            </aside>
-            <article>
-                
+        <p class="kudos">
+            Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+        </p>
+        <canvas></canvas>
+    </header>
 
-    
-        <h1>
-            <a href="../assignments/">Assignments</a> > 
-            HW5: Make a fake portfolio website
-        </h1>
-    
- 
-                <p>
-    
-        Due on Mon, 02/27 @ 11:59PM.
-    
-    
-        20 Points.
-    
-    
-</p>
+    <nav>
+        <ul>
+            <li><a href="../syllabus/index.html">Syllabus</a></li>
+            <li><a href="../index.html">Schedule</a></li>
+            <li class="active"><a href="../assignments/index.html">Assignments</a></li>
+            <li><a href="../reference/design-reference/index.html">Web Reference</a></li>
 
-<style>
-    blockquote h2 {
-        margin: auto !important;
-        padding: 0px !important;
-    }
+        </ul>
+    </nav>
 
-    .frame {
-        padding: 0;
-    }
+    <main>
+        <aside>
+            <ol class="side-menu">
+                <li><a href="#introduction">Introduction</a>
+                    <ol>
+                        <li><a href="#general-guidelines">General Guidelines</a></li>
+                    </ol>
+                </li>
+                <li><a href="#your-tasks">Your Tasks</a>
+                    <ol>
+                        <li><a href="#nav">1. Navigation [2 pts]</a></li>
+                        <li><a href="#header">2. Header [2 pts]</a></li>
+                        <li><a href="#about">3. About Me [1 pt]</a></li>
+                        <li><a href="#projects">4. Projects [3 pts]</a></li>
+                        <li><a href="#contact">5. Contact [5 pts]</a></li>
+                        <li><a href="#footer">6. Footer [1 pt]</a></li>
+                        <li><a href="#responsive">7. Responsive Design [4 pts]</a></li>
+                        <li><a href="#accessibility">8. Accessibility Features [5 pts]</a></li>
+                        <li><a href="#publish">9. Publish to GitHub [2 pts]</a></li>
+                    </ol>
+                </li>
+                <li><a href="#rubric">Rubric</a></li>
+                <li><a href="#what-to-submit">What to Submit</a></li>
+            </ol>
 
-    .medium th:first-child, .medium td:first-child {
-        width: 40px;
-        max-width: 40px;
-        min-width: 40px;
-    }
-</style>
-
-<h2 id="hints-updated-911-12pm">Hints (Updated 9/11 @12PM)</h2>
-<p>Several students contacted me about the “Contact” section and how to approach it. I decided to make a <a href="https://drive.google.com/file/d/1-I3NoIsFPK5jGVakLxjoWfp0Obj31K2A/view?usp=sharing">video walkthrough</a> to help you with that one. If you want to use the debugging script I used in the video, just paste the following right before the close of the body tag:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://csci-185.github.io/course-files/utilities/debug.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-    <span class="nx">debug</span><span class="p">(</span><span class="dl">'</span><span class="s1">#contact</span><span class="dl">'</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// first item is the selector; second is # of levels you want to highlight.</span>
-<span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
-
-<h2 id="introduction">Introduction</h2>
-<p>The goal of today’s lab is to make a fake portfolio website. You will be given an <code class="highlighter-rouge">index.html</code> file, which controls the content. You will then style this content by making changes to the <code class="highlighter-rouge">styles.css</code> file that you are given. When you’re done, your webpage should look exactly like the one shown in <a href="https://drive.google.com/file/d/1eLJVLW7AGQ_1EX6Hvqh_BVMAkPxKJZFX/view?usp=sharing">this video</a>. While this is mostly a CSS exercise, you are also welcome to change <code class="highlighter-rouge">index.html</code> to make things easier for you to style (optional, not required). Please download the starter files below to begin:</p>
-
-<p><a href="../course-files/homework/hw01.zip" class="nu-button">Homework 1 Starter Files <i class="fas fa-download"></i></a></p>
-
-<h2 id="your-tasks">Your Tasks</h2>
-<p>In order to complete this assignment, please complete the 7 sets of tasks described below. Read the checklist carefully, to ensure that you receive full credit for this assignment.</p>
-
-<ol>
-  <li><a href="#nav">Navigation</a></li>
-  <li><a href="#header">Header</a></li>
-  <li><a href="#about">About Me</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#footer">Footer</a></li>
-  <li><a href="#publish">Publish to GitHub</a></li>
-</ol>
-
-<h3 id="nav">1. Navigation</h3>
-<p>Style the <code class="highlighter-rouge">&lt;nav&gt;&lt;/nav&gt;</code> section so that it matches the style of the screenshot below. Specifically, you will:</p>
-
-<ul class="checkbox-list">
-  <li>Style the <code class="highlighter-rouge">&lt;ul&gt;&lt;/ul&gt;</code> so that it displays horizontally and aligned to the right, with the bullets removed.</li>
-  <li>Ensure that the color of the links are white and that they do not have an underline.</li>
-  <li>Modify the link HTML so that when each link is clicked, the page scrolls down to the relevant section (see video).</li>
-</ul>
-
-<p><img class="large frame" src="../assets/images/homework/hw01/01-header.png" /></p>
-
-<h3 id="header">2. Header</h3>
-<p>Style the <code class="highlighter-rouge">&lt;header&gt;&lt;/header&gt;</code> section so that it matches the style of the screenshot above. Specifically, you will:</p>
-
-<ul class="checkbox-list">
-  <li>Change the background color to a color that you like (but ensure that it’s dark enough for the white text to be readable).</li>
-  <li>Center the text and image.</li>
-  <li>Style the image so that it’s circular (hint: Google “border radius”).</li>
-  <li>Use a custom google font for the <code class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code> tag, and change the color to white.</li>
-</ul>
-
-<h3 id="about">3. About Me</h3>
-<p>Style the <code class="highlighter-rouge">&lt;section id="about"&gt;&lt;/section&gt;</code> section so that it matches the style of the screenshot below. Specifically, you will:</p>
-
-<ul class="checkbox-list">
-  <li>Use a custom google font for the <code class="highlighter-rouge">&lt;h2&gt;&lt;/h2&gt;</code> tag (same font you used for the h1 tag).</li>
-  <li>Use a simple font for the rest of your text tags (e.g., p, li, a, etc.) – something that is well-suited for body copy.</li>
-  <li>Ensure that the text has sufficient spacing from the sides of the screen and from the top and bottom, and that it is left-justified (see screenshot).</li>
-</ul>
-
-<p><img class="large frame" src="../assets/images/homework/hw01/02-about.png" /></p>
-
-<h3 id="projects">4. Projects</h3>
-
-<p>Style the <code class="highlighter-rouge">&lt;section id="projects"&gt;&lt;/section&gt;</code> section so that it matches the style of the screenshot below. Specifically, you will:</p>
-
-<ul class="checkbox-list">
-  <li>Arrange your project “cards” into two columns.</li>
-  <li>Ensure that there is adequate spacing between the cards (remember the principle of alignment).</li>
-  <li>Change the background of the entire section to light gray.</li>
-  <li>Ensure that the cards have sufficient spacing from the sides of the parent container.</li>
-</ul>
-
-<p><img class="large frame" src="../assets/images/homework/hw01/03-projects.png" /></p>
-
-<h3 id="contact">5. Contact</h3>
-
-<p>Style the <code class="highlighter-rouge">&lt;section id="contact"&gt;&lt;/section&gt;</code> section so that it matches the style of the screenshot below. Specifically, you will:</p>
-
-<ul class="checkbox-list">
-  <li>Arrange the screen into two columns, where the left column displays the form and the right column displays the author’s contact information.</li>
-  <li>Arrange the form textboxes and button as shown in the screenshot.</li>
-  <li>Ensure that the textboxes have a light gray background and some padding and marging (as shown in the screenshot).</li>
-  <li>Ensure that the form and contact info have sufficient spacing from the sides of the parent container.</li>
-</ul>
-
-<p><img class="large frame" src="../assets/images/homework/hw01/04-contact.png" /></p>
-
-<h3 id="footer">6. Footer</h3>
-<p>Style the <code class="highlighter-rouge">&lt;footer&gt;&lt;/footer&gt;</code> section so that it matches the style of the screenshot above, with center-aligned text and a light gray background color.</p>
-
-<h3 id="publish">7. Publish to GitHub</h3>
-
-<p>When you’re done styling your fake portfolio website, you will:</p>
-
-<ul class="checkbox-list">
-  <li>Ensure that all of your folders and files are <strong>lowercase</strong> with <strong>no spaces</strong>.</li>
-  <li>Ensure that your repository on GitHub is called <strong>csci185-coursework</strong> (and if it’s not, rename it).</li>
-  <li>Create a link to from your homepage (which you created during Tutorial 3) to the <code class="highlighter-rouge">index.html</code> you just made (which should be stored in the <code class="highlighter-rouge">homework/hw01</code> folder). Recall that your homepage is at the root of your <code class="highlighter-rouge">csci185</code> folder.</li>
-  <li>Commit and push all of your changes to GitHub (like we did in Tutorials 2-4).</li>
-</ul>
-
-<p>Here is what my homepage looks like after I’ve published it, except for your HW1 will be a <em>completed</em> HW1 (versus the starter files):</p>
-<ul>
-  <li>Webpage: <a href="https://vanwars.github.io/csci185-coursework/">https://vanwars.github.io/csci185-coursework/</a></li>
-  <li>Code: <a href="https://github.com/vanwars/csci185-coursework">https://github.com/vanwars/csci185-coursework</a></li>
-</ul>
-
-<h2 id="rubric">Rubric</h2>
-
-<table class="medium">
-  <thead>
-    <tr>
-      <th> </th>
-      <th>Task</th>
-      <th>Points</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1.</td>
-      <td>Navigation</td>
-      <td>2pts</td>
-      <td><a href="#nav">see requirements</a></td>
-    </tr>
-    <tr>
-      <td>2.</td>
-      <td>Header</td>
-      <td>2pts</td>
-      <td><a href="#header">see requirements</a></td>
-    </tr>
-    <tr>
-      <td>3.</td>
-      <td>About Me</td>
-      <td>1pts</td>
-      <td><a href="#about">see requirements</a></td>
-    </tr>
-    <tr>
-      <td>4.</td>
-      <td>Projects</td>
-      <td>3pts</td>
-      <td><a href="#projects">see requirements</a></td>
-    </tr>
-    <tr>
-      <td>5.</td>
-      <td>Contact</td>
-      <td>5pts</td>
-      <td><a href="#contact">see requirements</a></td>
-    </tr>
-    <tr>
-      <td>6.</td>
-      <td>Footer</td>
-      <td>1pt</td>
-      <td><a href="#footer">see requirements</a></td>
-    </tr>
-    <tr>
-      <td>7.</td>
-      <td>Publish to GitHub</td>
-      <td>2pts</td>
-      <td><a href="#publish">see requirements</a></td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td><strong>Total</strong></td>
-      <td><strong>16pts</strong></td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="what-to-submit">What to Submit</h2>
-<p><strong>Please Read Carefully:</strong> To submit Homework 1, please paste the following links into the Moodle under the Homework 1 submission section:</p>
-
-<ol>
-  <li>A link to your <strong>homepage</strong> (from Tutorial 3) on GitHub pages, which should link to your hw01 assignment (and previous tutorials and classwork you have done).</li>
-  <li>A link to your GitHub <strong>code repository</strong> (where your code files are stored).</li>
-</ol>
+        </aside>
+        <article>
 
 
 
-            </article>  
-        </main>
-        <footer>
-            <p>    
-                Department of Computer Science, UNC Asheville
+            <h1>
+                <a href="../assignments/">Assignments</a> >
+                HW5: Make a fake portfolio website
+            </h1>
+
+
+            <p>
+
+                Due on Fri, 03/03 @ 11:59PM.
+
+
+                25 Points.
+
+
             </p>
-        </footer>
-        
-            <script type="text/javascript" src="../assets/js/main.js"></script>
-    
-    
-        <script type="text/javascript" src="../assets/js/scrollspy.js"></script>
-    </body>
+
+            <style>
+                blockquote h2 {
+                    margin: auto !important;
+                    padding: 0px !important;
+                }
+
+                .frame {
+                    padding: 0;
+                }
+
+                .medium th:first-child,
+                .medium td:first-child {
+                    width: 40px;
+                    max-width: 40px;
+                    min-width: 40px;
+                }
+            </style>
+
+            <h2 id="introduction">Introduction</h2>
+            <p>The goal of HW5 is to:</p>
+
+            <ol>
+                <li>Style a fake portfolio template to resemble the one in the animation shown below, and</li>
+                <li>Make some design choices that better suit your own preferences and aesthetic sensibilities.</li>
+                <li>Make it accessible to screen readers and web crawlers.</li>
+            </ol>
+
+            <p>I have given you an <code class="highlighter-rouge">index.html</code> file with some “canned” content.
+                Your job is to style this content by making changes to the <code
+                    class="highlighter-rouge">styles.css</code> file that you are given. When you’re done, your webpage
+                should look like the one shown in <a
+                    href="../videos/Demos/hw05-demo.mp4">this
+                    video</a> – but your colors, fonts, icons, etc. should reflect your own choices.</p>
+
+            <blockquote>
+                <h3 id="general-guidelines">General Guidelines</h3>
+
+                <ul>
+                    <li>This exercise is primarily a CSS exercise that encourages you to practice what you have learned
+                        about the box model, flex, and CSS grid to instantiate some good rules of composition. Most of
+                        your required edits will be within the <code class="highlighter-rouge">styles.css</code> file
+                        (except for the navigation link edits, which must be done in <code
+                            class="highlighter-rouge">index.html</code>).</li>
+                    <li>You are also welcome (but not required) to change the actual content of the portfolio in <code
+                            class="highlighter-rouge">index.html</code> file. For instance:
+                        <ul>
+                            <li>You can add additional class names or ids to make things easier for you to style, or
+                            </li>
+                            <li>You can add additional images, icons, content, etc. to make the page look more like an
+                                actual portfolio of your work.</li>
+                        </ul>
+                    </li>
+                    <li>You can choose any fonts and colors that you want.</li>
+                    <li>If you take your own liberties in terms of the design, just ensure that your site is accessible
+                        in terms of color contrast, and that you are following the rules of composition discussed in
+                        class.</li>
+                </ul>
+            </blockquote>
+
+            <h2 id="your-tasks">Your Tasks</h2>
+            <p>Please download the starter <code class="highlighter-rouge">hw05</code> files and save them inside of
+                your <code class="highlighter-rouge">csci185/homework</code> folder:</p>
+
+            <p><a href="../course-files/homework/hw05.zip" class="nu-button">Homework 5 Starter Files <i
+                        class="fas fa-download"></i></a></p>
+
+            <p>Then, complete the 8 sets of tasks described below. Read the checklist carefully, to ensure that you
+                receive full credit for this assignment.</p>
+
+            <ol>
+                <li><a href="#nav">Navigation</a> (2 pts)</li>
+                <li><a href="#header">Header</a> (2 pts)</li>
+                <li><a href="#about">About Me</a> (1 pt)</li>
+                <li><a href="#projects">Projects</a> (3 pts)</li>
+                <li><a href="#contact">Contact</a> (5 pts)</li>
+                <li><a href="#footer">Footer</a> (1 pt)</li>
+                <li><a href="#responsive">Responsive Design</a> (4 pts)</li>
+                <li><a href="#accessibility">Accessibility Features</a> (5 pts)</li>
+                <li><a href="#publish">Publish to GitHub</a> (2 pts)</li>
+            </ol>
+
+            <h3 id="nav">1. Navigation [2 pts]</h3>
+            <p>Style the <code class="highlighter-rouge">&lt;nav&gt;&lt;/nav&gt;</code> section so that it matches the
+                style of the screenshot below. Specifically, you will:</p>
+
+            <ul class="checkbox-list">
+                <li>Style the <code class="highlighter-rouge">&lt;ul&gt;&lt;/ul&gt;</code> so that it displays
+                    horizontally and aligned to the right, with the bullets removed.</li>
+                <li>Ensure that you customize the color of the links (<code class="highlighter-rouge">a</code> tags) and
+                    that you remove the default underline style.
+                    <ul>
+                        <li>Feel free to choose a color other than white.</li>
+                    </ul>
+                </li>
+                <li>Modify the link’s <code class="highlighter-rouge">href</code> attribute (within the <code
+                        class="highlighter-rouge">index.html</code> file) so that when each link is clicked, the page
+                    scrolls down to the relevant section (see video).
+                    <ul>
+                        <li>Hint: See <a href="../../w3schools/html/html_links_bookmarks.html">this W3Schools
+                                sample</a>.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><img class="large frame" src="../assets/images/homework/hw05/01-header.png" /></p>
+
+            <h3 id="header">2. Header [2 pts]</h3>
+            <p>Style the <code class="highlighter-rouge">&lt;header&gt;&lt;/header&gt;</code> section so that it matches
+                the style of the screenshot above. Specifically, you will:</p>
+
+            <ul class="checkbox-list">
+                <li>Change the background color to a color that you like (but ensure that there is sufficient contrast
+                    with the text, so that the text is readable).</li>
+                <li>Center the text and image.</li>
+                <li>Style the image so that it’s circular (hint: Google “border radius”).</li>
+                <li>Use a custom Google font to style the <code class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code>
+                    tag, and change the color to white (or another color that you prefer).</li>
+            </ul>
+
+            <h3 id="about">3. About Me [1 pt]</h3>
+            <p>Style the <code class="highlighter-rouge">&lt;section id="about"&gt;&lt;/section&gt;</code> section so
+                that it matches the style of the screenshot below. Specifically, you will:</p>
+
+            <ul class="checkbox-list">
+                <li>Use a custom google font for the <code class="highlighter-rouge">&lt;h2&gt;&lt;/h2&gt;</code> tag
+                    (same font you used for the h1 tag).</li>
+                <li>Use a simple font for the rest of your text tags (e.g., p, li, a, etc.) – something that is
+                    well-suited for body copy.</li>
+                <li>Ensure that the text has sufficient spacing from the sides of the screen and from the top and
+                    bottom, and that it is left-justified (see screenshot).</li>
+            </ul>
+
+            <p><img class="large frame" src="../assets/images/homework/hw05/02-about.png" /></p>
+
+            <h3 id="projects">4. Projects [3 pts]</h3>
+
+            <p>Style the <code class="highlighter-rouge">&lt;section id="projects"&gt;&lt;/section&gt;</code> section so
+                that it matches the layout of the screenshot below. Specifically, you will:</p>
+
+            <ul class="checkbox-list">
+                <li>Arrange your project “cards” into two columns.</li>
+                <li>Ensure that there is adequate spacing between the cards (remember the principle of alignment).</li>
+                <li>Change the background of the entire section to light gray.</li>
+                <li>Ensure that the cards have sufficient spacing from the sides of the parent container.</li>
+            </ul>
+
+            <p><img class="large frame" src="../assets/images/homework/hw05/03-projects.png" /></p>
+
+            <h3 id="contact">5. Contact [5 pts]</h3>
+
+            <p>Style the <code class="highlighter-rouge">&lt;section id="contact"&gt;&lt;/section&gt;</code> section so
+                that it matches the style of the screenshot below. Specifically, you will:</p>
+
+            <ul class="checkbox-list">
+                <li>Arrange the screen into two columns, where the left column displays the form and the right column
+                    displays the author’s contact information.</li>
+                <li>Arrange the form textboxes and button as shown in the screenshot.</li>
+                <li>Ensure that the textboxes have a light gray background and some padding and marging (as shown in the
+                    screenshot).</li>
+                <li>Ensure that the form and contact info have sufficient spacing from the sides of the parent
+                    container.</li>
+            </ul>
+
+            <p><img class="large frame" src="../assets/images/homework/hw05/04-contact.png" /></p>
+
+            <h3 id="footer">6. Footer [1 pt]</h3>
+            <p>Style the <code class="highlighter-rouge">&lt;footer&gt;&lt;/footer&gt;</code> section so that it matches
+                the style of the screenshot above, with center-aligned text and a light gray background color.</p>
+
+            <h3 id="responsive">7. Responsive Design [4 pts]</h3>
+            <p>Make a media query for screen dimensions where the width of the screen falls below 800px. Within this
+                media query, implement the following style rules:</p>
+
+            <ol>
+                <li>The navigation menu should be centered (versus right justified).</li>
+                <li>Each of the project cards should be in its own column (versus the two-column desktop display).</li>
+                <li>In the “Get In Touch” section, the contact info should be displayed below the contact form (instead
+                    of to the right of it).</li>
+            </ol>
+
+            <p>See the animation shown below:</p>
+
+            <p><img class="small frame" src="../assets/images/homework/hw05/05-mobile-view-portfolio.gif" />
+            </p>
+
+            <h3 id="accessibility">8. Accessibility Features [5 pts]</h3>
+
+            <ol class="compact">
+                <li>Install the WAVE Browser Extension using either Firefox or Chrome, and use it to generate an
+                    accessibility report.</li>
+                <li>Correct all of the accessibility errors by modifying the <code
+                        class="highlighter-rouge">index.html</code> file.
+                    <ul>
+                        <li>You will need <code class="highlighter-rouge">alt</code> text for all images</li>
+                        <li>You will need to add <code class="highlighter-rouge">aria-label</code> attributes to all
+                            form controls. See <a href="https://www.w3.org/WAI/tutorials/forms/labels/"
+                                target="_blank">this article</a>, Approach #2.</li>
+                        <li>You will need to “teach” your web browser what language your HTML file is written in
+                            (English? Japanese? German?).</li>
+                    </ul>
+                </li>
+                <li>Take a screenshot of your final accessibility report (Sarah’s report is shown below) and save it in
+                    your <code class="highlighter-rouge">hw05</code> folder.</li>
+                <li>Answer the following questions in the <code
+                        class="highlighter-rouge">accessibility-answers.txt</code> file provided:
+                    <ul>
+                        <li>What corrections did you have to make?</li>
+                        <li>Do you think your website is usable if you turn off the CSS? Why or why not?</li>
+                        <li>Is your site is tabbable? In other words, without the use of the mouse, are all the links
+                            and buttons accessible using the tab key?</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p><img class="large frame" src="../assets/images/homework/hw05/06-wave-report.png" /></p>
+
+            <h3 id="publish">9. Publish to GitHub [2 pts]</h3>
+
+            <ul>
+                <li>On your homepage, create a new entry for Homework 5 with links to the following pages:
+                    <ul>
+                        <li>A link to the <code class="highlighter-rouge">index.html</code> (your actual portfolio).
+                        </li>
+                        <li>A link to the screenshot of your Wave report.</li>
+                        <li>A link to the answers to your accessibility questions.</li>
+                    </ul>
+                </li>
+                <li>Commit and sync all of your changes to GitHub.</li>
+                <li>Wait 5 minutes and verify that your GitHub pages link works.</li>
+            </ul>
+
+            
+            <h2 id="rubric">Rubric</h2>
+            <p>Please double-check that you have completed all of the tasks before submitting:</p>
+
+            <table class="medium">
+                <thead>
+                    <tr>
+                        <th> </th>
+                        <th>Task</th>
+                        <th>Points</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>Navigation</td>
+                        <td>2pts</td>
+                        <td><a href="#nav">see requirements</a></td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Header</td>
+                        <td>2pts</td>
+                        <td><a href="#header">see requirements</a></td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>About Me</td>
+                        <td>1pts</td>
+                        <td><a href="#about">see requirements</a></td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Projects</td>
+                        <td>3pts</td>
+                        <td><a href="#projects">see requirements</a></td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Contact</td>
+                        <td>5pts</td>
+                        <td><a href="#contact">see requirements</a></td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Footer</td>
+                        <td>1pt</td>
+                        <td><a href="#footer">see requirements</a></td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>Responsive Design</td>
+                        <td>4pts</td>
+                        <td><a href="#responsive">see requirements</a></td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>Accessibility Features</td>
+                        <td>5pts</td>
+                        <td><a href="#accessibility">see requirements</a></td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>Publish to GitHub</td>
+                        <td>2pts</td>
+                        <td><a href="#publish">see requirements</a></td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td><strong>Total</strong></td>
+                        <td><strong>20pts</strong></td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="what-to-submit">What to Submit</h2>
+
+            <ol>
+                <li>A link to your <strong>homepage</strong> on GitHub pages, which should link to your <code
+                        class="highlighter-rouge">hw05</code> assignment (and previous tutorials and classwork you have
+                    done).</li>
+                <li>A link to your GitHub <strong>code repository</strong> (where your code files are stored).</li>
+            </ol>
+
+
+
+        </article>
+    </main>
+    <footer>
+        <p>
+            Department of Computer Science, UNC Asheville
+        </p>
+    </footer>
+
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+    <script type="text/javascript" src="../assets/js/scrollspy.js"></script>
+</body>
+
 </html>
