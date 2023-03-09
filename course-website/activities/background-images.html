@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Activity: Background Images</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+
+</head>
+
+<body class="two-column">
+    <!-- banner -->
+    <header>
+        <section>
+            <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
+            <h2 class="desktop">Introduction to Programming for the Web</h2>
+            <a class="mobile" href="#">
+                <i class="menu-toggle fas fa-bars"></i>
+            </a>
+            <h1 class="mobile">CSCI 185: Spring 2023</h1>
+        </section>
+        <img src="../assets/images/unca-logo.svg" />
+        <p class="kudos">
+            Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+        </p>
+        <canvas></canvas>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../syllabus/index.html">Syllabus</a></li>
+            <li><a href="../index.html">Schedule</a></li>
+            <li><a href="../assignments/index.html">Assignments</a></li>
+            <li><a href="../reference/design-reference/index.html">Web Reference</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside>
+            <ol class="side-menu">
+                <li><a href="#1-uncomment-the-relevant-css-properties">1. Uncomment the relevant CSS properties</a></li>
+                <li><a href="#2-add-custom-images">2. Add Custom Images</a></li>
+                <li><a href="#3-try-out-the-filters">3. Try Out the Filters</a></li>
+                <li><a href="#4-try-adding-a-video-background">4. Try adding a video background</a></li>
+            </ol>
+
+        </aside>
+        <article>
+
+
+
+            <h1>Activity: Background Images</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <style>
+                .tips td:first-child,
+                .tips th:first-child {
+                    width: 200px;
+                }
+            </style>
+
+            <p>Please download the exercise files (below).</p>
+
+            <p><a href="../course-files/activities/background-media.zip" class="nu-button">Download Activity
+                    Files <i class="fas fa-download"></i></a></p>
+
+            <h2 id="1-uncomment-the-relevant-css-properties">1. Uncomment the relevant CSS properties</h2>
+            <p>Open <code class="highlighter-rouge">in-class-exercise</code> and take a look at the HTML and CSS files
+                to get oriented with them. Then, before making any changes to the code, preview the <code
+                    class="highlighter-rouge">index.html</code> page in your web browser.</p>
+
+            <p>After previewing your webpage, <strong>uncomment</strong> the following lines inside your <code
+                    class="highlighter-rouge">styles.css</code> file within your <code
+                    class="highlighter-rouge">header</code> style block.</p>
+
+            <div class="language-css highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code>  <span class="c">/* background-image: url('solar-eclipse.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center; */</span>
+</code></pre>
+                </div>
+            </div>
+
+            <p>When you’re done, preview the page, noting what changed. You should now see a background image in your
+                <code class="highlighter-rouge">header</code> of a solar eclipse.</p>
+
+            <p>Next, uncomment the following lines within your <code class="highlighter-rouge">#section2</code> style
+                block:</p>
+
+            <div class="language-css highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="c">/* background-image: url('solar-eclipse-multiples.jpg');
+background-repeat: no-repeat;
+background-position: center right;
+background-size: contain;
+background-attachment: fixed; */</span>
+</code></pre>
+                </div>
+            </div>
+
+            <p>When you’re done, preview the page. You should now see a background image of a series of photos of an
+                eclipse behind a box of white text. The image should be anchored as you scroll.</p>
+            <ul>
+                <li>Note that if you remove the <code class="highlighter-rouge">background-attachment: fixed;</code>
+                    declaration, the background image will move with the scroll bar (no anchoring). Try it!</li>
+            </ul>
+
+            <h2 id="2-add-custom-images">2. Add Custom Images</h2>
+            <p>Customize this page with your own background images.</p>
+
+            <ul>
+                <li>If you’re looking for free images, check out:
+                    <ul class="compact">
+                        <li><a href="https://www.pexels.com/" target="_blank">pexels.com</a></li>
+                        <li><a href="https://unsplash.com/" target="_blank">unsplash.com</a></li>
+                    </ul>
+                </li>
+                <li>When you’ve found some images that you like, save them inside of the <code
+                        class="highlighter-rouge">in-class-exercise</code> folder, and update the background-image file
+                    paths to point to your files.</li>
+                <li>If you want to explore some of the other background properties, take a look at <a
+                        href="https://www.w3schools.com/cssref/css3_pr_background.asp" target="_blank">W3 Schools</a>
+                </li>
+            </ul>
+
+            <h2 id="3-try-out-the-filters">3. Try Out the Filters</h2>
+            <p>If you have time, also try playing with some of the background filters. Here is a <a
+                    href="https://www.w3schools.com/cssref/css3_pr_filter.asp" target="_blank">list of available
+                    filters</a> (also on W3 Schools). The options for the filter property are:</p>
+
+            <ul class="compact">
+                <li>none</li>
+                <li>blur()</li>
+                <li>brightness()</li>
+                <li>contrast()</li>
+                <li>drop-shadow()</li>
+                <li>grayscale()</li>
+                <li>hue-rotate()</li>
+                <li>invert()</li>
+                <li>opacity()</li>
+                <li>saturate()</li>
+                <li>sepia()</li>
+                <li>url()</li>
+            </ul>
+
+            <p>Hint: try adding <code class="highlighter-rouge">filter: invert(180);</code> to the <code
+                    class="highlighter-rouge">header</code> style block in your CSS file to see what happens.</p>
+
+            <h2 id="4-try-adding-a-video-background">4. Try adding a video background</h2>
+            <ul>
+                <li>Take a look at the video background sample files and see if you can add a section somewhere on the
+                    page that has a video background.</li>
+                <li>Both <a href="https://www.pexels.com/search/videos/background%20videos/"
+                        target="_blank">pexels.com</a> has some free video backgrounds that you can download.</li>
+            </ul>
+
+
+
+
+        </article>
+    </main>
+    <footer>
+        <p>
+            Department of Computer Science, UNC Asheville
+        </p>
+    </footer>
+
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+    <script type="text/javascript" src="../assets/js/fish-pond.js"></script>
+
+</body>
+
+</html>

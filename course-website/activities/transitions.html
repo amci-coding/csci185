@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Activity: Transitions</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+
+</head>
+
+<body class="two-column">
+    <!-- banner -->
+    <header>
+        <section>
+            <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
+            <h2 class="desktop">Introduction to Programming for the Web</h2>
+            <a class="mobile" href="#">
+                <i class="menu-toggle fas fa-bars"></i>
+            </a>
+            <h1 class="mobile">CSCI 185: Spring 2023</h1>
+        </section>
+        <img src="../assets/images/unca-logo.svg" />
+        <p class="kudos">
+            Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+        </p>
+        <canvas></canvas>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../syllabus/index.html">Syllabus</a></li>
+            <li><a href="../index.html">Schedule</a></li>
+            <li><a href="../assignments/index.html">Assignments</a></li>
+            <li><a href="../reference/design-reference/index.html">Web Reference</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside>
+            <ol class="side-menu">
+                <li><a href="#part1">1. Experimenting with Transitions</a>
+                    <ol>
+                        <li><a href="#relevant-references">Relevant References</a></li>
+                        <li><a href="#uncomment-the-relevant-css-style-blocks">Uncomment the relevant CSS style
+                                blocks</a></li>
+                        <li><a href="#create-two-more-transition-effects">Create two more transition effects</a></li>
+                    </ol>
+                </li>
+                <li><a href="#part2">2. Implement one of the CSS Tricks Effects</a>
+                    <ol>
+                        <li><a href="#relevant-references-1">Relevant References</a></li>
+                    </ol>
+                </li>
+                <li><a href="#part3">3. selector::before and selector::after pseudo-classes</a></li>
+            </ol>
+
+        </aside>
+        <article>
+
+
+
+            <h1>Activity: Transitions</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <p>This in-class activity consists of 3 parts:</p>
+
+            <ol class="compact">
+                <li><a href="#part1">Experimenting with some transitions</a></li>
+                <li><a href="#part2">Trying to implement one of the CSS Tricks</a></li>
+                <li><a href="#part3">Experimenting with the ::before and ::after pseudo-classes</a></li>
+            </ol>
+
+            <p>Please download the exercise files (below).</p>
+
+            <p><a href="../course-files/activities/transitions.zip" class="nu-button">Download Activity Files
+                    <i class="fas fa-download"></i></a></p>
+
+            <h2 id="part1">1. Experimenting with Transitions</h2>
+
+            <blockquote class="blockquote-no-margin">
+                <h3 id="relevant-references">Relevant References</h3>
+                <ul>
+                    <li><a href="../../w3schools/css/css3_transitions.html">Transitions</a></li>
+                    <li><a href="../../w3schools/css/css_pseudo_classes.html" target="_blank">What are
+                            pseudoclasses?</a>
+                    </li>
+
+                    <li><a href="../../w3schools/css/css3_2dtransforms.html" target="_blank">The transform
+                            property</a></li>
+                </ul>
+            </blockquote>
+
+            <h3 id="uncomment-the-relevant-css-style-blocks">Uncomment the relevant CSS style blocks</h3>
+            <p>Inside of the <code class="highlighter-rouge">in-class-exercise</code> folder, take a look at the HTML
+                and CSS files to get oriented with them. Then, before making any changes to the code, preview the <code
+                    class="highlighter-rouge">index.html</code> page in your web browser.</p>
+
+            <p>After previewing your webpage, <strong>uncomment</strong> the following lines inside your <code
+                    class="highlighter-rouge">styles.css</code> style block:</p>
+
+            <div class="language-css highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="c">/*
+#section1 {
+    background: #0c7474;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+#section1:hover {
+    background: purple;
+    width: 220px;
+    height: 220px;
+}
+*/</span>
+</code></pre>
+                </div>
+            </div>
+
+            <p>When you’re done, preview the page, noting what changed. When you hover over the first section, you the
+                section should grow and change color (horray)!</p>
+
+            <h3 id="create-two-more-transition-effects">Create two more transition effects</h3>
+
+            <p>Your job is to experiment with the other two section tags (<code
+                    class="highlighter-rouge">#section2</code> and <code class="highlighter-rouge">#section3</code>) by
+                making some interesting interactions, using transitions. Some tips:</p>
+
+            <ol>
+                <li>To make a <a href="../../w3schools/css/css3_transitions.html"
+                        target="_blank">transition</a>, you define a transition inside of a style block (e.g., <code
+                        class="highlighter-rouge">#section1</code>) as follows: <code
+                        class="highlighter-rouge">transition: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;;</code>
+                    Examples:
+                    <ul class="compact">
+                        <li>transition: all 0.3s ease-out;</li>
+                        <li>transition: background 1s ease-in;</li>
+                        <li>transition: all 3s linear;</li>
+                        <li>transition: all 0.3s ease;</li>
+                    </ul>
+                </li>
+                <li>Some properties that you may want to change:
+                    <ul class="compact">
+                        <li>border-radius</li>
+                        <li>margin</li>
+                        <li>padding</li>
+                        <li>width</li>
+                        <li>height</li>
+                        <li>border-width</li>
+                        <li>background-color</li>
+                        <li>rotation</li>
+                        <li>opacity</li>
+                        <li><a href="../../w3schools/css/css3_2dtransforms.html" target="_blank">transform</a>.
+                            Examples<br />transform: skewX(20deg);<br />transform: rotate(-10deg);</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p>Feel free to look at <code class="highlighter-rouge">sample-files/01-pseudo-classes</code> and <code
+                    class="highlighter-rouge">sample-files/02-pseudo-classes-with-transitions</code> to get ideas.</p>
+
+            <h2 id="part2">2. Implement some interesting link hover effects</h2>
+
+            <p>When you’re done with parts 1-2, please try experimenting with hyperlink hover effects. Recall that
+                hyperlinks have several relevant states that you want to style:</p>
+
+            <ul class="compact">
+                <li>a</li>
+                <li>a:link</li>
+                <li>a:hover (the main interactive state)</li>
+                <li>a:focus (if the person tabs to the link)</li>
+                <li>a:visited (if you want the style of visited links to look different)</li>
+                <li>a:active (if you want a different style when the person clicks the link)</li>
+            </ul>
+
+
+            <h2 id="part3">3. selector::before and selector::after pseudo-classes</h2>
+
+            <p>If you have time, try to implement a “before” or an “after” pseudo-class on an eleement. See the <code
+                    class="highlighter-rouge">sample-files/01-pseudo-classes</code> folder for some examples (or you can
+                copy in the example and then adapt it).</p>
+
+
+
+        </article>
+    </main>
+    <footer>
+        <p>
+            Department of Computer Science, UNC Asheville
+        </p>
+    </footer>
+
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+    <script type="text/javascript" src="../assets/js/fish-pond.js"></script>
+</body>
+
+</html>

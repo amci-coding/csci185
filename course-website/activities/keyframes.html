@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Activity: Keyframes</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+
+</head>
+
+<body class="two-column">
+    <!-- banner -->
+    <header>
+        <section>
+            <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
+            <h2 class="desktop">Introduction to Programming for the Web</h2>
+            <a class="mobile" href="#">
+                <i class="menu-toggle fas fa-bars"></i>
+            </a>
+            <h1 class="mobile">CSCI 185: Spring 2023</h1>
+        </section>
+        <img src="../assets/images/unca-logo.svg" />
+        <p class="kudos">
+            Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+        </p>
+        <canvas></canvas>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../syllabus/index.html">Syllabus</a></li>
+            <li><a href="../index.html">Schedule</a></li>
+            <li><a href="../assignments/index.html">Assignments</a></li>
+            <li><a href="../reference/design-reference/index.html">Web Reference</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside>
+            <ol class="side-menu">
+                <li><a href="#cheatsheet">Cheatsheet</a></li>
+                <li><a href="#exercise-1-landscape">Exercise 1: Landscape</a>
+                    <ol>
+                        <li><a href="#uncomment-the-relevant-css-style-blocks">Uncomment the relevant CSS style
+                                blocks</a></li>
+                        <li><a href="#play-around-with-the-existing-animation">Play around with the existing
+                                animation</a></li>
+                        <li><a href="#make-one-of-the-clouds-move">Make one of the clouds move</a></li>
+                        <li><a href="#add-more-clouds">Add more clouds</a></li>
+                    </ol>
+                </li>
+                <li><a href="#exercise-2-experimenting-with-keyframes-on-your-homepage">Exercise 2: Experimenting with
+                        keyframes on your homepage</a></li>
+            </ol>
+
+        </aside>
+        <article>
+
+
+
+            <h1>Activity: Keyframes</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <p>Please download the exercise files (below) and attempt one or more of the following exercises.</p>
+
+            <p><a href="/spring2023/course-files/activities/keyframes.zip" class="nu-button">Download Activity Files <i
+                        class="fas fa-download"></i></a></p>
+
+            <h2 id="cheatsheet">Cheatsheet</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th><strong>Property</strong></th>
+                        <th><strong>Description</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>animation-name</strong></td>
+                        <td>Name of the keyframe you defined.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>animation-timing-function</strong></td>
+                        <td>e.g., linear, ease-in, ease-out</td>
+                    </tr>
+                    <tr>
+                        <td><strong>animation-delay</strong></td>
+                        <td>how long to wait before animation starts</td>
+                    </tr>
+                    <tr>
+                        <td><strong>animation-iteration-count</strong></td>
+                        <td>How many times animation should repeat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>animation-direction</strong></td>
+                        <td>normal, reverse, alternate, alternate-reverse</td>
+                    </tr>
+                    <tr>
+                        <td><strong>animation-fill-mode</strong></td>
+                        <td>e.g., forwards, backwards, normal, both (what to do when the animation stops)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>animation-play-state</strong></td>
+                        <td>e.g., paused, running</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="exercise-1-landscape">Exercise 1: Landscape</h2>
+            <p>See if you can create a landscape animation:</p>
+
+            <h3 id="uncomment-the-relevant-css-style-blocks">Uncomment the relevant CSS style blocks</h3>
+            <p>Inside of the <code class="highlighter-rouge">your-task</code> downloads folder, open <code
+                    class="highlighter-rouge">03-keyframes</code>, and take a look at the HTML and CSS files to get
+                oriented with them. Then, before making any changes to the code, preview the index.html page in your web
+                browser. You should see one cloud moving from left to right.</p>
+
+            <p>After previewing your webpage, <strong>uncomment</strong> the following two code blocks inside your <code
+                    class="highlighter-rouge">styles.css</code>:</p>
+
+            <p>Inside of #sun:</p>
+            <div class="language-css highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="c">/* animation-timing-function: linear;
+    animation-fill-mode: forwards; 
+    animation-name: sunrise;
+    animation-delay: 1s;
+    animation-duration: 12s; */</span>
+</code></pre>
+                </div>
+            </div>
+
+            <p>Also comment out the corresponding keyframe that controls the sunrise:</p>
+            <div class="language-css highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="c">/* @keyframes sunrise {
+    0% { 
+        transform: translate(0, 0);
+    }
+    100% { 
+        transform: translate(0, -70vh); 
+    }
+} */</span>
+</code></pre>
+                </div>
+            </div>
+
+            <p>When you’re done, preview the page, noting what changed. You should now see a second cloud moving from
+                right to left.</p>
+
+            <h3 id="play-around-with-the-existing-animation">Play around with the existing animation</h3>
+
+            <ol>
+                <li>Try experimenting with the <code class="highlighter-rouge">animation-delay</code>, <code
+                        class="highlighter-rouge">animation-duration</code>, and <code
+                        class="highlighter-rouge">animation-timing-function</code> (ease-in, ease-out, ease, etc.) to
+                    change the speed and timing of the animation.</li>
+                <li>See if you can make the sun change from orange to yellow as it rises.</li>
+                <li>See if you can make the size of the sun change as it rises.
+                    <ul>
+                        <li>Hint: Add some additional style rules to the <code class="highlighter-rouge">to {}</code>
+                            block of the <code class="highlighter-rouge">sunrise</code> keyframe.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3 id="make-one-of-the-clouds-move">Make one of the clouds move</h3>
+            <p>See if you can make <code class="highlighter-rouge">#cloud1</code> animate from left to right. To do
+                this, <strong>uncomment</strong> the following two code blocks inside your <code
+                    class="highlighter-rouge">styles.css</code>:</p>
+
+            <p>Within the <code class="highlighter-rouge">#cloud1</code> selector:</p>
+
+            <div class="language-css highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="c">/* transform: translate(-30vw, 0); */</span>
+
+<span class="c">/* animation-timing-function: linear;
+animation-iteration-count: infinite; 
+animation-direction: alternate;
+animation-name: moveCloudHorizontally;
+animation-delay: 1s;
+animation-duration: 18s; */</span>
+</code></pre>
+                </div>
+            </div>
+
+            <p>Also comment out the corresponding keyframe that controls the cloud movement:</p>
+
+            <div class="language-css highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="c">/* @keyframes moveCloudHorizontally {
+    0% { 
+        transform: translate(-30vw, 0);
+    }
+    100% { 
+        transform: translate(110vw, 0); 
+    }
+} */</span>
+</code></pre>
+                </div>
+            </div>
+
+            <p>See what happens.</p>
+
+            <h3 id="add-more-clouds">Add more clouds</h3>
+            <p>See if you can add more clouds that move in different directions and at different speeds.</p>
+
+            <p><img src="/spring2023/assets/images/activities/keyframes/landscape-animation.gif"
+                    alt="image of the animation" /></p>
+
+            <h2 id="exercise-2-experimenting-with-keyframes-on-your-homepage">Exercise 2: Experimenting with keyframes
+                on your homepage</h2>
+            <p>See if you can add a keyframe hover effect (like the ones) in <code
+                    class="highlighter-rouge">sample-files/02-heart-infinite</code> or <code
+                    class="highlighter-rouge">sample-files/03-spin-activate-on-hover</code> in your homepage.</p>
+
+
+
+        </article>
+    </main>
+    <footer>
+        <p>
+            Department of Computer Science, UNC Asheville
+        </p>
+    </footer>
+
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+    <script type="text/javascript" src="../assets/js/fish-pond.js"></script>
+</body>
+
+</html>
