@@ -1,303 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-            <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>Web Accessibility</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
     <script defer src="../assets/js/fish-pond.js"></script>
-    
-    
-    </head>
-    <body class="two-column">
-        <!-- banner -->
- <header>
-            <section>
-                <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
-                <h2 class="desktop">Introduction to Programming for the Web</h2>
-                <a class="mobile" href="#">
-                    <i class="menu-toggle fas fa-bars"></i>
-                </a>
-                <h1 class="mobile">CSCI 185: Spring 2023</h1>
-            </section>
-            <img src="../assets/images/unca-logo.svg" />
-            <p class="kudos">
-                Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
-            </p>
-            <canvas></canvas>
-        </header>
+</head>
 
-        <nav>
+<body class="two-column">
+    <!-- banner -->
+    <header>
+        <section>
+            <h1 class="desktop">
+                <a href="../index.html">CSCI 185: Spring 2023</a>
+            </h1>
+            <h2 class="desktop">Introduction to Programming for the Web</h2>
+            <a class="mobile" href="#">
+                <i class="menu-toggle fas fa-bars"></i>
+            </a>
+            <h1 class="mobile">CSCI 185: Spring 2023</h1>
+        </section>
+        <img src="../assets/images/unca-logo.svg" />
+        <p class="kudos">
+            Fish by
+            <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+        </p>
+        <canvas></canvas>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../syllabus/index.html">Syllabus</a></li>
+            <li><a href="../index.html">Schedule</a></li>
+            <li><a href="../assignments/index.html">Assignments</a></li>
+            <li>
+                <a href="../reference/design-reference/index.html">Web Reference</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside>
+            <ol class="side-menu">
+                <li>
+                    <a href="#readings">Readings</a>
+                    <ol>
+                        <li><a href="#">Optional Readings</a></li>
+                    </ol>
+                </li>
+                <li><a href="#slides">Slides</a></li>
+                <li><a href="#videos">Videos</a></li>
+            </ol>
+        </aside>
+        <article>
+            <h1><a href="../">Schedule</a> > 8. Web Accessibility</h1>
+            <div class="subtitle">Week 7: Mon, Feb 20</div>
+
+            <h2 id="readings">Readings</h2>
+            <ol class="readings">
+                <li>
+                    Laura Geley (2018).
+
+                    <a href="../course-files/readings/accessibility/UX and the Importance of Web Accessibility.pdf" target="_blank">UX and
+                        the Importance of Web Accessibility</a>.
+                </li>
+
+                <li>
+                    <a href="../course-files/readings/accessibility/accessibility-posters.pdf" target="_blank">Designing accessible
+                        services</a>.
+                </li>
+
+                <li>
+                    Groves, Karl (Sept., 2013).
+
+                    <a href="../course-files/readings/accessibility/The 6 Simplest Web Accessibility Tests Anyone Can Do - Karl Groves.pdf"
+                        target="_blank">The 6 Simplest Web Accessibility Tests Anyone Can Do</a>.
+                </li>
+            </ol>
+
+            <h3>Optional Readings</h3>
+            <ol class="readings">
+                <li>
+                    (Oct., 2019).
+
+                    <a href="../course-files/readings/accessibility/dominoes-supreme-court.pdf"
+                        target="_blank">Supreme Court allows blind people to sue retailers if their
+                        websites are not accessible</a>.
+
+                    <em>LA Times</em>
+                </li>
+
+                <li>
+                    Stokel-Walker, Chris (Oct., 2019).
+
+                    <a href="../course-files/readings/accessibility/memes.pdf"
+                        target="_blank">Researchers are making memes accessible to the blind</a>.
+
+                    <em>Medium</em>
+                </li>
+
+                <li>
+                    Ladner, Richard (Mar-Apr, 2015).
+
+                    <a href="../course-files/readings/accessibility/p24-ladner.pdf"
+                        target="_blank">Design for User Empowerment</a>.
+
+                    <em>Interactions (ACM)</em>
+                </li>
+            </ol>
+
+            <p>Today we will be talking about web accessibility</p>
+
+            <h2 id="slides">Slides</h2>
             <ul>
-                <li ><a href="../syllabus/index.html">Syllabus</a></li>
-                <li ><a href="../index.html" >Schedule</a></li>
-                <li ><a href="../assignments/index.html">Assignments</a></li>
-                <li ><a href="../reference/design-reference/index.html">Web Reference</a></li>
+                <li>
+                    Lecture 11:
+                    <a href="../course-files/slides/L11_ Design with Accessibility in Mind.pptx"
+                        target="_blank">Design with Accessibility in Mind</a>
+                    (Monday, 02/20)
+                </li>
             </ul>
-        </nav>
 
-        <main>
-            <aside>
-                <ol class="side-menu">
-  <li><a href="#readings">Readings</a>
-    <ol>
-      <li><a href="#">Optional Readings</a></li>
-    </ol>
-  </li>
-  <li><a href="#slides">Slides</a></li>
-  <li><a href="#videos">Videos</a></li>
-</ol>
-
-            </aside>
-            <article>
-                
-
-    
-
-        
-        
-        <h1>
-            <a href="../">Schedule</a> > 8.  Web Accessibility
-        </h1>
-        <div class="subtitle">
-            
-                Week 7: Mon, Feb 20
-            
-        </div>
-    
- 
-                
-
-
-
-    <h2 id="readings">Readings</h2>
-    <ol class="readings">
-
-    
-    
-        <li>
-    
-        Laura Geley
-    
-    
-        (2018).
-    
-    
-        
-            <a href="https://www.toptal.com/designers/ui/importance-web-accessibility" target="_blank">UX and the Importance of Web Accessibility</a>.
-        
-    
-    
-    
-    
-    
-</li> 
-    
-
-    
-    
-        <li>
-    
-    
-    
-        
-            <a href="https://ukhomeoffice.github.io/accessibility-posters/" target="_blank">Designing accessible services</a>.
-        
-    
-    
-    
-    
-    
-</li> 
-    
-
-    
-    
-        <li>
-    
-        Groves, Karl
-    
-    
-        (Sept., 2013).
-    
-    
-        
-            <a href="https://karlgroves.com/2013/09/05/the-6-simplest-web-accessibility-tests-anyone-can-do" target="_blank">The 6 Simplest Web Accessibility Tests Anyone Can Do</a>.
-        
-    
-    
-    
-    
-    
-</li> 
-    
-
-    
-    
-        <li>
-    
-        Dodson, Rob
-    
-    
-        (2018).
-    
-    
-        
-            <a href="https://www.youtube.com/watch?v=cOmehxAU_4s" target="_blank">Watch: How I do an accessibility check -- A11ycasts #11</a>.
-        
-    
-    
-    
-    
-    
-</li> 
-    
-
-    
-    
-        
-    
-
-    
-    
-        
-    
-
-    
-    
-        
-    
-
-</ol>
-
-    <h3>Optional Readings</h3>
-    <ol class="readings">
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            <li>
-    
-    
-        (Oct., 2019).
-    
-    
-        
-            <a href="https://www.latimes.com/politics/story/2019-10-07/blind-person-dominos-ada-supreme-court-disabled" target="_blank">Supreme Court allows blind people to sue retailers if their websites are not accessible</a>.
-        
-    
-    
-        <em>LA Times</em>
-    
-    
-    
-    
-</li> 
-        
-    
-        
-            <li>
-    
-        Stokel-Walker, Chris
-    
-    
-        (Oct., 2019).
-    
-    
-        
-            <a href="https://onezero.medium.com/researchers-are-making-memes-accessible-to-the-blind-46b9ef0550da" target="_blank">Researchers are making memes accessible to the blind</a>.
-        
-    
-    
-        <em>Medium</em>
-    
-    
-    
-    
-</li> 
-        
-    
-        
-            <li>
-    
-        Ladner, Richard
-    
-    
-        (Mar-Apr, 2015).
-    
-    
-        
-            <a href="http://www.nixdell.com/classes/HCI-and-Design-Spring-2017/p24-ladner.pdf" target="_blank">Design for User Empowerment</a>.
-        
-    
-    
-        <em>Interactions (ACM)</em>
-    
-    
-    
-    
-</li> 
-        
-    
-    </ol>
- 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p>Today we will be talking about web accessibility</p>
-
-<h2 id="slides">Slides</h2>
-<ul>
-  <li>Lecture 11: <a href="https://docs.google.com/presentation/d/14aZc0xKDmKuHW-M-mwAsf0yOfxsu2gWO_qzVpZyAYIA/edit?usp=sharing" target="_blank">Design with Accessibility in Mind</a> (Monday, 02/20)</li>
-</ul>
-
-<h2 id="videos">Videos</h2>
-<p>Videos will be published after class on <a href="https://drive.google.com/drive/folders/1O7exzeo0Wg-RmAN7W20R10SSHdEt75Mx" target="_blank">Google Drive</a></p>
-
-
-
-            </article>  
-        </main>
-        <footer>
-            <p>    
-                Department of Computer Science, UNC Asheville
+            <h2 id="videos">Videos</h2>
+            <p>
+                Videos will be published after class on
+                <a href="https://drive.google.com/drive/folders/1O7exzeo0Wg-RmAN7W20R10SSHdEt75Mx"
+                    target="_blank">Google Drive</a>
             </p>
-        </footer>
-        
-            <script type="text/javascript" src="/spring2023/assets/js/main.js"></script>
-    
-    <script>
-        //little bit of a hack:
-        const scrollLeft = () => {
-            //console.log('scrollLeft');
-            document.documentElement.scrollLeft = 0;
-        };
-        setTimeout(scrollLeft, 100);
-    </script>
-        <script type="text/javascript" src="/spring2023/assets/js/scrollspy.js"></script>
-    </body>
+        </article>
+    </main>
+    <footer>
+        <p>Department of Computer Science, UNC Asheville</p>
+    </footer>
+
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+
+   
+</body>
+
 </html>
