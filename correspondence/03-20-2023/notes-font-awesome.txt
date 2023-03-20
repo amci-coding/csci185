@@ -1,0 +1,15 @@
+Hi Mr. Kitchen,
+
+Sorry about the font confusion. Font Awesome is usually just a simple Internet link, but since that's not available to you, I had to download the fonts and the stylesheet. There are two folders enclosed:
+
+* 01-font-reference: intended to help you see your list of options re: fonts. Open font-awesome-demo.html to take a look. The "cheatsheets" list all of the possible icons that are available to you.
+
+* 02-keyframes-activity: all I did here was:
+    (a) copy the fonts folder and font-awesome.css stylesheet into this folder, and 
+    (b) add a link from any relevant index.html file to font-awesome.css.
+
+In the future, if you ever want to use a font awesome icon, just copy the fonts folder and font-awesome.css into the same folder as the HTML file you're working on.
+
+Hope this helps!
+
+-- Prof. Van Wart

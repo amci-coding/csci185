@@ -41,7 +41,10 @@
 .far,
 .fal,
 .fad,
-.fab {
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -146,7 +149,10 @@
 .fas.fa-pull-left,
 .far.fa-pull-left,
 .fal.fa-pull-left,
-.fab.fa-pull-left {
+.fab.fa-pull-left,
+.fa-solid.fa-pull-left,
+.fa-regular.fa-pull-left,
+.fa-brands.fa-pull-left {
     margin-right: .3em;
 }
 
@@ -154,7 +160,10 @@
 .fas.fa-pull-right,
 .far.fa-pull-right,
 .fal.fa-pull-right,
-.fab.fa-pull-right {
+.fab.fa-pull-right,
+.fa-solid.fa-pull-right,
+.fa-regular.fa-pull-right,
+.fa-brands.fa-pull-right {
     margin-left: .3em;
 }
 
@@ -5868,17 +5877,20 @@
 }
 
 
-.far {
+.far,
+.fa-regular {
     font-family: 'Font Awesome 5 Free';
     font-weight: 400;
 }
 
 .fa,
-.fas {
+.fas,
+.fa-solid {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
 }
 
-.fab {
+.fab,
+.fa-brands {
     font-family: 'Font Awesome 5 Brands';
 }
