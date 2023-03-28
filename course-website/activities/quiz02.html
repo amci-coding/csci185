@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../course-files/" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Practice for Quiz 1</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="../assets/images/unca-logo.svg" />
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="../syllabus/index.html">Syllabus</a></li>
+        <li ><a href="../index.html" >Schedule</a></li>
+        <li ><a href="../assignments/index.html">Assignments</a></li>
+        <!-- <li ><a href="/final-project/">Final Project</a></li> -->
+        <li ><a href="../reference/design-reference/index.html">Web Reference</a></li>
+        
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#guidelines">Guidelines</a></li>
+  <li><a href="#set-up">Set-Up</a></li>
+  <li><a href="#your-tasks">Your Tasks</a>
+    <ol>
+      <li><a href="#part1">Part 1. Header [20pts]</a></li>
+      <li><a href="#part2">Part 2. Google Fonts &amp; Header Styling [15pts]</a></li>
+      <li><a href="#part3">Part 3. Main [25pts]</a></li>
+      <li><a href="#part4">Part 4. Accessibility [10pts]</a></li>
+      <li><a href="#part5">Part 5: Pseudo-classes &amp; Transitions [10pts]</a></li>
+      <li><a href="#part6">Part 6: Responsive Layout [15pts]</a></li>
+      <li><a href="#part7">Part 7: Add a link from your homepage [5pts]</a></li>
+    </ol>
+  </li>
+  <li><a href="#submit-to-the-moodle">Submit to the Moodle</a>
+    <ol>
+      <li><a href="#before-you-submit">Before you submit</a>
+        <ol>
+          <li><a href="#">Desktop Layout</a></li>
+          <li><a href="#">Tablet / Mobile</a></li>
+        </ol>
+      </li>
+      <li><a href="#submit-to-the-moodle-1">Submit to the Moodle</a></li>
+    </ol>
+  </li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>Quiz 2: Taco Temple Part II</h1>
+    
+ 
+                <style>
+    img.preview {
+        max-width: 60%;
+        min-width: 500px;
+    }
+
+    .verify {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        column-gap: 30px;
+    }
+    .verify > section {
+        border: solid 1px #CCC;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    .verify img {
+        width: 100%;
+        margin-top: 20px;
+    }
+</style>
+
+<blockquote>
+  <h2 id="guidelines">Guidelines</h2>
+  <ul class="compact">
+    <li>Read the instructions that are outlined under each section very carefully.</li>
+    <li>Complete as many tasks as you can by the end of the quiz.</li>
+    <li>Make your pages look as close to the screenshots / demos as possible.</li>
+    <li>You may use your notes, any sample code, any prior work you’ve completed, and the Internet</li>
+    <li>You <strong>may not</strong> communicate with anyone during the quiz.</li>
+    <li>Partial credit given. Just do your best.</li>
+  </ul>
+</blockquote>
+
+<h2 id="set-up">Set-Up</h2>
+
+<p><a href="../course-files/quizzes/quiz02.zip" class="nu-button">Quiz 2 Starter Files <i class="fas fa-download"></i></a>  
+</p>
+
+<ul>
+  <li>Download the starter files and unzip them. They should be unzipped in a folder called <code class="highlighter-rouge">quiz02</code>.</li>
+  <li>Move your <code class="highlighter-rouge">quiz02</code> folder into your <code class="highlighter-rouge">csci185/quizzes</code> folder.</li>
+  <li>Open your entire <code class="highlighter-rouge">csci185</code> folder in VS Code.</li>
+</ul>
+
+<p>Your directory structure should look something like this (it’s OK if your file structure looks different, so long as the quizzes folder looks like the one below):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>csci185
+├── homework
+├── index.html
+├── lectures
+├── quizzes
+│   ├── quiz01
+│   └── quiz02
+├── styles.css
+└── tutorials
+</code></pre></div></div>
+
+<p>When you’re done with that, complete the Parts 1-7 as described below:</p>
+
+<ol class="compact">
+  <li>(20pts) <a href="#part1">Header</a></li>
+  <li>(15pts) <a href="#part2">Google Fonts</a></li>
+  <li>(25pts) <a href="#part3">Main</a></li>
+  <li>(10pts) <a href="#part4">Accessibility</a></li>
+  <li>(10pts) <a href="#part5">Pseudo-classes   transitions</a></li>
+  <li>(15pts) <a href="#part6">Responsive layout</a></li>
+  <li>(5pts) <a href="#part7">Link from your homepage</a></li>
+</ol>
+
+<h2 id="your-tasks">Your Tasks</h2>
+
+<h3 id="part1">Part 1. Header [20pts]</h3>
+<p>Make the header section look like the picture below, following the guidelines provided:</p>
+
+<ul class="compact">
+  <li>[10pts] Use <strong>Flex</strong></li>
+  <li>[5pts] Links should be white with no underline</li>
+  <li>[5pts] Don’t forget the spacing surrounding the image and navigation</li>
+</ul>
+
+<p><img class="large" src="../assets/images/quizzes/quiz02/header.png" /></p>
+
+<h3 id="part2">Part 2. Google Fonts &amp; Header Styling [15pts]</h3>
+
+<ul class="compact">
+  <li>[10pts] Use the “Passion One” Google font to style the <code class="highlighter-rouge">h1</code>, <code class="highlighter-rouge">h2</code>, and <code class="highlighter-rouge">h3</code> tags.</li>
+  <li>[2.5pts] Center-align the <code class="highlighter-rouge">h1</code> tag (Our Menu)</li>
+  <li>[2.5pts] Add some top margin to the <code class="highlighter-rouge">h1</code> and <code class="highlighter-rouge">h2</code> tags.</li>
+</ul>
+
+<p>When you’re done, the fonts should look like the ones pictured in <a href="#part3">Part 3</a>.</p>
+
+<h3 id="part3">Part 3. Main [25pts]</h3>
+<p>Within the <code class="highlighter-rouge">main</code> section of your HTML page, create layout shown below by following the guidelines:</p>
+
+<ul class="compact">
+  <li>[12.5pts] The section with the class of “cards” should be a two-column grid (each column should be the same width).
+    <ul>
+      <li>Hint: you’ll only need to specify the columns, <strong>not</strong> the rows, as the cards will be positioned into the next available grid cell by default.</li>
+      <li>Note the spacing between columns and rows</li>
+    </ul>
+  </li>
+  <li>[12.5pts] Each section with a class of “card” should also be a two-column grid (the second column should be narrower than the first).
+    <ul>
+      <li>Make sure you add a border around each card</li>
+      <li>Make sure you apply some padding within each card</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a style="text-decoration: none; border: none;" href="../assets/images/quizzes/quiz02/main.png" target="_blank"><img class="frame large" src="../assets/images/quizzes/quiz02/main.png" /></a></p>
+
+<h3 id="part4">Part 4. Accessibility [10pts]</h3>
+<p>Use the WAVE browser extension to fix any accessibility errors. When you’re done, you should have no accessibility errors.</p>
+<ul>
+  <li>You <strong>do NOT</strong> have to submit a screenshot of your accessibility report.</li>
+  <li>You <strong>do</strong> have to correct all the errors.</li>
+</ul>
+
+<p><img class="medium" src="../assets/images/quizzes/quiz02/wave.png" /></p>
+
+<h3 id="part5">Part 5: Pseudo-classes &amp; Transitions [10pts]</h3>
+<p>Create a rule for all of the “card” sections so when you hover over them:</p>
+
+<ul class="compact">
+  <li>[2.5pts] the text color turns white</li>
+  <li>[2.5pts] the background color turns navy blue (<code class="highlighter-rouge">#013672</code>)</li>
+</ul>
+
+<p>[5pts] Ensure that the transition is smooth:</p>
+
+<p><img class="frame large" src="../assets/images/quizzes/quiz02/transitions.gif" /></p>
+
+<h3 id="part6">Part 6: Responsive Layout [15pts]</h3>
+<p>Create a media query that activates when the width of the screen is <strong>800px or less</strong>. Within the media query, implement the following rules:</p>
+
+<ul>
+  <li>[10pts] Overide the section with the class of “cards” so that it’s a one-column grid.</li>
+  <li>[5pts] Target the <code class="highlighter-rouge">nav</code> element and set its display to “none” so that the navigation does not display in the tablet or mobile views.</li>
+</ul>
+
+<h3 id="part7">Part 7: Add a link from your homepage [5pts]</h3>
+<ol>
+  <li>Update your homepage by adding a link to the <code class="highlighter-rouge">index.html</code> file that you made in this quiz (and make sure you are using a relative link). Sarah’s quiz looks like this:
+    <ul>
+      <li><a href="https://vanwars.github.io/csci185-coursework/" target="_blank">https://vanwars.github.io/csci185-coursework/</a></li>
+    </ul>
+  </li>
+  <li>Commit and sync your changes to GitHub.</li>
+</ol>
+
+<h2 id="submit-to-the-moodle">Submit to the Moodle</h2>
+
+<h3 id="before-you-submit">Before you submit</h3>
+
+<p>Verify that you’ve completed <strong>all 7 tasks</strong> and that you’re final Taco Temple menu page (mobile/tablet and desktop) looks as similar as possible to the animations (shown below):</p>
+
+<div class="verify">
+    <section>
+        <h4>Desktop Layout</h4>
+        <img src="../assets/images/quizzes/quiz02/desktop-ui.gif" alt="Animation of Desktop layout" />
+    </section>
+    <section>
+        <h4>Tablet / Mobile</h4>
+        <img src="../assets/images/quizzes/quiz02/tablet-ui.gif" alt="Animation of Tablet / Mobile layout" />
+    </section>
+</div>
+
+<h3 id="submit-to-the-moodle-1">Submit to the Moodle</h3>
+<p><strong>Please Read Carefully:</strong> To submit Quiz 2, paste the following links into the Moodle under the Quiz 2 submission section:</p>
+
+<ol>
+  <li>A link to your <strong>homepage</strong> on GitHub pages.</li>
+  <li>A link to your GitHub <strong>code repository</strong> (where your code files are stored).</li>
+</ol>
+
+<p>If your GitHub is not working for whatever reason, just zip your <strong>COMPLETED</strong> <code class="highlighter-rouge">quiz02</code> folder and upload it to the Moodle.</p>
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>

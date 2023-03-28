@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Homework 6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
+    
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="../assets/images/unca-logo.svg" />
+
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="../syllabus/index.html">Syllabus</a></li>
+        <li ><a href="../index.html" >Schedule</a></li>
+        <li class="active"><a href="../assignments/index.html">Assignments</a></li>
+        <li ><a href="../reference/design-reference/index.html">Web Reference</a></li>
+        
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#collaboration-policy">Collaboration Policy</a></li>
+  <li><a href="#1-set-up">1. Set Up</a>
+    <ol>
+      <li><a href="#indexhtml">index.html</a></li>
+      <li><a href="#carouseljs">carousel.js</a></li>
+      <li><a href="#stylescss">styles.css</a></li>
+    </ol>
+  </li>
+  <li><a href="#2-your-tasks">2. Your Tasks</a>
+    <ol>
+      <li><a href="#part1">1. Attach the event handlers to the buttons (3pts)</a></li>
+      <li><a href="#part2">2. Implement the showImage() function (7pts)</a></li>
+      <li><a href="#part3">3. Implement the forward() function (5pts)</a></li>
+      <li><a href="#part4">4. Implement the back() function (5pts)</a>
+        <ol>
+          <li><a href="#tips">Tips</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#3-what-to-submit">3. What to Submit</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            HW6: Create a Photo Carousel
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Mon, 04/10 @ 11:59PM.
+    
+    
+        20 Points.
+    
+    
+</p>
+
+<style>
+    .medium {
+        margin: 0 auto;
+        display: block;
+    }
+</style>
+
+<blockquote>
+  <h2 class="callout" id="collaboration-policy">Collaboration Policy</h2>
+  <p>For this homework assignment, you are welcome to work in pairs (optional). Even if you collaborate with someone else, you must still submit your own files on GitHub. If you collaborate, you’ll just list your partner in the comments section of Moodle.</p>
+</blockquote>
+
+<p>In this assignment, you will be building a photo carousel from scratch. While there are a million carousel widgets out there, the goal of this assignment is not to simply “build a carousel” but understanding how to use HTML, CSS, and JavaScript together to build any interactive interface that you want.</p>
+
+<h2 id="1-set-up">1. Set Up</h2>
+<p>Download the <code class="highlighter-rouge">hw06</code> starter files and save them to your <code class="highlighter-rouge">csci185/homework</code> folder. Then, open the entire hw06 folder in VS Code.</p>
+
+<p><a href="../course-files/homework/hw06.zip" class="nu-button">HW6 Starter Files <i class="fas fa-download"></i></a></p>
+
+<p>Before you begin, you should first get familiar with the starter files:</p>
+
+<h3 id="indexhtml">index.html</h3>
+<p>Note that there are links to <code class="highlighter-rouge">styles.css</code> and <code class="highlighter-rouge">carousel.js</code> in the <code class="highlighter-rouge">&lt;head&gt;&lt;/head&gt;</code> tag. Note that there is also a carousel “skeleton” inside of the <code class="highlighter-rouge">&lt;body&gt;&lt;/body&gt;</code> tag:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"carousel"</span> <span class="na">aria-label=</span><span class="s">"Photo Carousel"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"current-photo"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- Replace image here --&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/img1-600x400.jpg"</span> <span class="na">alt=</span><span class="s">"current photo"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span> 
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"back"</span> <span class="na">onclick=</span><span class="s">"back()"</span> <span class="na">aria-label=</span><span class="s">"Show previous slide"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/left.png"</span> <span class="na">alt=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"forward"</span> <span class="na">onclick=</span><span class="s">"forward()"</span> <span class="na">aria-label=</span><span class="s">"Show next slide"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/right.png"</span> <span class="na">alt=</span><span class="s">""</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"caption"</span><span class="nt">&gt;</span>Image 1 of 10<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<p>The skeleton consists of:</p>
+<ol class="compact">
+  <li>A carousel container (the section tag)</li>
+  <li>A div tag for holding the image (which will be swapped out when the user clicks the previous and next buttons)</li>
+  <li>Two buttons (to allow the user to control which photo should be displayed), and</li>
+  <li>A caption (the p tag)</li>
+</ol>
+
+<h3 id="carouseljs">carousel.js</h3>
+<p>Inside of carousel, there is already some starter code written for you:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">photos</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="dl">"</span><span class="s2">images/img1-600x400.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">images/img2-600x400.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">images/img3-600x400.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">images/img4-600x400.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">images/img5-600x400.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">images/img6-600x400.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">images/img7-600x400.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">images/img8-600x400.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">images/img9-600x400.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">images/img10-600x400.jpg</span><span class="dl">"</span>
+<span class="p">];</span>
+<span class="kd">let</span> <span class="nx">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">showImage</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Show image</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">forward</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">forward</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">back</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">back</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Specifically:</p>
+
+<ol class="compact">
+  <li>A variable called <code class="highlighter-rouge">photos</code>, which stores an array of photo URLs (strings)</li>
+  <li>A variable called <code class="highlighter-rouge">idx</code> which stores the position of the current photo being displayed</li>
+  <li>An unimplemented function called <code class="highlighter-rouge">showImage()</code></li>
+  <li>An unimplemented function definition called <code class="highlighter-rouge">forward()</code></li>
+  <li>An unimplemented function definition called <code class="highlighter-rouge">back()</code></li>
+</ol>
+
+<h3 id="stylescss">styles.css</h3>
+<p>This file styles the carousel (you shouldn’t have to worry about any CSS edits for this homework assignment). Take a look if you’re interested in seeing how the styling works.</p>
+
+<h2 id="2-your-tasks">2. Your Tasks</h2>
+<p>After inspecting the starter code, please implement the carousel (below) by completing the following tasks:</p>
+
+<p><img class="medium" src="../assets/images/homework/hw06/demo.gif" /></p>
+
+<h3 id="part1">1. Attach the event handlers to the buttons (3pts)</h3>
+<p>Inside <code class="highlighter-rouge">index.html</code>, attach the <code class="highlighter-rouge">forward()</code> and <code class="highlighter-rouge">back()</code> functions to the click events of the appropriate buttons (like we’ve been doing for the past few weeks).</p>
+
+<h3 id="part2">2. Implement the showImage() function (7pts)</h3>
+<p>Inside <code class="highlighter-rouge">carousel.js</code>, implement the <code class="highlighter-rouge">showImage()</code> function. The job of this function is to:</p>
+<ol class="compact">
+  <li>Replace the image that is currently displayed in the DOM with the image that is stored at the <code class="highlighter-rouge">idx</code> position inside the <code class="highlighter-rouge">photos</code> array.</li>
+  <li>Update the caption to indicate to the user which photo is being displayed (see animation below). For instance, if the fourth image in the array is being displayed, the caption should say: “4 of 10”</li>
+</ol>
+
+<h3 id="part3">3. Implement the forward() function (5pts)</h3>
+<p>Inside <code class="highlighter-rouge">carousel.js</code>, implement the <code class="highlighter-rouge">forward()</code> function. The job of this function is to:</p>
+<ol class="compact">
+  <li>Advance the carousel forward by incrementing the value stored inside of the <code class="highlighter-rouge">idx</code> variable, and</li>
+  <li>Invoke the <code class="highlighter-rouge">showImage()</code> function so that the next photo is displayed.</li>
+</ol>
+
+<p>Note that if the value held in <code class="highlighter-rouge">idx</code> is equal to the last available slots in the array, you should set <code class="highlighter-rouge">idx</code> to zero so that the carousel “wraps around” to the beginning.</p>
+
+<h3 id="part4">4. Implement the back() function (5pts)</h3>
+<p>Inside <code class="highlighter-rouge">carousel.js</code>, implement the <code class="highlighter-rouge">back()</code> function. The job of this function is to:</p>
+<ol class="compact">
+  <li>Advance the carousel backward by decrementing the value stored inside of the <code class="highlighter-rouge">idx</code> variable, and</li>
+  <li>Invoking the <code class="highlighter-rouge">showImage()</code> function so that the previous photo is displayed.</li>
+</ol>
+
+<p>Note that if the value held in <code class="highlighter-rouge">idx</code> is 0, set <code class="highlighter-rouge">idx</code> to the last available slot in the arrayso that the carousel “wraps around” to the end.</p>
+
+<blockquote>
+  <h4 id="tips">Tips</h4>
+  <p>For the <code class="highlighter-rouge">forward()</code> and <code class="highlighter-rouge">back()</code> functions, you will need to use an if / else statement to check if the idx value is out of bounds in either direction, so that you can respond accordingly.</p>
+</blockquote>
+
+<h2 id="3-what-to-submit">3. What to Submit</h2>
+<p>Please double-check the instructions to make sure you implemented all of the features and that your carousel looks like the one in the animation above. Then, please navigate to the Moodle and submit the following:</p>
+
+<ol>
+  <li>A link to your <strong>homepage</strong> on GitHub pages, which should link to your <code class="highlighter-rouge">hw06</code> assignment (and previous tutorials and classwork you have done).</li>
+  <li>A link to your GitHub <strong>code repository</strong> (where your code files are stored).</li>
+  <li>If you worked with a partner, list them in the comments section.</li>
+</ol>
+
+
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="../assets/js/main.js"></script>
+    
+    
+        <script type="text/javascript" src="../assets/js/scrollspy.js"></script>
+    </body>
+</html>

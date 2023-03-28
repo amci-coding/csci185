@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Tutorial 8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
+    
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="../assets/images/unca-logo.svg" />
+
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="../syllabus/index.html">Syllabus</a></li>
+        <li ><a href="../index.html" >Schedule</a></li>
+        <li class="active"><a href="../assignments/index.html">Assignments</a></li>
+        <li ><a href="../reference/design-reference/index.html">Web Reference</a></li>
+        
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#background-readings--references">Background Readings / References</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#set-up">Set Up</a>
+    <ol>
+      <li><a href="#indexhtml">index.html</a></li>
+      <li><a href="#mainjs">main.js</a></li>
+    </ol>
+  </li>
+  <li><a href="#your-task">Your Task</a>
+    <ol>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#optional-assignment-extensions">Optional Assignment Extensions</a></li>
+    </ol>
+  </li>
+  <li><a href="#what-to-submit">What to Submit</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            Tutorial 8: Make an online drawing program
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Fri, 03/31 @ 11:59PM.
+    
+    
+        6 Points.
+    
+    
+</p>
+
+<h2 id="background-readings--references">Background Readings / References</h2>
+<ul class="compact">
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-write-conditional-statements-in-javascript" target="_blank">How To Write Conditional Statements in JavaScript</a>. <em>Digital Ocean</em></li>
+  <li><a href="https://www.w3schools.com/html/html5_canvas.asp" target="_blank">The canvas element</a>. <em>W3Schools</em></li>
+  <li>Intro to <a href="https://p5js.org/" target="_blank">p5.js</a></li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+<p>Today you are going to create a drawing program as a means to help you practice:</p>
+<ol class="compact">
+  <li>Accessing user input from form controls</li>
+  <li>Working with conditional statements</li>
+  <li>Using a third-party library (p5.js) and reading technical documentation.</li>
+</ol>
+
+<p>When you’re done, you will have created something that looks like the video shown below:</p>
+
+<p><img class="medium frame" src="../assets/images/tutorials/tutorial08/drawing.gif" /></p>
+
+<h2 id="set-up">Set Up</h2>
+<p>Please download the <code class="highlighter-rouge">tutorial08.zip</code> zip file, extract it, and move the <code class="highlighter-rouge">tutorial08</code> folder inside of your <code class="highlighter-rouge">csci185/tutorials</code> folder.</p>
+
+<p><a href="../course-files/tutorials/tutorial08.zip" class="nu-button">Download Tutorial 8 <i class="fas fa-download"></i></a></p>
+
+<p>When you’re done, please examine the starter files before beginning the assignment.</p>
+
+<h3 id="indexhtml">index.html</h3>
+<p>Notice that <code class="highlighter-rouge">index.html</code> has a reference to the <a href="https://p5js.org/reference/" target="_blank">p5.js</a> library, which has a bunch of functions that we will be using. It also has a reference to <code class="highlighter-rouge">main.js</code>, which is the JavaScript file that you will be editing.</p>
+
+<p>In the body section, there are two panels. The panel on the left (<code class="highlighter-rouge">&lt;aside&gt;&lt;/aside&gt;</code> tag) contains some form controls that allow the user of your drawing program to specify the color, size, and shape of the paintbrush. The panel on the right will eventually hold a <code class="highlighter-rouge">&lt;canvas&gt;&lt;/canvas&gt;</code> tag, which is where the user will create their drawing.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;title&gt;</span>DOM Demo<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"main.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;main&gt;</span>
+            <span class="nt">&lt;aside&gt;</span>
+                <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"color"</span><span class="nt">&gt;</span>Color:<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"color"</span> <span class="na">value=</span><span class="s">"red"</span> <span class="nt">/&gt;</span>
+
+                <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"size"</span><span class="nt">&gt;</span>Size:<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"size"</span> <span class="na">value=</span><span class="s">"40"</span> <span class="nt">/&gt;</span>
+
+                <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"shape"</span><span class="nt">&gt;</span>Shape:<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"shape"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"circle"</span><span class="nt">&gt;</span>Circle<span class="nt">&lt;/option&gt;</span>
+                    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"square"</span><span class="nt">&gt;</span>Square<span class="nt">&lt;/option&gt;</span>
+                    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"triangle"</span><span class="nt">&gt;</span>Triangle<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;/select&gt;</span>
+
+            <span class="nt">&lt;/aside&gt;</span>
+
+            <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"canvas-holder"</span><span class="nt">&gt;</span> 
+                <span class="c">&lt;!-- A canvas element will be inserted here (from main.js) --&gt;</span>
+            <span class="nt">&lt;/section&gt;</span>
+        <span class="nt">&lt;/main&gt;</span>
+    
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="mainjs">main.js</h3>
+<p>You will implement the logic of your drawing program in <code class="highlighter-rouge">main.js</code>. At the top, you will see a function called <code class="highlighter-rouge">setup()</code> (below), whose job is to create a canvas tag and register it with p5.js. This function is always required, but you do not need to edit it.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Code to set up the canvas. Do not edit.</span>
+    <span class="kd">const</span> <span class="nx">canvasEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#canvas-holder</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">canvasWidth</span> <span class="o">=</span> <span class="nx">canvasEl</span><span class="p">.</span><span class="nx">offsetWidth</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">canvasHeight</span> <span class="o">=</span> <span class="nx">canvasEl</span><span class="p">.</span><span class="nx">offsetHeight</span><span class="p">;</span> 
+    <span class="kd">const</span> <span class="nx">myCanvas</span> <span class="o">=</span> <span class="nx">createCanvas</span><span class="p">(</span><span class="nx">canvasWidth</span><span class="p">,</span> <span class="nx">canvasHeight</span><span class="p">);</span>
+    <span class="nx">myCanvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="dl">"</span><span class="s2">canvas-holder</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nx">background</span><span class="p">(</span><span class="dl">'</span><span class="s1">#FFF</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>You will be editing a function called <code class="highlighter-rouge">mouseDragged()</code> which is invoked anytime a user drags their mouse on the canvas. Currently, no matter what preferences the user has selected in the left-hand panel, the drag will always make a hotpink circle:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">mouseDragged</span><span class="p">(){</span>
+    <span class="c1">// Your job:</span>
+    <span class="c1">// When the user drags the mouse on the canvas, you should honor</span>
+    <span class="c1">// the color, shape, and size of the paintbrush that are selected</span>
+    <span class="c1">// in the right-hand panel. Replace the code below with something</span>
+    <span class="c1">// smarter:</span>
+    <span class="nx">fill</span><span class="p">(</span><span class="dl">'</span><span class="s1">hotpink</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">circle</span><span class="p">(</span><span class="nx">mouseX</span><span class="p">,</span> <span class="nx">mouseY</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="your-task">Your Task</h2>
+<p>Your job is to edit the function body of <code class="highlighter-rouge">mouseDragged()</code> so that it honors the user’s color, shape, and size preferences (see animation above):</p>
+
+<h3 id="tips">Tips</h3>
+<p>Within the <code class="highlighter-rouge">mouseDragged()</code> function:</p>
+<ul class="compact">
+  <li>Create three variables – <code class="highlighter-rouge">color</code>, <code class="highlighter-rouge">shape</code>, and <code class="highlighter-rouge">size</code>. Store the value of the user’s preferences in these variables.</li>
+  <li>Use an if / else if / else statement to figure out which shape to draw</li>
+</ul>
+
+<p>I have pasted some code below that shows you how to make a triangle, circle, and square using p5.js.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Samples:</span>
+
+<span class="c1">// https://p5js.org/reference/#/p5/circle</span>
+<span class="nx">fill</span><span class="p">(</span><span class="dl">'</span><span class="s1">pink</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">circle</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>   <span class="c1">// x, y, diameter</span>
+
+<span class="c1">// https://p5js.org/reference/#/p5/square</span>
+<span class="nx">fill</span><span class="p">(</span><span class="dl">'</span><span class="s1">navy</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">square</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>   <span class="c1">// x (top left), y (top left), width</span>
+
+<span class="c1">// https://p5js.org/reference/#/p5/triangle</span>
+<span class="nx">fill</span><span class="p">(</span><span class="dl">'</span><span class="s1">teal</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">triangle</span><span class="p">(</span>
+    <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="c1">// first point</span>
+    <span class="mi">30</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="c1">// second point</span>
+    <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span>  <span class="c1">// third point</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="optional-assignment-extensions">Optional Assignment Extensions</h3>
+<ul class="compact">
+  <li>Add a fourth shape that a user might choose</li>
+  <li>Add the ability for the user to specify the outline color of the shape (currently it defaults to black)</li>
+</ul>
+
+<h2 id="what-to-submit">What to Submit</h2>
+<p><strong>Please Read Carefully:</strong> To submit Tutorial 8, please paste the following links into the Moodle under the Tutorial 8 submission section:</p>
+
+<ol>
+  <li>A link to your <strong>homepage</strong> on GitHub pages, which should link to the drawing program that you just made. See <a href="https://vanwars.github.io/csci185-coursework" target="_blank">Sarah’s Homepage</a> for an example.
+    <ul>
+      <li>Note that your homepage should also link to previous tutorials and classwork you have done.</li>
+    </ul>
+  </li>
+  <li>A link to your GitHub <strong>code repository</strong> (where your code files are stored).</li>
+</ol>
+
+
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="../assets/js/main.js"></script>
+    
+       </body>
+</html>
