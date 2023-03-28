@@ -10,7 +10,7 @@ function changeTitle() {
 function addImage() {
     // adds the following image to each panel:
     // 1. what element do you want to select?
-    //`<img src="https://media1.britannica.com/eb-media/22/65322-004-8FF21CDA.jpg" />`;
+    //`<img src="../02-attribute-demo/images/fish.jpg" />`;
 
 };
 
