@@ -1,297 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            href="../assets/images/favicon.ico"
+            type="image/x-icon"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>Assignments</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <script
+            type="text/javascript"
+            src="../assets/js/fish-pond.js"
+            defer
+        ></script>
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <title>Assignments</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
-</head>
+    <body class="one-column">
+        <div class="container">
+            <!-- banner -->
+            <header>
+                <section>
+                    <h1 class="desktop">
+                        <a href="../index.html">CSCI 185: Spring 2023</a>
+                    </h1>
+                    <h2 class="desktop">
+                        Introduction to Programming for the Web
+                    </h2>
+                    <a class="mobile" href="#">
+                        <i class="menu-toggle fas fa-bars"></i>
+                    </a>
+                    <h1 class="mobile">CSCI 185: Spring 2023</h1>
+                </section>
+                <img src="../assets/images/unca-logo.svg" />
 
-<body class="one-column">
-    <div class="container">
-        <!-- banner -->
-        <header>
-            <section>
-                <h1 class="desktop">
-                    <a href="../index.html">CSCI 185: Spring 2023</a>
-                </h1>
-                <h2 class="desktop">Introduction to Programming for the Web</h2>
-                <a class="mobile" href="#">
-                    <i class="menu-toggle fas fa-bars"></i>
-                </a>
-                <h1 class="mobile">CSCI 185: Spring 2023</h1>
-            </section>
-            <img src="../assets/images/unca-logo.svg" />
+                <p class="kudos">
+                    Fish by
+                    <a
+                        href="https://github.com/akeatk/fish-pond"
+                        target="_blank"
+                        >@akeatk</a
+                    >
+                </p>
+                <canvas></canvas>
+            </header>
 
-            <p class="kudos">
-                Fish by
-                <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
-            </p>
-            <canvas></canvas>
-        </header>
+            <nav>
+                <ul>
+                    <li><a href="../syllabus/index.html">Syllabus</a></li>
+                    <li><a href="../index.html">Schedule</a></li>
+                    <li class="active">
+                        <a href="../assignments/index.html">Assignments</a>
+                    </li>
+                    <li>
+                        <a href="../reference/design-reference/index.html"
+                            >Web Reference</a
+                        >
+                    </li>
+                </ul>
+            </nav>
 
-        <nav>
-            <ul>
-                <li><a href="../syllabus/index.html">Syllabus</a></li>
-                <li><a href="../index.html">Schedule</a></li>
-                <li class="active">
-                    <a href="../assignments/index.html">Assignments</a>
-                </li>
-                <li>
-                    <a href="../reference/design-reference/index.html">Web Reference</a>
-                </li>
-            </ul>
-        </nav>
+            <main>
+                <h1>Assignments</h1>
 
-        <main>
-            <h1>Assignments</h1>
+                <style>
+                    td:nth-child(2),
+                    th:nth-child(2) {
+                        min-width: 150px;
+                    }
+                </style>
 
-            <style>
-                td:nth-child(2),
-                th:nth-child(2) {
-                    min-width: 150px;
-                }
-            </style>
+                <section class="assignments">
+                    <table class="assignments-table">
+                        <thead>
+                            <tr>
+                                <th>Week</th>
+                                <th>Assignment</th>
+                                <th>Description</th>
+                                <th>Points</th>
+                                <th>Due</th>
+                                <th>Days Left</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Week 1</td>
+                                <td>
+                                    <a
+                                        class="lab"
+                                        href="../assignments/tutorial01.html"
+                                    >
+                                        Tutorial 1
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </td>
+                                <td>Analyze an Internet Platform</td>
+                                <td>6 points</td>
+                                <td>Fri, 01/13</td>
+                                <td>
+                                    <span class="due-date"> 01/13/23 </span>
+                                </td>
+                            </tr>
 
-            <section class="assignments">
-                <table class="assignments-table">
-                    <thead>
-                        <tr>
-                            <th>Week</th>
-                            <th>Assignment</th>
-                            <th>Description</th>
-                            <th>Points</th>
-                            <th>Due</th>
-                            <th>Days Left</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Week 1</td>
-                            <td>
-                                <a class="lab" href="../assignments/tutorial01.html">
-                                    Tutorial 1
-                                    <i class="fas fa-link"></i>
-                                </a>
-                            </td>
-                            <td>Analyze an Internet Platform</td>
-                            <td>6 points</td>
-                            <td>Fri, 01/13</td>
-                            <td>
-                                <span class="due-date"> 01/13/23 </span>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>Week 2</td>
+                                <td>
+                                    <a
+                                        class="lab"
+                                        href="../assignments/tutorial02.html"
+                                    >
+                                        Tutorial 2
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </td>
+                                <td>Make Your First Web Page</td>
+                                <td>6 points</td>
+                                <td>Fri, 01/20</td>
+                                <td>
+                                    <span class="due-date"> 01/20/23 </span>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>Week 2</td>
-                            <td>
-                                <a class="lab" href="../assignments/tutorial02.html">
-                                    Tutorial 2
-                                    <i class="fas fa-link"></i>
-                                </a>
-                            </td>
-                            <td>Make Your First Web Page</td>
-                            <td>6 points</td>
-                            <td>Fri, 01/20</td>
-                            <td>
-                                <span class="due-date"> 01/20/23 </span>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>Week 3</td>
+                                <td>
+                                    <a
+                                        class="hw"
+                                        href="../assignments/hw01.html"
+                                    >
+                                        HW1
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </td>
+                                <td>The Internet and the News</td>
+                                <td>20 points</td>
+                                <td>Mon, 01/23</td>
+                                <td>
+                                    <span class="due-date"> 01/23/23 </span>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>Week 3</td>
-                            <td>
-                                <a class="hw" href="../assignments/hw01.html">
-                                    HW1
-                                    <i class="fas fa-link"></i>
-                                </a>
-                            </td>
-                            <td>The Internet and the News</td>
-                            <td>20 points</td>
-                            <td>Mon, 01/23</td>
-                            <td>
-                                <span class="due-date"> 01/23/23 </span>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a
+                                        class="lab"
+                                        href="../assignments/tutorial03.html"
+                                    >
+                                        Tutorial 3
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </td>
+                                <td>Create a Homepage</td>
+                                <td>6 points</td>
+                                <td>Fri, 01/27</td>
+                                <td>
+                                    <span class="due-date"> 01/27/23 </span>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td></td>
-                            <td>
-                                <a class="lab" href="../assignments/tutorial03.html">
-                                    Tutorial 3
-                                    <i class="fas fa-link"></i>
-                                </a>
-                            </td>
-                            <td>Create a Homepage</td>
-                            <td>6 points</td>
-                            <td>Fri, 01/27</td>
-                            <td>
-                                <span class="due-date"> 01/27/23 </span>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>Week 4</td>
+                                <td>
+                                    <a
+                                        class="hw"
+                                        href="../assignments/hw02.html"
+                                    >
+                                        HW2
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </td>
+                                <td>Linking to Internet Resources</td>
+                                <td>20 points</td>
+                                <td>Mon, 01/30</td>
+                                <td>
+                                    <span class="due-date"> 01/30/23 </span>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>Week 4</td>
-                            <td>
-                                <a class="hw" href="../assignments/hw02.html">
-                                    HW2
-                                    <i class="fas fa-link"></i>
-                                </a>
-                            </td>
-                            <td>Linking to Internet Resources</td>
-                            <td>20 points</td>
-                            <td>Mon, 01/30</td>
-                            <td>
-                                <span class="due-date"> 01/30/23 </span>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <a
+                                        class="lab"
+                                        href="../assignments/tutorial04.html"
+                                    >
+                                        Tutorial 4
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </td>
+                                <td>Intro to HTML Forms + CSS Practice</td>
+                                <td>6 points</td>
+                                <td>Fri, 02/03</td>
+                                <td>
+                                    <span class="due-date"> 02/03/23 </span>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td></td>
-                            <td>
-                                <a class="lab" href="../assignments/tutorial04.html">
-                                    Tutorial 4
-                                    <i class="fas fa-link"></i>
-                                </a>
-                            </td>
-                            <td>Intro to HTML Forms + CSS Practice</td>
-                            <td>6 points</td>
-                            <td>Fri, 02/03</td>
-                            <td>
-                                <span class="due-date"> 02/03/23 </span>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>Week 5</td>
+                                <td>
+                                    <a
+                                        class="hw"
+                                        href="../assignments/hw03.html"
+                                    >
+                                        HW3
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    Assigning CSS Properties Using Selectors
+                                </td>
+                                <td>15 points</td>
+                                <td>Mon, 02/06</td>
+                                <td>
+                                    <span class="due-date"> 02/06/23 </span>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>Week 5</td>
-                            <td>
-                                <a class="hw" href="../assignments/hw03.html">
-                                    HW3
-                                    <i class="fas fa-link"></i>
-                                </a>
-                            </td>
-                            <td>Assigning CSS Properties Using Selectors</td>
-                            <td>15 points</td>
-                            <td>Mon, 02/06</td>
-                            <td>
-                                <span class="due-date"> 02/06/23 </span>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>Week 6</td>
+                                <td>
+                                    <a
+                                        class="lab"
+                                        href="../assignments/tutorial05.html"
+                                    >
+                                        Tutorial 5
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </td>
+                                <td>Practice with Flexbox and CSS Grid</td>
+                                <td>6 points</td>
+                                <td>Fri, 02/17</td>
+                                <td>
+                                    <span class="due-date"> 02/17/23 </span>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>Week 6</td>
-                            <td><a class="lab" href="../assignments/tutorial05.html">
-                                Tutorial 5
-                                <i class="fas fa-link"></i>
-                            </a></td>
-                            <td>Practice with Flexbox and CSS Grid</td>
-                            <td>6 points</td>
-                            <td>Fri, 02/17</td>
-                            <td>
-                                <span class="due-date"> 02/17/23 </span>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>Week 7</td>
+                                <td>
+                                    <a
+                                        class="hw"
+                                        href="../assignments/hw04.html"
+                                    >
+                                        HW4
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </td>
+                                <td>CSS Grid & Flex Practice</td>
+                                <td>20 points</td>
+                                <td>Mon, 02/20</td>
+                                <td>
+                                    <span class="due-date"> 02/20/23 </span>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>Week 7</td>
-                            <td>
-                                <a class="hw" href="../assignments/hw04.html">
-                                    HW4
-                                    <i class="fas fa-link"></i>
-                                </a>
-                            </td>
-                            <td>CSS Grid & Flex Practice</td>
-                            <td>20 points</td>
-                            <td>Mon, 02/20</td>
-                            <td>
-                                <span class="due-date"> 02/20/23 </span>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>Week 8</td>
+                                <td>
+                                    <a
+                                        class="hw"
+                                        href="../assignments/hw05.html"
+                                    >
+                                        HW5
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </td>
+                                <td>Make a fake portfolio website</td>
+                                <td>20 points</td>
+                                <td>Mon, 02/27</td>
+                                <td>
+                                    <span class="due-date"> 02/27/23 </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Week 11
+    
+                                </td>
+                                <td>
+    
+    
+    
+                                    <a class="lab" href="../assignments/tutorial07.html">
+                                        Tutorial 7
+                                        <i class="fas fa-link"></i>
+                                    </a>
+    
+                                </td>
+                                <td>DOM manipulation</span>
+                                <td>
+    
+                                    6 points
+    
+                                </td>
+                                <td>Fri, 03/24</td>
+                                <td>
+                                    <span class="due-date">
+                                        03/24/23
+                                    </span>
+                                </td>
+                            </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                            <tr>
+                                <td>
+                                    Week 12
+    
+                                </td>
+                                <td>
+    
+    
+    
+                                    <a class="lab" href="../assignments/tutorial08.html">
+                                        Tutorial 8
+                                        <i class="fas fa-link"></i>
+                                    </a>
+    
+                                </td>
+                                <td>Make an online drawing program</span>
+                                <td>
+    
+                                    6 points
+    
+                                </td>
+                                <td>Fri, 03/31</td>
+                                <td>
+                                    <span class="due-date">
+                                        03/31/23
+                                    </span>
+                                </td>
+                            </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                            <tr>
+                                <td>
+                                    Week 13
+    
+                                </td>
+                                <td>
+    
+    
+    
+                                    <a class="pj" href="../assignments/p1.html">
+                                        Project 1
+                                        <i class="fas fa-link"></i>
+                                    </a>
+    
+                                </td>
+                                <td>Project Proposal</span>
+                                <td>
+    
+                                    10 points
+    
+                                </td>
+                                <td>Mon, 04/03</td>
+                                <td>
+                                    <span class="due-date">
+                                        04/03/23
+                                    </span>
+                                </td>
+                            </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+    
+    
+    
+                                    Tutorial 9
+    
+                                </td>
+                                <td>Make some algorithmic art</span>
+                                <td>
+    
+                                    6 points
+    
+                                </td>
+                                <td>Fri, 04/07</td>
+                                <td>
+                                    <span class="due-date">
+                                        04/07/23
+                                    </span>
+                                </td>
+                            </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                            <tr>
+                                <td>
+                                    Week 14
+    
+                                </td>
+                                <td>
+    
+    
+    
+                                    <a class="hw" href="../assignments/hw06.html">
+                                        HW6
+                                        <i class="fas fa-link"></i>
+                                    </a>
+    
+                                </td>
+                                <td>Create a Photo Carousel</span>
+                                <td>
+    
+                                    20 points
+    
+                                </td>
+                                <td>Mon, 04/10</td>
+                                <td>
+                                    <span class="due-date">
+                                        04/10/23
+                                    </span>
+                                </td>
+                            </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+    
+    
+    
+                                    Tutorial 10
+    
+                                </td>
+                                <td>Get started on the Spotify Homework</span>
+                                <td>
+    
+                                    6 points
+    
+                                </td>
+                                <td>Fri, 04/14</td>
+                                <td>
+                                    <span class="due-date">
+                                        04/14/23
+                                    </span>
+                                </td>
+                            </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                            <tr>
+                                <td>
+                                    Week 15
+    
+                                </td>
+                                <td>
+    
+    
+    
+                                    Project
+    
+                                </td>
+                                <td>Mid-Point Project Deliverable</span>
+                                <td>
+    
+                                    20 points
+    
+                                </td>
+                                <td>Mon, 04/17</td>
+                                <td>
+                                    <span class="due-date">
+                                        04/17/23
+                                    </span>
+                                </td>
+                            </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                            <tr>
+                                <td>
+                                    Week 16
+    
+                                </td>
+                                <td>
+    
+    
+    
+                                    HW7
+    
+                                </td>
+                                <td>Recreate the Spotify Interface</span>
+                                <td>
+    
+                                    25 points
+    
+                                </td>
+                                <td>Mon, 04/24</td>
+                                <td>
+                                    <span class="due-date">
+                                        04/24/23
+                                    </span>
+                                </td>
+                            </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+    
+    
+    
+                                    Exam
+    
+                                </td>
+                                <td>Final Exam: Section 2 (11:30AM-2:00PM)</span>
+                                <td>
+    
+                                </td>
+                                <td>Fri, 04/28</td>
+                                <td>
+                                    <span class="due-date">
+                                        04/28/23
+                                    </span>
+                                </td>
+                            </tr>
+    
+    
+    
+    
+    
+    
 
-                        <tr>
-                            <td>Week 8</td>
-                            <td>
-                                <a class="hw" href="../assignments/hw05.html">
-                                    HW5
-                                    <i class="fas fa-link"></i>
-                                </a>
-                            </td>
-                            <td>Make a fake portfolio website</td>
-                            <td>20 points</td>
-                            <td>Mon, 02/27</td>
-                            <td>
-                                <span class="due-date"> 02/27/23 </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Week 15</td>
-                            <td>Project</td>
-                            <td>Project Proposal</td>
-                            <td>15 points</td>
-                            <td>Mon, 04/17</td>
-                            <td>
-                                <span class="due-date"> 04/17/23 </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Week 16</td>
-                            <td>Project</td>
-                            <td>Midpoint Deliverable</td>
-                            <td>15 points</td>
-                            <td>Mon, 04/24</td>
-                            <td>
-                                <span class="due-date"> 04/24/23 </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td>Lab</td>
-                            <td>Final Exam: Section 2 (11:30AM-2:00PM)</td>
-                            <td>points</td>
-                            <td>Fri, 04/28</td>
-                            <td>
-                                <span class="due-date"> 04/28/23 </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Week 17</td>
-                            <td>Lab</td>
-                            <td>Final Exam: Section 1 (8AM-10:30AM)</td>
-                            <td>points</td>
-                            <td>Mon, 05/01</td>
-                            <td>
-                                <span class="due-date"> 05/01/23 </span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td>Project</td>
-                            <td>Final Project Deliverable</td>
-                            <td>15 points</td>
-                            <td>Wed, 05/03</td>
-                            <td>
-                                <span class="due-date"> 05/03/23 </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-        <footer>
-            <p>Department of Computer Science, UNC Asheville</p>
-        </footer>
-    </div>
-    <script type="text/javascript" src="../assets/js/main.js"></script>
-</body>
-
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+            <footer>
+                <p>Department of Computer Science, UNC Asheville</p>
+            </footer>
+        </div>
+        <script type="text/javascript" src="../assets/js/main.js"></script>
+    </body>
 </html>

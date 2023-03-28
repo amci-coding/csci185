@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Final Project: Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
+    
+    
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <section>
+        <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
+        <h2 class="desktop">Introduction to Programming for the Web</h2>
+        <a class="mobile" href="#">
+            <i class="menu-toggle fas fa-bars"></i>
+        </a>
+        <h1 class="mobile">CSCI 185: Spring 2023</h1>
+    </section>
+    <img src="../assets/images/unca-logo.svg" />
+
+    <p class="kudos">
+        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+    </p>
+    <canvas></canvas>
+</header>
+<nav>
+    <ul>
+        <li ><a href="../syllabus/index.html">Syllabus</a></li>
+        <li ><a href="../index.html" >Schedule</a></li>
+        <li class="active"><a href="../assignments/index.html">Assignments</a></li>
+        <li ><a href="../reference/design-reference/index.html">Web Reference</a></li>
+        
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#deliverable-deadlines">Deliverable Deadlines</a></li>
+  <li><a href="#your-tasks">Your Tasks</a>
+    <ol>
+      <li><a href="#1-create-a-drawcreature-function">1. Create a drawCreature function</a></li>
+      <li><a href="#2-create-a-drawlandscapeobject-function-4-points">2. Create a drawLandscapeObject function (4 points)</a></li>
+      <li><a href="#3-initialize-your-interactive-scene">3. Initialize your interactive scene</a>
+        <ol>
+          <li><a href="#a-background-creatures">a. Background creatures</a></li>
+          <li><a href="#b-landscape-features">b. Landscape features</a></li>
+        </ol>
+      </li>
+      <li><a href="#4-animate-your-scene">4. Animate your scene</a></li>
+      <li><a href="#5-optional-extra-credit-up-to-8-points">5. (Optional) Extra Credit (Up to 8 points)</a></li>
+      <li><a href="#6-create-a-short-video">6. Create a short video</a></li>
+    </ol>
+  </li>
+  <li><a href="#resources-to-check-out">Resources to Check Out</a></li>
+  <li><a href="#policy-on-sample-code-and-collaboration">Policy on sample code and collaboration</a>
+    <ol>
+      <li><a href="#you-may">YOU MAY….</a></li>
+      <li><a href="#you-may-not">YOU MAY NOT…</a></li>
+    </ol>
+  </li>
+  <li><a href="#what-to-submit">What to Submit</a>
+    <ol>
+      <li><a href="#midpoint-deliverable-due-417">Midpoint Deliverable (Due 4/17)</a></li>
+      <li><a href="#final-project-deliverable-due-502">Final Project Deliverable (Due 5/02)</a></li>
+    </ol>
+  </li>
+  <li><a href="#rubric-for-final-project">Rubric (for Final Project)</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>Final Project: Animation / Game Option</h1>
+    
+ 
+                <style>
+    .showcase img {
+        width: 100%;
+    }
+</style>
+
+<p>This final project option asks you to apply what you’ve learned to create an animated, interactive terrarium, aquarium, or space odyssey. To get an idea of what you might make, please see the <a href="https://photos.app.goo.gl/akHuei69rujrveANA" target="_blank">sample videos</a> (as well as the animated gif below). I have also included some projects from last semester:</p>
+<ul>
+  <li><a href="https://qhess.github.io/csci185-coursework/projects/project1/SpaceCannibal/index.html">Space Cannibal</a>, by Quentin Hess</li>
+  <li><a href="https://wshaw1.github.io/csci185-coursework/project2/index.html">Platform Game</a>, by Henry Shaw &amp; Davin Shim</li>
+</ul>
+
+<p>Most of these samples shown above have gone above and beyond the assignment specifications (and thus earned extra credit), but please know that meeting the assignment’s minimum requirements is sufficient for earning all the available points. Please calibrate your implementation according to your experience level with programming (i.e. do more if you’re more experienced): you’ll get out of it what you put into it. See the rubric below to get a sense of how you will be evaluated on this assignment.</p>
+
+<p><img class="frame center med-lg" src="../assets/images/project01/animation.gif" /></p>
+
+<p class="caption">Created by Rachel Smith (Berkeley City College)</p>
+
+<h2 id="deliverable-deadlines">Deliverable Deadlines</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>04/17</strong></td>
+      <td>15pts</td>
+      <td>By the midpoint deliverable, you must complete a rough draft of Parts 1-3 and have at least two distinct animations from Part 4</td>
+    </tr>
+    <tr>
+      <td><strong>04/19</strong></td>
+      <td>5pts</td>
+      <td>Share your progress with a few of your classmates</td>
+    </tr>
+    <tr>
+      <td><strong>05/02</strong></td>
+      <td>30pts</td>
+      <td>By the final deliverable, you must complete all of the specifications listed. Please read the requirements very carefully.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="your-tasks">Your Tasks</h2>
+
+<h3 id="1-create-a-drawcreature-function">1. Create a drawCreature function</h3>
+<p>Create a custom function called <code class="highlighter-rouge">drawCreature</code> (or 2 custom functions if you’re working in pairs) that makes a creature of your choosing. Your function should have at least 4 parameters:</p>
+
+<ol>
+  <li>An <code class="highlighter-rouge">x</code> parameter, specifying the x-position of the center of your creature (should be a number).</li>
+  <li>A <code class="highlighter-rouge">y</code> parameter, specifying the y-position of the center of your creature (should also be a number).</li>
+  <li>A<code class="highlighter-rouge">size</code> parameter, specifying the size of the creature.</li>
+  <li>A <code class="highlighter-rouge">primaryColor</code> parameter, specifying the primary color of the creature. In the case of the bear, this is the face color.</li>
+  <li>A <code class="highlighter-rouge">secondaryColor</code> parameter, specifying the secondary color of the creature. In the case of the bear, this is the ear color.</li>
+</ol>
+
+<p>You may also add any additional parameters, but they must be <strong><em>optional</em></strong>, not required. This means that you will need to give any optional parameters a default value. (hasSunglasses=true, hasSmile=true, tertiaryColor=’hotpink’). Feel free to use the random module to create creatures with ‘surprise’ features.</p>
+
+<p>You are also welcome to create additional creature functions (if you want different kinds of creatures to be present in your terrarium / aquarium). That said, please ensure that your main creature function is called <code class="highlighter-rouge">drawCreature</code>. Any additional creature functions can be named anything that you want and work in any way you want. Up to 3 points will be given for creatures that go above and beyond.</p>
+
+<h3 id="2-create-a-drawlandscapeobject-function-4-points">2. Create a drawLandscapeObject function (4 points)</h3>
+<p>You have already experimented with stars and bubbles in Homework 4. Here, you will make an object of your own choosing (e.g. a tree, a building, a rock, grass, coral, etc.). To do this, you will create a custom function called <code class="highlighter-rouge">drawLandscapeObject</code> (or 2 custom functions if you’re working in pairs) that draws a landscape feature of your choosing. It should have at least 3 parameters:</p>
+
+<ol>
+  <li>An <code class="highlighter-rouge">x</code> parameter, specifying the x-position of the center of your creature (should be a number).</li>
+  <li>A <code class="highlighter-rouge">y</code> parameter, specifying the y-position of the center of your creature (should also be a number).</li>
+  <li>A <code class="highlighter-rouge">size</code> parameter, specifying the size of the creature.</li>
+</ol>
+
+<p>You may also add any additional <strong>keyword</strong> parameters of your choosing to make your  landscape object even more customizable (e.g.: color=’red’, texture=’rough’).</p>
+
+<p>You are also welcome to create several different landscape feature functions to make different landscape features. Note that while your main landscape function must be called <code class="highlighter-rouge">drawLandscapeObject</code>, any additional landscape feature functions can be named anything that you want. Up to 3 points will be given for fantastic landscape features.</p>
+
+<h3 id="3-initialize-your-interactive-scene">3. Initialize your interactive scene</h3>
+<p>Within the <code class="highlighter-rouge">draw()</code> function, you will create your interactive scene. This involves (a) instantiating some background creatures (using your <code class="highlighter-rouge">drawCreature()</code> function), and (b) creating some landscape features (using your <code class="highlighter-rouge">drawLandscapeObject()</code> function).</p>
+
+<h4 id="a-background-creatures">a. Background creatures</h4>
+<p>Instantiate at least 3 different creatures in your landscape, located at different positions, and with varying sizes (and colors and features — optional). You may use a loop (and perhaps a random function) to position your background creatures, or you can intentionally place your background creatures in specific places — or some combination of the two.</p>
+
+<h4 id="b-landscape-features">b. Landscape features</h4>
+<p>Instantiate at least 3 instances of your landscape feature (in the same manner as you did with your background creatures).</p>
+
+<h3 id="4-animate-your-scene">4. Animate your scene</h3>
+<p>Animate the creatures in your landscape by picking <strong>five</strong> of the following effects to implement:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num</th>
+      <th>Task</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Animate one or more of your creatures. If your creature(s) move off of the screen, recreate them on the other side or have them bounce off the side.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Experiment with different kinds of motion. Instead of your creatures moving linearly at a constant speed, you can experiment with the Math.sin and Math.cos functions (or any others techniques) to make your creature oscillate, accelerate, decelerate, etc.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Spawn a new creature or landscape object when the user either clicks or drags or right-clicks the screen.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Animate each of your creatures so that their movement is slightly different (different speeds, different movement patterns).</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Enable your user to control one or more of your creatures using keyboard events (pressing the up/down arrow, using the spacebar, etc.)</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Periodically add or remove creatures to/from your scene.</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>When you click a creature, remove it from the screen.</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Detect collisions, and do something interesting if creatures collide with another object.</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Enable the user to reposition a creature or landscape feature by dragging it</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Create some game mechanics (space bar jumps or shoots, drag ‘flings’ an object, etc.).</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Make your creature or landscape feature periodically change colors.</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <h3 id="5-optional-extra-credit-up-to-8-points">5. (Optional) Extra Credit (Up to 8 points)</h3>
+  <p>If you have already implemented the 5 features above and would like to earn extra credit, I will award up to <strong>8 points</strong> extra credit for pursuing the following enhancements:</p>
+  <ul>
+    <li>Implementing an additional animation. Each additional animation that you add from this list above (beyond the 5 that are required) will earn 3 points extra credit.</li>
+    <li>Making an additional creature function (3 pts).</li>
+    <li>Making an additional landscape function (3 pts).</li>
+    <li>Making a landscape / creature function that goes above and beyond – i.e., more than 8 shapes (3 pts).</li>
+  </ul>
+</blockquote>
+
+<h3 id="6-create-a-short-video">6. Create a short video</h3>
+<p>Please create a short video (between 20 seconds and 1 minute…nothing too involved) of your interactive scene in action. To do this:</p>
+<ol>
+  <li>Take a screencast. For Mac users, QuickTime works, and is free. Zoom also enables you to record your screen.</li>
+  <li>Upload it to Google Drive.</li>
+  <li>Share your Google Drive video so that anyone with link can view.</li>
+</ol>
+
+<h2 id="resources-to-check-out">Resources to Check Out</h2>
+<ul>
+  <li>To download the starter kit: <a href="https://p5js.org/download/support.html" target="_blank">https://p5js.org/download/support.html</a></li>
+  <li>Get Started (the “hello world” example): <a href="https://p5js.org/get-started/" target="_blank">https://p5js.org/get-started/</a></li>
+  <li>Learn: <a href="https://p5js.org/learn/" target="_blank">https://p5js.org/learn/</a></li>
+  <li>Examples: <a href="https://p5js.org/examples/" target="_blank">https://p5js.org/examples/</a></li>
+</ul>
+
+<h2 id="policy-on-sample-code-and-collaboration">Policy on sample code and collaboration</h2>
+<h3 id="you-may">YOU MAY….</h3>
+<ul>
+  <li>Make use of any sample code that I have provided you at any point during the course</li>
+  <li>Consult with and incorporate ideas from Internet sources, so long as you are typing the code for yourself (not copying) and understand how every line of it works.</li>
+  <li>Help each other debug your code and discuss ideas together.</li>
+</ul>
+
+<h3 id="you-may-not">YOU MAY NOT…</h3>
+<ul>
+  <li>Share code — or look at your neighbor’s screen and transcribe their code. I have plagiarism detection software to flag code similarities (e.g. MOSS) — even when whitespace, variable names, and ordering have been changed.</li>
+  <li>Blindly copy code from third-party sources and/or incorporate programming techniques that you don’t understand. You are welcome to find code online to get ideas. But you need to be able to understand how the code works in order to use it (feel free to come to office hours and we can discuss code you find online).</li>
+  <li>Ask other people to write code for you.</li>
+</ul>
+
+<h2 id="what-to-submit">What to Submit</h2>
+<p><strong>Please Read Carefully:</strong> To submit each of your project deliverables, please follow the instructions below:</p>
+
+<h3 id="midpoint-deliverable-due-417">Midpoint Deliverable (Due 4/17)</h3>
+<p>On your homepage, create a section called “Projects”. Underneath this section, include links to:</p>
+<ul class="compact">
+  <li>Your animation / game (midpoint)</li>
+  <li>Your presentation slides</li>
+</ul>
+
+<p>When you’ve created these links, and committed / synced them to GitHub, please include the following information in your Moodle submission:</p>
+<ol>
+  <li>A link to your <strong>homepage</strong> (GitHub pages)</li>
+  <li>A link to your GitHub <strong>code repository</strong></li>
+  <li>If you worked with a partner, list your partner</li>
+</ol>
+
+<h3 id="final-project-deliverable-due-502">Final Project Deliverable (Due 5/02)</h3>
+<p>Inside of the “Projects” section of your homepage, include links to:</p>
+<ul class="compact">
+  <li>Your animation / game (final)</li>
+</ul>
+
+<p>When you’ve created these links, and committed / synced them to GitHub, please include the following information in your Moodle submission:</p>
+<ol>
+  <li>A link to your <strong>homepage</strong> (GitHub pages)</li>
+  <li>A link to your GitHub <strong>code repository</strong></li>
+  <li>If you worked with a partner, list your partner</li>
+  <li>If you did any extra credit, please list what you did, so that I can make sure I give you the appropriate points.
+    <ul>
+      <li>You may earn up to <em>8pts</em> extra credit.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="rubric-for-final-project">Rubric (for Final Project)</h2>
+
+<p>30 points possible + extra credit:</p>
+<table class="rubric">
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Points</th>
+            <th>Scoring Guidelines</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Creature function</td>
+            <td>4</td>
+            <td>
+                Function enables creature to be customized by size and position. 
+                <ul>
+                    <li>Function doesn't properly scale creature (1-2 pts)</li>
+                    <li>Function doesn't properly position creature  (1-2 pts)</li>
+                    <li>Missing parameters (1-2 pts)</li>
+                    <li>Missing calling arguments (1-2 pts)</li>
+                    <li>Function doesn't run b/c of syntax errors (up to 5 points)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Landscape function</td>
+            <td>4</td>
+            <td>
+                Function enables landscape object to be customized by size and position. 
+                <ul>
+                    <li>Function doesn't properly scale object (1-2 pts)</li>
+                    <li>Function doesn't properly position object  (1-2 pts)</li>
+                    <li>Missing parameters (1-2 pts)</li>
+                    <li>Missing calling arguments (1-2 pts)</li>
+                    <li>Function doesn't run b/c of syntax errors (up to 5 points)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Initialize your interactive scene</td>
+            <td>4</td>
+            <td>
+                <ul>
+                    <li>At least 3 background creatures have been rendered</li>
+                    <li>At least 3 landscape features have been rendered (with different sizes, positions, colors, etc.)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Animate your landscape</td>
+            <td>15</td>
+            <td>
+                <ul>
+                    <li>5 animations/interactions (from the list above) have been implemented.</li> 
+                    <li>Each of the animations/interactions follows the specifications given.</li> 
+                    <li>There is coherence to the design of the interactions.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Code Quality</td>
+            <td>1</td>
+            <td>
+                <ul>
+                    <li>All functions, variables, and file_names have pneumonic names / are snake case (up to -1 points)</li>
+                    <li>Code is organized and without unused or redundant code. Please remove commented out code that isn’t running (to help our graders) (up to -2 points)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Video</td>
+            <td>2</td>
+            <td>
+                <ul>
+                    <li>Video has been submitted</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Extra Credit</td>
+            <td>Maximum of 8</td>
+            <td>
+                For projects that exceed expectations in any of the following ways:
+                <ul>
+                    <li>Went above and beyond adding optional parameters and/or additional creature functions.</li>
+                    <li>Went above and beyond adding optional parameters and/or additional landscape object functions.</li>
+                    <li>Creature or landscape function is particularly creative / complex.</li>
+                    <li>The interactions (events) are creative.</li>
+                    <li>The composition is sophisticated (artistically or otherwise).</li>
+                    <li>Extra features listed in animation / interaction section.</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+            </article>  
+        </main>
+        <footer>
+            <p>    
+                Department of Computer Science, UNC Asheville
+            </p>
+        </footer>
+        
+            <script type="text/javascript" src="../assets/js/main.js"></script>
+    
+    
+        <script type="text/javascript" src="../assets/js/scrollspy.js"></script>
+    </body>
+</html>
