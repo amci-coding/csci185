@@ -1,9 +1,11 @@
-const imgOn = "https://www.w3schools.com/js/pic_bulbon.gif";
-const imgOff = "https://www.w3schools.com/js/pic_bulboff.gif";
+const imgOn = "images/pic_bulbon.gif";
+const imgOff = "images/pic_bulboff.gif";
 const elem = document.querySelector("#my_image");
 
-function turnOn() {
-    if (elem.src === imgOn) {
+function turnOnOff() {
+    // console.log(elem.src, imgOn, elem.src === imgOn);
+    // includes checks if the string is contained within another string:
+    if (elem.src.includes(imgOn)) {
         elem.src = imgOff;
     } else {
         elem.src = imgOn;
