@@ -1,136 +1,198 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-            <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../course-files/" type="image/x-icon">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Practice for Quiz 1</title>
-    <link rel="stylesheet" href="../assets/css/main.css">
-    
-    
-    </head>
-    <body class="two-column">
-        <!-- banner -->
-<header>
-    <section>
-        <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
-        <h2 class="desktop">Introduction to Programming for the Web</h2>
-        <a class="mobile" href="#">
-            <i class="menu-toggle fas fa-bars"></i>
-        </a>
-        <h1 class="mobile">CSCI 185: Spring 2023</h1>
-    </section>
-    <img src="../assets/images/unca-logo.svg" />
-    <p class="kudos">
-        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
-    </p>
-    <canvas></canvas>
-</header>
 
-        <nav>
-    <ul>
-        <li ><a href="../syllabus/index.html">Syllabus</a></li>
-        <li ><a href="../index.html" >Schedule</a></li>
-        <li ><a href="../assignments/index.html">Assignments</a></li>
-        <!-- <li ><a href="/final-project/">Final Project</a></li> -->
-        <li ><a href="../reference/design-reference/index.html">Web Reference</a></li>
-        
-    </ul>
-</nav>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../course-files/" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Practice for Quiz 2</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
 
-        <main>
-            <aside>
-                <ol class="side-menu">
-  <li><a href="#20pts-task-1-flexbox">[20pts] Task 1. Flexbox</a></li>
-  <li><a href="#20pts-task-2-css-grid">[20pts] Task 2. CSS Grid</a></li>
-  <li><a href="#20pts-task-3-google-fonts">[20pts] Task 3. Google Fonts</a></li>
-  <li><a href="#20pts-task-4-transitions">[20pts] Task 4. Transitions</a></li>
-  <li><a href="#20pts-task-5-responsive-layout">[20pts] Task 5. Responsive Layout</a>
-    <ol>
-      <li><a href="#desktop">Desktop</a></li>
-      <li><a href="#tablet">Tablet</a></li>
-    </ol>
-  </li>
-</ol>
+<body class="two-column">
+    <!-- banner -->
+    <header>
+        <section>
+            <h1 class="desktop"><a href="/">CSCI 185: Spring 2023</a></h1>
+            <h2 class="desktop">Introduction to Programming for the Web</h2>
+            <a class="mobile" href="#">
+                <i class="menu-toggle fas fa-bars"></i>
+            </a>
+            <h1 class="mobile">CSCI 185: Spring 2023</h1>
+        </section>
+        <img src="../assets/images/unca-logo.svg" />
+        <p class="kudos">
+            Fish by
+            <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+        </p>
+        <canvas></canvas>
+    </header>
 
-            </aside>
-            <article>
-                
+    <nav>
+        <ul>
+            <li><a href="../syllabus/index.html">Syllabus</a></li>
+            <li><a href="../index.html">Schedule</a></li>
+            <li><a href="../assignments/index.html">Assignments</a></li>
+            <!-- <li ><a href="/final-project/">Final Project</a></li> -->
+            <li>
+                <a href="../reference/design-reference/index.html">Web Reference</a>
+            </li>
+        </ul>
+    </nav>
 
-    
-        <h1>Practice for Quiz 2</h1>
-    
- 
-                <style>
-    img {
-        max-width: 70%;
-    }
-</style>
+    <main>
+        <aside>
+            <ol class="side-menu">
+                <li>
+                    <a href="#20pts-task-1-flexbox">[25pts] Task 1. Flexbox</a>
+                </li>
+                <li>
+                    <a href="#20pts-task-2-css-grid">[25pts] Task 2. CSS Grid</a>
+                </li>
+                <li>
+                    <a href="#20pts-task-4-transitions">[25pts] Task 3. Transitions</a>
+                </li>
+                <li>
+                    <a href="#20pts-task-5-responsive-layout">[25pts] Task 4. Responsive Layout</a>
+                    <ol>
+                        <li><a href="#desktop">Desktop</a></li>
+                        <li><a href="#tablet">Tablet</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </aside>
+        <article>
+            <h1>Practice for Quiz 2</h1>
 
-<p>To study for Quiz 2, please complete the practice quiz by downloading the starter files and following the instructions (below). If you have questions, please ask during class time or in office hours.</p>
+            <style>
+                img {
+                    max-width: 70%;
+                }
+            </style>
 
-<p><a href="../course-files/activities/practice-quiz02.zip" class="nu-button">Download Starter Files <i class="fas fa-download"></i></a></p>
-
-<h3 id="20pts-task-1-flexbox">[20pts] Task 1. Flexbox</h3>
-<p>Open the <code class="highlighter-rouge">task01</code> folder and use flexbox to produce the layout shown below.</p>
-
-<ul>
-  <li>You may only edit the stylesheet (<code class="highlighter-rouge">styles.css</code>). <strong>Do not edit anything inside <code class="highlighter-rouge">index.html</code>.</strong></li>
-  <li>Centering the text horizontally and vertically within each <code class="highlighter-rouge">section</code> tag is optional.</li>
-</ul>
-
-<p><img class="medium frame" src="../assets/images/quizzes/practice_quiz02/task01.png" /></p>
-
-<h3 id="20pts-task-2-css-grid">[20pts] Task 2. CSS Grid</h3>
-<p>Open the <code class="highlighter-rouge">task02</code> folder and use CSS Grid to produce the layout shown below (note that the gridlines in the second images are just to help you understand the layout).</p>
-
-<ul>
-  <li>You may only edit the stylesheet (<code class="highlighter-rouge">styles.css</code>). <strong>Do not edit anything inside <code class="highlighter-rouge">index.html</code>.</strong></li>
-  <li>Centering the text horizontally and vertically within each <code class="highlighter-rouge">section</code> tag is optional.</li>
-</ul>
-
-<p><img class="medium frame" src="../assets/images/quizzes/practice_quiz02/task02.png" /></p>
-
-<p><img class="medium frame" src="../assets/images/quizzes/practice_quiz02/task02-gridlines.png" /></p>
-
-<h3 id="20pts-task-3-google-fonts">[20pts] Task 3. Google Fonts</h3>
-<p>Open the <code class="highlighter-rouge">task03</code> folder and apply the “Orbitron” Google Font to the h1 and h2 tags (see screenshot below).</p>
-
-<p><img class="medium frame" src="../assets/images/quizzes/practice_quiz02/task03.png" /></p>
-
-<h3 id="20pts-task-4-transitions">[20pts] Task 4. Transitions</h3>
-<p>Open the <code class="highlighter-rouge">task04</code> folder and create the following transition effects:</p>
-
-<p><img class="medium frame" src="../assets/images/quizzes/practice_quiz02/task04.gif" /></p>
-
-<h3 id="20pts-task-5-responsive-layout">[20pts] Task 5. Responsive Layout</h3>
-<p>Open the <code class="highlighter-rouge">task05</code> folder and create the following responsive layout for Desktop and Tablet. Assume that the tablet layout starts as <code class="highlighter-rouge">max-width: 800px</code>:</p>
-
-<h4 id="desktop">Desktop</h4>
-<p><img class="medium" src="../assets/images/quizzes/practice_quiz02/task05a.png" /></p>
-
-<h4 id="tablet">Tablet</h4>
-<p><img class="small" src="../assets/images/quizzes/practice_quiz02/task05b.png" /></p>
-
-<h2 id="what-to-submit-if-this-were-a-real-quiz">What to Submit (if this were a real quiz)</h2>
-<p>If this were the real quiz, you would commit and push your changes (like we’ve been doing in class). Then, you would paste each of the 5 links into the Quiz 2 section:</p>
-<ol>
-  <li>A link to your code repository (e.g., <a href="https://github.com/vanwars/csci185-coursework">https://github.com/vanwars/csci185-coursework</a>)</li>
-  <li>A link to your homepage (e.g., <a href="https://vanwars.github.io/csci185-coursework">https://vanwars.github.io/csci185-coursework</a>)</li>
-</ol>
-
-            </article>  
-        </main>
-        <footer>
-            <p>    
-                Department of Computer Science, UNC Asheville
+            <p>
+                To study for Quiz 2, please complete the practice quiz by
+                downloading the starter files and following the instructions
+                (below). If you have questions, please ask during class time
+                or in office hours.
             </p>
-        </footer>
-        
-            <script type="text/javascript" src="/assets/js/main.js"></script>
-    
-    
-        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
-    </body>
+
+            <p>
+                <a href="../course-files/activities/practice-quiz02.zip" class="nu-button">Download Starter Files <i
+                        class="fas fa-download"></i></a>
+            </p>
+
+            <h3 id="20pts-task-1-flexbox">[25pts] Task 1. Flexbox</h3>
+            <p>
+                Open the
+                <code class="highlighter-rouge">task01</code> folder and use
+                flexbox to produce the layout shown below.
+            </p>
+
+            <ul>
+                <li>
+                    You may only edit the stylesheet (<code class="highlighter-rouge">styles.css</code>).
+                    <strong>Do not edit anything inside
+                        <code class="highlighter-rouge">index.html</code>.</strong>
+                </li>
+                <li>
+                    Centering the text horizontally and vertically within
+                    each <code class="highlighter-rouge">section</code> tag
+                    is optional.
+                </li>
+            </ul>
+
+            <p>
+                <img class="medium frame" src="../assets/images/quizzes/practice_quiz02/task01.png" />
+            </p>
+
+            <h3 id="20pts-task-2-css-grid">[25pts] Task 2. CSS Grid</h3>
+            <p>
+                Open the
+                <code class="highlighter-rouge">task02</code> folder and use
+                CSS Grid to produce the layout shown below (note that the
+                gridlines in the second images are just to help you
+                understand the layout).
+            </p>
+
+            <ul>
+                <li>
+                    You may only edit the stylesheet (<code class="highlighter-rouge">styles.css</code>).
+                    <strong>Do not edit anything inside
+                        <code class="highlighter-rouge">index.html</code>.</strong>
+                </li>
+                <li>
+                    Centering the text horizontally and vertically within
+                    each <code class="highlighter-rouge">section</code> tag
+                    is optional.
+                </li>
+            </ul>
+
+            <p>
+                <img class="medium frame" src="../assets/images/quizzes/practice_quiz02/task02.png" />
+            </p>
+
+            <p>
+                <img class="medium frame" src="../assets/images/quizzes/practice_quiz02/task02-gridlines.png" />
+            </p>
+
+            <h3 id="20pts-task-4-transitions">
+                [25pts] Task 3. Transitions
+            </h3>
+            <p>
+                Open the
+                <code class="highlighter-rouge">task04</code> folder and
+                create the following transition effects:
+            </p>
+
+            <p>
+                <img class="medium frame" src="../assets/images/quizzes/practice_quiz02/task04.gif" />
+            </p>
+
+            <h3 id="20pts-task-5-responsive-layout">
+                [25pts] Task 4. Responsive Layout
+            </h3>
+            <p>
+                Open the
+                <code class="highlighter-rouge">task05</code> folder and
+                create the following responsive layout for Desktop and
+                Tablet. Assume that the tablet layout starts as
+                <code class="highlighter-rouge">max-width: 800px</code>:
+            </p>
+
+            <h4 id="desktop">Desktop</h4>
+            <p>
+                <img class="medium" src="../assets/images/quizzes/practice_quiz02/task05a.png" />
+            </p>
+
+            <h4 id="tablet">Tablet</h4>
+            <p>
+                <img class="small" src="../assets/images/quizzes/practice_quiz02/task05b.png" />
+            </p>
+
+            <h2 id="what-to-submit-if-this-were-a-real-quiz">
+                What to Submit (if this were a real quiz)
+            </h2>
+            <p>
+                If this were the real quiz, you would commit and push your
+                changes (like we’ve been doing in class). Then, you would
+                paste each of the 5 links into the Quiz 2 section:
+            </p>
+            <ol>
+                <li>
+                    A link to your homepage
+                </li>
+            </ol>
+        </article>
+    </main>
+    <footer>
+        <p>Department of Computer Science, UNC Asheville</p>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+
+    <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+</body>
+
 </html>

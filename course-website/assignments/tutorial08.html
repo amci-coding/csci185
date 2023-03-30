@@ -6,7 +6,6 @@
     <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>Tutorial 8</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
     
@@ -82,10 +81,15 @@
 </p>
 
 <h2 id="background-readings--references">Background Readings / References</h2>
+
 <ul class="compact">
-  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-write-conditional-statements-in-javascript" target="_blank">How To Write Conditional Statements in JavaScript</a>. <em>Digital Ocean</em></li>
-  <li><a href="https://www.w3schools.com/html/html5_canvas.asp" target="_blank">The canvas element</a>. <em>W3Schools</em></li>
-  <li>Intro to <a href="https://p5js.org/" target="_blank">p5.js</a></li>
+    <li>
+        <a href="../../course-website/course-files/readings/How To Write Conditional Statements in JavaScript _ DigitalOcean.pdf"
+            target="_blank">How To Write Conditional Statements in
+            JavaScript</a>. <em>Digital Ocean</em>
+    </li>
+    <li><a href="../../w3schools/html/html5_canvas.html" target="_blank">The canvas element</a>. <em>W3Schools</em></li>
+    <li>Intro to <a href="../../p5-reference/index.html" target="_blank">p5.js</a></li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
@@ -108,7 +112,7 @@
 <p>When you’re done, please examine the starter files before beginning the assignment.</p>
 
 <h3 id="indexhtml">index.html</h3>
-<p>Notice that <code class="highlighter-rouge">index.html</code> has a reference to the <a href="https://p5js.org/reference/" target="_blank">p5.js</a> library, which has a bunch of functions that we will be using. It also has a reference to <code class="highlighter-rouge">main.js</code>, which is the JavaScript file that you will be editing.</p>
+<p>Notice that <code class="highlighter-rouge">index.html</code> has a reference to the <a href="../../p5-reference/index.html" target="_blank">p5.js</a> library, which has a bunch of functions that we will be using. It also has a reference to <code class="highlighter-rouge">main.js</code>, which is the JavaScript file that you will be editing.</p>
 
 <p>In the body section, there are two panels. The panel on the left (<code class="highlighter-rouge">&lt;aside&gt;&lt;/aside&gt;</code> tag) contains some form controls that allow the user of your drawing program to specify the color, size, and shape of the paintbrush. The panel on the right will eventually hold a <code class="highlighter-rouge">&lt;canvas&gt;&lt;/canvas&gt;</code> tag, which is where the user will create their drawing.</p>
 
@@ -116,7 +120,7 @@
     <span class="nt">&lt;head&gt;</span>
         <span class="nt">&lt;title&gt;</span>DOM Demo<span class="nt">&lt;/title&gt;</span>
         <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"p5.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
         <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"main.js"</span> <span class="na">defer</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="nt">&lt;/head&gt;</span>
     <span class="nt">&lt;body&gt;</span>
