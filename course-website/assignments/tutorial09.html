@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Tutorial 9</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
+</head>
+
+<body class="two-column">
+    <!-- banner -->
+    <header>
+        <section>
+            <h1 class="desktop">
+                <a href="../index.html">CSCI 185: Spring 2023</a>
+            </h1>
+            <h2 class="desktop">Introduction to Programming for the Web</h2>
+            <a class="mobile" href="#">
+                <i class="menu-toggle fas fa-bars"></i>
+            </a>
+            <h1 class="mobile">CSCI 185: Spring 2023</h1>
+        </section>
+        <img src="../assets/images/unca-logo.svg" />
+
+        <p class="kudos">
+            Fish by
+            <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+        </p>
+        <canvas></canvas>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../syllabus/index.html">Syllabus</a></li>
+            <li><a href="../index.html">Schedule</a></li>
+            <li class="active">
+                <a href="../assignments/index.html">Assignments</a>
+            </li>
+            <li>
+                <a href="../reference/design-reference/index.html">Web Reference</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside>
+            <ol class="side-menu">
+                <li>
+                    <a href="#part-1-loop-art">Part 1: Loop Art</a>
+                    <ol>
+                        <li>
+                            <a href="#about-the-mathrandom-function">About the Math.random() function</a>
+                        </li>
+                        <li><a href="#your-job">Your Job</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#part-2-animation">Part 2: Animation</a>
+                    <ol>
+                        <li><a href="#your-job-1">Your Job</a></li>
+                        <li>
+                            <a href="#optional-enhancements-extra-credit">Optional enhancements (extra credit)</a>
+                        </li>
+                    </ol>
+                </li>
+                <li><a href="#what-to-submit">What to Submit</a></li>
+            </ol>
+        </aside>
+        <article>
+            <h1>
+                <a href="../assignments/">Assignments</a> > Tutorial 9: Make
+                some algorithmic art
+            </h1>
+
+            <p>Due on Fri, 04/07 @ 11:59PM. 6 Points.</p>
+
+            <style>
+                .cars {
+                    min-width: 450px;
+                    border-top: solid 1px #666;
+                    border-left: solid 1px #666;
+                    border-right: solid 1px #666;
+                    border-radius: 4px;
+                    width: 70%;
+                }
+
+                .grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 10px;
+                    row-gap: 10px;
+                    margin-bottom: 40px;
+                }
+
+                .grid img {
+                    width: 100%;
+                }
+
+                .span2 {
+                    grid-column: 1 / span 2;
+                }
+
+                @media screen and (max-width: 500px) {
+                    .grid {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .span2 {
+                        grid-column: 1 / span 1;
+                    }
+                }
+            </style>
+
+            <p>
+                <a class="nu-button" href="../course-files/tutorials/tutorial09.zip" target="_blank">
+                    Tutorial 09 Starter Files
+                    <i class="fas fa-download"></i>
+                </a>
+            </p>
+
+            <p>
+                The goal of this tutorial is to get you more comfortable
+                working with loops and conditional statements.
+            </p>
+
+            <blockquote class="blockquote-no-margin">
+                <p><strong>LEARNING OBJECTIVES:</strong></p>
+                <ol>
+                    <li>Practice working with loops</li>
+                    <li>Practice working with if statements</li>
+                    <li>
+                        Practice working with JavaScript’s built-in
+                        Math.random() module
+                    </li>
+                </ol>
+            </blockquote>
+
+            <h2 id="part-1-loop-art">Part 1: Loop Art</h2>
+            <p>
+                Preview
+                <code class="highlighter-rouge">artwork/index.html</code> in
+                the browser, and then refresh the page a few times. Note
+                that each time the screen is redrawn, the circle appears in
+                a different location and has a different size and shape.
+                This effect is achieved using the random function:
+            </p>
+
+            <h3 id="about-the-mathrandom-function">
+                About the Math.random() function
+            </h3>
+            <p>
+                <code class="highlighter-rouge">Math.random()</code> returns
+                a value between 0 and 1. This value can then be multiplied
+                by some number to be more useful. For instance, if I wanted
+                a random number between 0 and 500, I would issue the
+                following statement (try it out in the JavaScript console):
+                <code class="highlighter-rouge">const randNum = Math.random() * 500;</code>
+            </p>
+
+            <p>
+                I could also be a little more creative to further control
+                the range of numbers returned:
+            </p>
+
+            <div class="language-js highlighter-rouge">
+                <div class="highlight">
+                    <pre class="highlight"><code><span class="c1">// give me a number between 300 and 500:</span>
+<span class="kd">const</span> <span class="nx">randNum1</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">200</span> <span class="o">+</span> <span class="mi">300</span><span class="p">;</span>
+
+<span class="c1">// give me an integer between 300 and 500:</span>
+<span class="kd">const</span> <span class="nx">randNum2</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="mi">200</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="mi">300</span><span class="p">;</span>
+
+<span class="c1">// make a function that returns a decimal number </span>
+<span class="c1">// between a and b (decimals are sometimes called "floats" in computer science):</span>
+<span class="kd">function</span> <span class="nx">randomFloat</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span><span class="p">)</span> <span class="o">+</span> <span class="nx">min</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// make a function that returns an integer between a and b:</span>
+<span class="kd">function</span> <span class="nx">randomInt</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="nx">min</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+                </div>
+            </div>
+
+            <h3 id="your-job">Your Job</h3>
+            <p>
+                In <code class="highlighter-rouge">artwork/sketch.js</code>,
+                take a look at lines 22-25 (which are responsible for
+                creating the randomly sized and positioned circle). Then,
+                using any kind of loop you want, try making 1,000 randomly
+                generated circles. When you’re done, experiment with the
+                following techniques to make some algorithmic, abstract art:
+            </p>
+
+            <ul>
+                <li>
+                    Try creating other random shapes (squares, lines,
+                    triangles, etc.) within your loop. There is some sample
+                    code (commented out) at the bottom of
+                    <code class="highlighter-rouge">sketch.js</code> that
+                    you can experiment with (but note that you have to move
+                    the relevant function invocations <em>inside</em> of the
+                    setup function for them to work).
+                </li>
+                <li>
+                    Try making each shape a different color. Consider
+                    picking a random color from the
+                    <code class="highlighter-rouge">colors</code> palette
+                    (and feel free to change the colors / add more colors).
+                </li>
+                <li>
+                    See if you can animate some of the shapes by moving some
+                    of your code into the
+                    <code class="highlighter-rouge">draw()</code> function.
+                </li>
+            </ul>
+
+            <p>
+                I have included some sample drawings below to give you some
+                ideas:
+            </p>
+
+            <div class="grid">
+                <img class="span2" src="../assets/images/tutorials/tutorial09/bubbles.png" />
+                <img class="span2" src="../assets/images/tutorials/tutorial09/stars.png" />
+                <img src="../assets/images/tutorials/tutorial09/lines.png" />
+                <img src="../assets/images/tutorials/tutorial09/crosses.png" />
+                <img src="../assets/images/tutorials/tutorial09/color-shapes.png" />
+                <img src="../assets/images/tutorials/tutorial09/lines-rotating.gif" />
+                <img src="../assets/images/tutorials/tutorial09/squares-rotating.gif" />
+                <img src="../assets/images/tutorials/tutorial09/bubbles.gif" />
+            </div>
+
+            <h2 id="part-2-animation">Part 2: Animation</h2>
+            <p>
+                Open the
+                <code class="highlighter-rouge">cars/sketch.js</code> file
+                and examine the starter code. Some things to note:
+            </p>
+            <ul>
+                <li>
+                    I have created a
+                    <code class="highlighter-rouge">drawCar()</code>
+                    function for you, which draws a car of any position,
+                    size, and color, depending on the values passed into the
+                    function as arguments.
+                </li>
+                <li>
+                    I have also created a “state object” called
+                    <code class="highlighter-rouge">c1</code> that keeps
+                    track of the data values for the car. You can create
+                    additional state objects to keep track of additional
+                    cars.
+                </li>
+                <li>
+                    Some brief reminders about
+                    <code class="highlighter-rouge">p5.js</code>:
+                    <ul>
+                        <li>
+                            It requires us to define a
+                            <code class="highlighter-rouge">setup()</code>
+                            function to define the canvas we’ll be using for
+                            our animation.
+                        </li>
+                        <li>
+                            It also allows us to define an optional
+                            <code class="highlighter-rouge">draw()</code>
+                            function, which will be invoked in p5’s built-in
+                            animation loop. Everything inside of
+                            <code class="highlighter-rouge">draw()</code>
+                            will be called over and over again as part of
+                            the animation loop.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Within the
+                    <code class="highlighter-rouge">draw()</code> loop, I
+                    have already started animating the pink car. Your job
+                    will involve enhancing this code so that it looks like
+                    the one in the animation below.
+                </li>
+            </ul>
+
+            <p>
+                <img class="cars" src="../assets/images/tutorials/tutorial09/cars.gif" />
+            </p>
+
+            <h3 id="your-job-1">Your Job</h3>
+            <ul>
+                <li>
+                    Currently, the pink car moves very slowly. Make it move
+                    at a reasonable pace by modifying the data in the
+                    <code class="highlighter-rouge">c1</code> object at the
+                    top of the page.
+                </li>
+                <li>
+                    If the pink car gets past the end of the screen, it
+                    should seamlessly be moved to the beginning of the
+                    screen, so that it looks like it’s wrapping around.
+                    <ul>
+                        <li>
+                            Hint: You will need to use an “if statement”
+                            within the draw loop that checks if the car’s
+                            position has reached the end of the screen. If
+                            it has, you’ll update the car’s position so that
+                            it “jumps” back to the beginning again.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Next, add a second car to your animation, which should
+                    move in the opposite direction, and also loop back
+                    around when it gets to the end of the screen (see the
+                    animated gif). To do this:
+                    <ul>
+                        <li>
+                            Copy the
+                            <code class="highlighter-rouge">c1</code>
+                            object, paste it below the first one. Rename the
+                            copied object to
+                            <code class="highlighter-rouge">c2.</code> This
+                            new
+                            <code class="highlighter-rouge">c2</code> state
+                            object will help you animate a second car.
+                        </li>
+                        <li>
+                            Within the
+                            <code class="highlighter-rouge">draw()</code>
+                            function, add another
+                            <code class="highlighter-rouge">drawCar()</code>
+                            function call, but using the c2 object to
+                            position the car.
+                        </li>
+                        <li>
+                            Note: the cars don’t have to be the same size or
+                            go the same speed.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 id="optional-enhancements-extra-credit">
+                Optional enhancements (extra credit)
+            </h3>
+            <p>The more you practice, the better you’ll get!</p>
+
+            <ol>
+                <li>
+                    <strong>[1pt]</strong> Add a third car with a different
+                    position, size, and color (and make sure it also wraps
+                    around when it gets to the end).
+                </li>
+                <li>
+                    <strong>[2pts]</strong> Create a
+                    <code class="highlighter-rouge">drawTruck()</code>
+                    function that draws a truck. Then add the truck to your
+                    animation (in addition to the 2 cars and make sure it
+                    also wraps around when it gets to the end).
+                </li>
+                <li>
+                    <strong>[1pt]</strong> Make the cars accelerate over
+                    time (start off slow and gradually move faster).
+                </li>
+                <li>
+                    <strong>[2pt]</strong> Add your creature to your
+                    animation:
+                    <ul>
+                        <li>
+                            Inside
+                            <code class="highlighter-rouge">helpers.py</code>:
+                        </li>
+                        <li>
+                            Add your
+                            <code class="highlighter-rouge">drawCreature</code>
+                            function definition (adapt from Homework 3).
+                        </li>
+                        <li>
+                            In
+                            <code class="highlighter-rouge">cars/sketch.js</code>: animate your creature
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>[3pt]</strong> Add one of your classmate’s
+                    creatures to your animation, and complete the steps from
+                    #2 directly above.
+                </li>
+            </ol>
+
+            <h2 id="what-to-submit">What to Submit</h2>
+            <p>
+                <strong>Please Read Carefully:</strong> To submit Tutorial
+                9, please paste the following links into the Moodle under
+                the Tutorial 9 submission section:
+            </p>
+
+            <ol>
+                <li>
+                    A link to your <strong>homepage</strong> on GitHub
+                    pages, which should link to:
+                    <ul>
+                        <li>Your artwork page</li>
+                        <li>Your animation page</li>
+                    </ul>
+                </li>
+                <li>
+                    A link to your GitHub
+                    <strong>code repository</strong> (where your code files
+                    are stored).
+                </li>
+            </ol>
+
+            <p>
+                See
+                <a href="https://vanwars.github.io/csci185-coursework/" target="_blank">Sarah’s homepage</a>
+                for an example.
+            </p>
+        </article>
+    </main>
+    <footer>
+        <p>Department of Computer Science, UNC Asheville</p>
+    </footer>
+
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+
+</html>
