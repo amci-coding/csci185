@@ -1,87 +1,215 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-            <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Project: Midpoint Deliverable</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Midpoint Project Deliverable</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
     <script type="text/javascript" src="../assets/js/fish-pond.js" defer></script>
-    
-    </head>
-    <body class="two-column">
-        <!-- banner -->
-<header>
-    <section>
-        <h1 class="desktop"><a href="../index.html">CSCI 185: Spring 2023</a></h1>
-        <h2 class="desktop">Introduction to Programming for the Web</h2>
-        <a class="mobile" href="#">
-            <i class="menu-toggle fas fa-bars"></i>
-        </a>
-        <h1 class="mobile">CSCI 185: Spring 2023</h1>
-    </section>
-    <img src="../assets/images/unca-logo.svg" />
+</head>
 
-    <p class="kudos">
-        Fish by <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
-    </p>
-    <canvas></canvas>
-</header>
+<body class="two-column">
+    <!-- banner -->
+    <header>
+        <section>
+            <h1 class="desktop">
+                <a href="../index.html">CSCI 185: Spring 2023</a>
+            </h1>
+            <h2 class="desktop">Introduction to Programming for the Web</h2>
+            <a class="mobile" href="#">
+                <i class="menu-toggle fas fa-bars"></i>
+            </a>
+            <h1 class="mobile">CSCI 185: Spring 2023</h1>
+        </section>
+        <img src="../assets/images/unca-logo.svg" />
 
-        <nav>
-    <ul>
-        <li ><a href="../syllabus/index.html">Syllabus</a></li>
-        <li ><a href="../index.html" >Schedule</a></li>
-        <li class="active"><a href="../assignments/index.html">Assignments</a></li>
-        <li ><a href="../reference/design-reference/index.html">Web Reference</a></li>
-        
-    </ul>
-</nav>
+        <p class="kudos">
+            Fish by
+            <a href="https://github.com/akeatk/fish-pond" target="_blank">@akeatk</a>
+        </p>
+        <canvas></canvas>
+    </header>
 
-        <main>
-            <aside>
-                
+    <nav>
+        <ul>
+            <li><a href="../syllabus/index.html">Syllabus</a></li>
+            <li><a href="../index.html">Schedule</a></li>
+            <li class="active">
+                <a href="../assignments/index.html">Assignments</a>
+            </li>
+            <li>
+                <a href="../reference/design-reference/index.html">Web Reference</a>
+            </li>
+        </ul>
+    </nav>
 
-            </aside>
-            <article>
-                
+    <main>
+        <aside>
+            <ol class="side-menu">
+                <li><a href="#overview">Overview</a></li>
+                <li>
+                    <a href="#code">1. Code &amp; Designs [6pts]</a>
+                    <ol>
+                        <li><a href="#side-note">Side note</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#reflection">2. Reflection [4pts]</a>
+                    <ol>
+                        <li>
+                            <a href="#1-reflecting-on-your-accomplishments-1pt">1. Reflecting on your accomplishments
+                                [1pt]</a>
+                        </li>
+                        <li>
+                            <a href="#2-reflecting-on-challenges-1pt">2. Reflecting on challenges [1pt]</a>
+                        </li>
+                        <li>
+                            <a href="#3-next-steps-1pt">3. Next steps [1pt]</a>
+                        </li>
+                        <li>
+                            <a href="#4-scope-revision-1pt">4. Scope revision? [1pt]</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#accomplishments">3. Sharing Your Accomplishments [5pts]</a>
+                </li>
+                <li><a href="#what-to-turn-in">What to Turn In</a></li>
+            </ol>
+        </aside>
+        <article>
+            <h1>
+                <a href="../assignments/">Assignments</a> > Project 1b:
+                Mid-Point Project Deliverable
+            </h1>
 
-    
-        <h1>
-            <a href="../assignments/">Assignments</a> > 
-            Project: Mid-Point Project Deliverable
-        </h1>
-    
- 
-                <p>
-    
-        Due on Mon, 04/17 @ 11:59PM.
-    
-    
-        20 Points.
-    
-    
-</p>
+            <p>Due on Mon, 04/17 @ 11:59PM. 15 Points.</p>
 
-<ul>
-  <li>TODO: Presentations + Share Progress</li>
-</ul>
-
-
-
-            </article>  
-        </main>
-        <footer>
-            <p>    
-                Department of Computer Science, UNC Asheville
+            <h2 id="overview">Overview</h2>
+            <p>
+                Your submission for this week’s deliverable should consist
+                of three parts:
             </p>
-        </footer>
-        
-            <script type="text/javascript" src="../assets/js/main.js"></script>
-    
-    
-        <script type="text/javascript" src="../assets/js/scrollspy.js"></script>
-    </body>
+
+            <ol>
+                <li>
+                    [6pts] <a href="#code">Sharing some design / code</a> of
+                    what you have accomplished (Q1).
+                </li>
+                <li>
+                    [4pts] Answering the
+                    <a href="#reflection">4 reflective questions below</a>
+                    (Q2-Q5).
+                </li>
+                <li>
+                    [5pts] Sharing
+                    <a href="#accomplishments">what you have accomplished</a>
+                    with your classmates (you are welcome to use slides, but
+                    you don’t have to).
+                </li>
+            </ol>
+
+            <p>
+                This is an opportunity for you to reflect on your
+                accomplishments, and consider how you can best use the
+                remaining time that you have to come to a reasonable
+                stopping point for your project.
+            </p>
+
+            <h2 id="code">1. Code &amp; Designs [6pts]</h2>
+            <p>
+                Please share something that best represents your progress
+                thus far. This could be a link to your your GitHub
+                repository, a screenshot of your code (or some attachments),
+                drawings of your screens, a mockup, etc. The code / designs
+                you share should reflect 4-6 hours of work.
+            </p>
+
+            <blockquote class="blockquote-no-margin">
+                <h3 id="side-note">Side note</h3>
+                <p>
+                    We’re all still learning how all of these technologies
+                    work, so no need to feel hesitant to share your
+                    progress…even if you hoped to be further along! The
+                    point is to put in a good faith effort and to get some
+                    feedback.
+                </p>
+            </blockquote>
+
+            <h2 id="reflection">2. Reflection [4pts]</h2>
+            <h3 id="1-reflecting-on-your-accomplishments-1pt">
+                1. Reflecting on your accomplishments [1pt]
+            </h3>
+            <p>What did you accomplish this week (i.e. how’d it go)?</p>
+
+            <h3 id="2-reflecting-on-challenges-1pt">
+                2. Reflecting on challenges [1pt]
+            </h3>
+            <p>
+                What took the most time / was the most challenging part of
+                what you did? Do you feel stuck? How can you get unstuck? Is
+                there any specific feedback that you would like from Sarah?
+            </p>
+
+            <h3 id="3-next-steps-1pt">3. Next steps [1pt]</h3>
+            <p>
+                What will you turn in for your final deliverable. Please
+                describe what you plan to accomplish.
+            </p>
+
+            <h3 id="4-scope-revision-1pt">4. Scope revision? [1pt]</h3>
+            <p>
+                Given your experience this week, are you on track to deliver
+                on what you proposed last week? If not, what adjustments to
+                the scope of your project are you planning to make?
+            </p>
+
+            <h2 id="accomplishments">
+                3. Sharing Your Accomplishments [5pts]
+            </h2>
+            <p>
+                One of the great things about being in a class with other
+                people who are also learning web technologies is that you
+                can learn with one another. Given this, you will be sharing
+                your ideas and your progress so far with some of your
+                classmates during class on Wednesday, 4/19. This is a very
+                low-pressure check-in, and is intended for you each to help
+                each other explore different ideas and approaches and get
+                some feedback and encouragement from your peers.
+            </p>
+
+            <h2 id="what-to-turn-in">What to Turn In</h2>
+            <p>
+                Please upload a file (either a text document or a zip file)
+                that includes:
+            </p>
+
+            <ol>
+                <li>
+                    [6pts] Your code and/or design progress. Please share /
+                    upload something that represents your progress. This
+                    will probably include links to your repo / website, but
+                    it could also include drawings, etc.
+                </li>
+                <li>[4pts] Your answers to the reflective questions.</li>
+            </ol>
+
+            <p>
+                Note that your “Sharing your accomplishments” grade will be
+                based on your participation in class on
+                <strong>Wednesday, 4/19</strong>.
+            </p>
+        </article>
+    </main>
+    <footer>
+        <p>Department of Computer Science, UNC Asheville</p>
+    </footer>
+
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+
 </html>
